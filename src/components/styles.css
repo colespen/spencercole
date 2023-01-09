@@ -1,0 +1,12 @@
+.title-container {
+    width: 100%;
+    top: 37em;
+    position: absolute;
+    text-align: center;
+}
+
+.title {
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
+    font-size: 48px;
+}
