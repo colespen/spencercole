@@ -2,21 +2,21 @@ import { Fragment } from 'react';
 import './Projects.scss';
 
 
-export default function MadCap() {
+export default function Scheduler() {
 
 
   return (
     <Fragment>
 
       <header>
-        <h1>Project2</h1>
+        <h1>Project5</h1>
       </header>
 
       <main>
         <p>this is another project</p>
         <br></br>
-        <p>the stack is this and this and this, Socket.IO</p>
-        <p>Material-UI and custom SASS</p>
+        <p>React.js, Node.js, Express and WebSockets ('ws')</p>
+        <p>Bootstrap</p>
         <br></br>
         <p>check it out herreeee.</p>
       </main>

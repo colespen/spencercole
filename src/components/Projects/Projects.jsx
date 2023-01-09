@@ -1,10 +1,14 @@
-import { useState } from 'react';
 import classNames from 'classnames';
 
 import ShowFinder from './ShowFinder';
 import MadCap from './MadCap';
+import QuizApp from './QuizApp';
+import Jungle from './Jungle';
+import Scheduler from './Scheduler';
 
 import './Projects.scss';
+
+import useVisualMode from '../../hooks/useVisualMode';
 
 
 export default function Projects({ show, handleShowHideWindow }) {
@@ -15,15 +19,7 @@ export default function Projects({ show, handleShowHideWindow }) {
     "display-none": show,
   });
 
-  function useVisualMode(initial) {
-    const [page, setPage] = useState(initial);
 
-    const transition = nextmode => {
-      if (nextmode) setPage(nextmode);
-      else setPage(initial);
-    };
-    return { mode: page, transition };
-  }
 
   const { mode, transition } = useVisualMode("P1")
 
@@ -37,13 +33,15 @@ export default function Projects({ show, handleShowHideWindow }) {
       <section className="window-main">
         <nav className="projects-nav">
           <button id="P1" onClick={handleProjectBtnClick}
-          >project1</button>
+          >ShowFinder</button>
           <button id="P2" onClick={handleProjectBtnClick}
-          >project2</button>
+          >MadCap</button>
           <button id="P3" onClick={handleProjectBtnClick}
-          >project3</button>
+          >QuizApp</button>
           <button id="P4" onClick={handleProjectBtnClick}
-          >project4</button>
+          >Jungle</button>
+          <button id="P5" onClick={handleProjectBtnClick}
+          >Scheduler</button>
         </nav>
         <button className="close-btn" onClick={handleShowHideWindow}>
           <img src="./close.png" alt="close-window" />
@@ -52,6 +50,9 @@ export default function Projects({ show, handleShowHideWindow }) {
         <div className="inner-window">
           { mode === "P1" && <ShowFinder />}
           { mode === "P2" && <MadCap />}
+          { mode === "P3" && <QuizApp />}
+          { mode === "P4" && <Jungle />}
+          { mode === "P5" && <Scheduler />}
         </div>
 
       </section>
