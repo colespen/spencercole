@@ -10,7 +10,6 @@ export default function Home({ handleShowHideWindow }) {
         <h1 className="title">Spencer Cole</h1>
 
         <div className="navigate">
-
           <button className="nav-btn" id="projects"
             onClick={handleShowHideWindow}
           >projects
@@ -21,7 +20,6 @@ export default function Home({ handleShowHideWindow }) {
           <button className="nav-btn" id="contact"
             onClick={handleShowHideWindow}
           >contact</button>
-
         </div>
 
       </div>

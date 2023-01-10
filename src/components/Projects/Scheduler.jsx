@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import './Projects.scss';
+import '../modal.scss';
 
 
 export default function Scheduler() {
@@ -9,10 +9,10 @@ export default function Scheduler() {
     <Fragment>
 
       <header>
-        <h1>Project5</h1>
+        <h1>Scheduler</h1>
       </header>
 
-      <main>
+      <main className="modal-description">
         <p>this is another project</p>
         <br></br>
         <p>React.js, Node.js, Express and WebSockets ('ws')</p>

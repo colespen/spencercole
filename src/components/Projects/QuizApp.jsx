@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import './Projects.scss';
+import '../modal.scss';
 
 
 export default function QuizApp() {
@@ -9,11 +9,12 @@ export default function QuizApp() {
     <Fragment>
 
       <header>
-        <h1>Project3</h1>
+        <h1>QuizApp</h1>
       </header>
 
-      <main>
+      <main className="modal-description">
         <p>this is another project</p>
+        <p>It's the first team project I was every invloced in</p>
         <br></br>
         <p>the stack is JS, Node.js Express</p>
         <p>custom CSS</p>

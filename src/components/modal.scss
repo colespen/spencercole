@@ -1,22 +1,5 @@
-.window {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-}
-
-.display-none {
-    display: none;
-}
-
-.display-block {
-    display: block;
-}
-
-.window-main {
-    background: #182b47;
+.modal-main {
+    background: #1e3352;
     border-radius: 10px;
     position: fixed;
     width: 75%;
@@ -38,19 +21,18 @@
 
         img {
             max-width: 25px;
-
         }
     }
 
     header {
-        width: 95%;
+        width: 85%;
         top: 6%;
         left: 6%;
         position: fixed;
     }
 }
 
-.projects-nav {
+.modal-nav {
     border-radius: 10px;
     position: fixed;
     width: 75%;
@@ -68,6 +50,10 @@
         border-right: 2px solid #151e26;
         border-bottom: 2px solid #191d21;
         height: 30px;
-        margin: 2.5px;
+        margin-right: 6px;
     }
+}
+
+.modal-description {
+    width: 50%
 }

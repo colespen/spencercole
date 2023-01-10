@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import './Projects.scss';
+import '../modal.scss';
 
 
 export default function MadCap() {
@@ -9,10 +9,10 @@ export default function MadCap() {
     <Fragment>
 
       <header>
-        <h1>Project2</h1>
+        <h1>Madcap</h1>
       </header>
 
-      <main>
+      <main className="modal-description">
         <p>this is another project</p>
         <br></br>
         <p>the stack is this and this and this, Socket.IO</p>

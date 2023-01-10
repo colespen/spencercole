@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import './Projects.scss';
+import '../modal.scss';
 
 
 export default function Jungle() {
@@ -9,10 +9,10 @@ export default function Jungle() {
     <Fragment>
 
       <header>
-        <h1>Project4</h1>
+        <h1>Jungle</h1>
       </header>
 
-      <main>
+      <main className="modal-description">
         <p>this is another project</p>
         <br></br>
         <p>the stack is Ruby on Rails</p>
