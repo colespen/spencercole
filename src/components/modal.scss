@@ -16,7 +16,8 @@
     }
 
     .project-screenshot {
-        max-height: 320px;
+        // max-height: 320px;
+        max-height: 360px;
         object-fit: contain;
         width: 100%;
     }
@@ -27,6 +28,7 @@
     border-radius: 10px;
     position: fixed;
     width: 75%;
+    max-width: 1200px;
     height: 65%;
     top: 50%;
     left: 50%;
@@ -49,9 +51,10 @@
     }
 
     header {
-        width: 85%;
-        // top: 9%;
-        top: 11%;
+        // width: 85%;
+        width: fit-content;
+        top: 10%;
+        // top: 7%;
         left: 6%;
         position: fixed;
     }
@@ -162,3 +165,13 @@
         width: 100%;
     }
 }
+// @media only screen and (min-width: 1520px) {
+//     .modal-main {
+//         header {
+//             left: 40%;
+//             top: 45%;
+//             font-size: 30px
+
+//         }
+//     }
+// }
