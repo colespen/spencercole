@@ -6,6 +6,7 @@ import './styles.scss';
 import Home from './Home';
 import Projects from './Projects/Projects';
 import Bio from './Bio';
+import Contact from './Contact';
 
 import useVisualMode from '../hooks/useVisualMode';
 
@@ -44,7 +45,12 @@ export default function Main() {
             show={show}
             handleShowHideWindow={handleShowHideWindow}
             view={view} transition={transition} />}
-        {/* {view.page === "contact" &&<Contact />} */}
+        {view.page === "contact" &&
+          <Contact
+            show={show}
+            handleShowHideWindow={handleShowHideWindow}
+            view={view} transition={transition}
+          />}
       </div>
 
     </Fragment>

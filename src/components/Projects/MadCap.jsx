@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+
 import '../modal.scss';
 
 
@@ -12,7 +13,10 @@ export default function MadCap() {
         <h1>Madcap</h1>
       </header>
 
-      <main className="modal-description">
+      <img className="project-icon" src="./avatar-1.png" 
+      style={{height: '172px'}}/>
+
+      <main className="tab-description">
         <p>this is another project</p>
         <br></br>
         <p>the stack is this and this and this, Socket.IO</p>

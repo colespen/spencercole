@@ -4,10 +4,7 @@ import QuizApp from './QuizApp';
 import Jungle from './Jungle';
 import Scheduler from './Scheduler';
 
-import '../styles.scss'
 import '../modal.scss';
-
-import { Fragment } from 'react';
 
 
 
@@ -19,7 +16,7 @@ export default function Projects(props) {
     transition("projects", e.currentTarget.id);
   };
 
-  console.log(view);
+  // console.log(view);
 
   return (
     <section className="modal-main">
@@ -39,31 +36,31 @@ export default function Projects(props) {
         <img src="./close.png" alt="close-window" />
       </button>
 
-      <div className="inner-window">
-        {!view.tab &&
-          <Fragment>
-            <header>
-              <h1>PROJECTS</h1>
-            </header>
+      {!view.tab ?
+        <div className="home-inner-window">
+          <header>
+            <h1>PROJECTS</h1>
+          </header>
 
-            <main>
-              <p>Here is a collection of some projects I have recently completed.</p>
+          <main className="main-description">
+            <p>Here is a collection of some projects I have recently completed.</p>
+            <br></br>
+            <p>I love to focus on creating useful, fun applications.
               <br></br>
-              <p>I love to focus on creating useful, fun applications. 
-              <br></br>
-                I'm perpetually in search of a new challenge and enjoy discovering the latest tools.</p>
-              <br></br>
-              <p>Please have a look through my work above...</p>
-            </main>
-          </Fragment>
-        }
-        {view.tab === "P1" && <ShowFinder />}
-        {view.tab === "P2" && <MadCap />}
-        {view.tab === "P3" && <QuizApp />}
-        {view.tab === "P4" && <Jungle />}
-        {view.tab === "P5" && <Scheduler />}
-      </div>
-
+              I'm perpetually in search of a new challenges and enjoy discovering the latest tools available.</p>
+            <br></br>
+            <p>Please have a look through my work above...</p>
+          </main>
+        </div>
+        :
+        <div className="inner-window">
+          {view.tab === "P1" && <ShowFinder />}
+          {view.tab === "P2" && <MadCap />}
+          {view.tab === "P3" && <QuizApp />}
+          {view.tab === "P4" && <Jungle />}
+          {view.tab === "P5" && <Scheduler />}
+        </div>
+      }
     </section>
   );
 }

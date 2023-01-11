@@ -36,7 +36,7 @@
     }
 }
 
-/////////       Modal       /////////
+/////////       Modal Window Container      /////////
 
 .window {
     position: fixed;
@@ -55,7 +55,3 @@
     display: block;
 }
 
-.inner-window {
-    display: flex;
-    justify-content: center;
-}

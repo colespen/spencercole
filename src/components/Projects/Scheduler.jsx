@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+
 import '../modal.scss';
 
 
@@ -12,7 +13,7 @@ export default function Scheduler() {
         <h1>Scheduler</h1>
       </header>
 
-      <main className="modal-description">
+      <main className="tab-description">
         <p>this is another project</p>
         <br></br>
         <p>React.js, Node.js, Express and WebSockets ('ws')</p>

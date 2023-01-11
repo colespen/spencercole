@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+
 import '../modal.scss';
 
 
@@ -12,7 +13,7 @@ export default function Jungle() {
         <h1>Jungle</h1>
       </header>
 
-      <main className="modal-description">
+      <main className="tab-description">
         <p>this is another project</p>
         <br></br>
         <p>the stack is Ruby on Rails</p>
