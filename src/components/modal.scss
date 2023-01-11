@@ -1,5 +1,6 @@
 .inner-window {
     width: 85%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,11 +54,14 @@
     header {
         // width: 85%;
         width: fit-content;
-        top: 10%;
+        top: 8%;
         // top: 7%;
-        left: 6%;
+        left: 8%;
         position: fixed;
     }
+
+    
+
 }
 
 .modal-nav {
@@ -84,10 +88,12 @@
 
 .tab-description {
     width: 40%;
+    height: 85%;
     max-width: 312px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: scroll;
 }
 
 .home-inner-window {
@@ -97,6 +103,7 @@
     justify-content: center;
 
 }
+
 .main-description {
     // width: 50%;
     width: 36%;
@@ -144,6 +151,7 @@
 
     input[type="submit"] {
         height: 11%;
+        min-height: 26px;
         color: #f4e5e0;
         font-weight: 600;
         margin-bottom: 0;
@@ -161,17 +169,23 @@
         width: 88%;
     }
 
+    // .main-description {
+    //     width: 100%;
+    // }
+}
+
+@media only screen and (max-width: 1260px) {
+
+
     .main-description {
         width: 100%;
     }
 }
-// @media only screen and (min-width: 1520px) {
-//     .modal-main {
-//         header {
-//             left: 40%;
-//             top: 45%;
-//             font-size: 30px
 
-//         }
-//     }
-// }
+@media only screen and (max-width: 775px) {
+    .modal-main {
+        .contact-header {
+            visibility: hidden;
+        }
+    }
+}

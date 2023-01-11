@@ -1,3 +1,5 @@
+import { animated, useSpring } from '@react-spring/web';
+
 import ShowFinder from './ShowFinder';
 import MadCap from './MadCap';
 import QuizApp from './QuizApp';
@@ -16,10 +18,16 @@ export default function Projects(props) {
     transition("projects", e.currentTarget.id);
   };
 
-  // console.log(view);
+  const springs = useSpring({
+    from: { height: "0%", width: "0%" },
+    to: { height: "65%", width: "75%" }
+  });
+
 
   return (
-    <section className="modal-main">
+    <animated.section className="modal-main"
+    style={{...springs}}
+    >
       <nav className="modal-nav">
         <button id="P1" onClick={handleProjectBtnClick}
         >ShowFinder</button>
@@ -37,7 +45,7 @@ export default function Projects(props) {
       </button>
 
       {!view.tab ?
-        <div className="home-inner-window">
+        <div className="home-inner-window" style={{...props.opacity}}>
           <header>
             <h1>PROJECTS</h1>
           </header>
@@ -61,6 +69,6 @@ export default function Projects(props) {
           {view.tab === "P5" && <Scheduler />}
         </div>
       }
-    </section>
+    </animated.section>
   );
 }

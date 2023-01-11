@@ -13,7 +13,7 @@ export default function ShowFinder() {
         <h1>ShowFinder</h1>
       </header>
 
-      <img className="project-icon" src="./globeicon.png" />
+      <img className="project-icon" src="./globeicon.png" alt="project icon"/>
 
       <main className="tab-description">
         <p>The world needs a very simple, quick app to find shows.</p>

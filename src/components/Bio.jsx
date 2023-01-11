@@ -1,7 +1,9 @@
+import { animated, useSpring } from '@react-spring/web';
+
 import './modal.scss';
 
 export default function Bio(props) {
-  const { handleShowHideWindow,
+  const { handleShowHideWindow
     // view, 
     // transition 
   } = props;
@@ -10,9 +12,14 @@ export default function Bio(props) {
   //     transition("bio", e.currentTarget.id);
   // };
 
+  const springs = useSpring({
+    from: { height: "0%", width: "0%" },
+    to: { height: "65%", width: "75%" }
+  });
 
   return (
-    <section className="modal-main">
+    <animated.section className="modal-main"
+    style={{...springs}}>
       <nav className="modal-nav">
         <button id="P1"
         // onClick={handleBioButtonClick}
@@ -26,7 +33,7 @@ export default function Bio(props) {
       </button>
 
       <div className="home-inner-window">
-        <header>
+        <header className="bio-header">
           <h1>LIFE</h1>
         </header>
 
@@ -48,6 +55,6 @@ export default function Bio(props) {
           { mode === "P2" && <Extra />}
         </div> */}
 
-    </section>
+    </animated.section>
   );
 }

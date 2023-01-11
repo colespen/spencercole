@@ -15,12 +15,18 @@ export default function QuizApp() {
       </header>
 
       <Carousel>
-        <img className="project-screenshot" src="./quizapp1.png" alt="screenshot1"/>
-        <img className="project-screenshot" src="./quizapp1a.png" alt="screenshot2"/>
-        <img className="project-screenshot" src="./quizapp2.png" alt="screenshot3"/>
-        <img className="project-screenshot" src="./quizapp3.png" alt="screenshot4"/>
-        <img className="project-screenshot" src="./quizapp4.png" alt="screenshot5"/>
-        <img className="project-screenshot" src="./quizapp5.png" alt="screenshot6"/>
+        <img className="project-screenshot" 
+        src="./quizapp1.png" alt="screenshot 1"/>
+        <img className="project-screenshot" 
+        src="./quizapp1a.png" alt="screenshot 2"/>
+        <img className="project-screenshot" 
+        src="./quizapp2.png" alt="screenshot 3"/>
+        <img className="project-screenshot" 
+        src="./quizapp3.png" alt="screenshot 4"/>
+        <img className="project-screenshot" 
+        src="./quizapp4.png" alt="screensho t5"/>
+        <img className="project-screenshot" 
+        src="./quizapp5.png" alt="screenshot 6"/>
       </Carousel>
 
       <main className="tab-description">

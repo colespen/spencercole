@@ -13,7 +13,7 @@ export default function MadCap() {
         <h1>Madcap</h1>
       </header>
 
-      <img className="project-icon" src="./avatar-1.png" 
+      <img className="project-icon" src="./avatar-1.png" alt="project icon"
       style={{height: '172px'}}/>
 
       <main className="tab-description">
