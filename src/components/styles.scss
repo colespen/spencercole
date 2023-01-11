@@ -9,15 +9,17 @@
     .title {
         font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
         font-weight: 400;
-        font-size: 48px;
+        // font-size: 48px;
+        font-size: clamp(40px, 9vw, 55px);
         margin: 10px 0 20px 0;
     }
 
     .navigate {
-        margin: 20px 0 10px 0;
+        margin: 2vw 0 10px 0;
         display: flex;
         justify-content: space-evenly;
-        width: 75%;
+        width: 84%;
+        max-width: 625px;
 
         button {
             font-size: 15px;
@@ -55,3 +57,8 @@
     display: block;
 }
 
+@media only screen and (max-height: 844px) {
+   .title-nav-container {
+    top: 40%;
+   }
+}

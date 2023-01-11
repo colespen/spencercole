@@ -15,37 +15,40 @@ export default function Carousel(props) {
 
     const next = () => {
         if (currentIndex < (length - 1)) {
-            setCurrentIndex(prevState => prevState + 1)
+            setCurrentIndex(prevState => prevState + 1);
         }
-    }
-    
+    };
+
     const prev = () => {
         if (currentIndex > 0) {
-            setCurrentIndex(prevState => prevState - 1)
+            setCurrentIndex(prevState => prevState - 1);
         }
-    }
+    };
 
     return (
         <div className="carousel-container">
             <div className="carousel-wrapper">
 
-                <button onClick={prev} className="left-arrow">
-                    &lt;
-                </button>
 
                 <div className="carousel-content-wrapper">
                     <div className="carousel-content"
-                        style={{ 
-                            transform: `translateX(-${currentIndex * 100}%)` 
+                        style={{
+                            transform: `translateX(-${currentIndex * 100}%)`
                         }}
                     >
                         {children}
                     </div>
                 </div>
+                <div className="carousel-buttons">
 
-                <button onClick={next} className="right-arrow">
-                    &gt;
-                </button>
+                    <button onClick={prev} className="left-arrow">
+                        &lt;
+                    </button>
+
+                    <button onClick={next} className="right-arrow">
+                        &gt;
+                    </button>
+                </div>
 
             </div>
         </div>
