@@ -1,8 +1,12 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 
 import './styles.scss';
 
-export default function Home({ handleShowHideWindow }) {
+export default function Home({ handleShowHideWindow, show }) {
+
+  useEffect(() => {
+    
+  }, [show])
 
   return (
     <Fragment>

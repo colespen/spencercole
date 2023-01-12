@@ -1,4 +1,5 @@
-import { useState, Fragment } from 'react';
+import { useState, useEffect, Fragment } from 'react';
+import { useSpring } from '@react-spring/web';
 import classNames from 'classnames';
 
 import './styles.scss';
@@ -13,16 +14,15 @@ import useVisualMode from '../hooks/useVisualMode';
 
 export default function Main() {
   const [show, setShow] = useState(false);
-  const [opacity, setOpacity] = useState(0);
 
   const handleShowHideWindow = e => {
-    !show ? setShow(true) : setShow(false);
+    handleModalOpen();
+    if (!show) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
     transition(e.currentTarget.id, "");
-    
-      setTimeout(() => {
-        setOpacity(100)
-      }, [])
-    
   };
 
   const { view, transition } = useVisualMode("home", "");
@@ -34,10 +34,41 @@ export default function Main() {
   });
 
 
+  const [modalSpringOpen, api1] = useSpring(() => ({
+    from: {height: "0%"},
+    config: { mass: 1.3, tension: 365, friction: 24 }
+  }), []);
+
+  const handleModalOpen = () => {
+    api1.start({
+      to: {
+        height: !show ? "65%" : "0%",
+      },
+    });
+  };
+
+  // const [modalSpringClose, api2] = useSpring(() => ({
+  //   // ref: api,
+  //   from: {height: "65%"},
+  //   config: { tension: 365, friction: 23 }
+  // }), []);
+
+  // const handleModalClose = () => {
+  //   api2.start({
+  //     to: {
+  //       height: "0%",
+  //       // opacity: modalSprings.opacity.get() === 1 ? 0 : 1
+  //     },
+  //   });
+  // };
+ 
+
   return (
     <Fragment>
       {view.page === "home" &&
-        <Home handleShowHideWindow={handleShowHideWindow}
+        <Home 
+        handleShowHideWindow={handleShowHideWindow}
+        show={show}
         />}
       <div className={windowShowHide}>
         {view.page === "projects" &&
@@ -45,21 +76,19 @@ export default function Main() {
             show={show}
             handleShowHideWindow={handleShowHideWindow}
             view={view} transition={transition}
-            opacity={opacity}
+            modalSpringOpen={modalSpringOpen}
           />}
         {view.page === "bio" &&
           <Bio
             show={show}
             handleShowHideWindow={handleShowHideWindow}
-            view={view} transition={transition} 
-            opacity={opacity}
-            />}
+            view={view} transition={transition}
+          />}
         {view.page === "contact" &&
           <Contact
             show={show}
             handleShowHideWindow={handleShowHideWindow}
             view={view} transition={transition}
-            opacity={opacity}
           />}
       </div>
     </Fragment>

@@ -1,4 +1,5 @@
-import { animated, useSpring } from '@react-spring/web';
+import { useState, useEffect } from 'react';
+import { animated } from '@react-spring/web';
 
 import ShowFinder from './ShowFinder';
 import MadCap from './MadCap';
@@ -9,24 +10,35 @@ import Scheduler from './Scheduler';
 import '../modal.scss';
 
 
-
 export default function Projects(props) {
+  const {
+    handleShowHideWindow, view, transition, modalSpringOpen, show, 
+  } = props;
 
-  const { handleShowHideWindow, view, transition } = props;
+  const [modalStyle, setModalStyle] = useState({
+    opacity: 0
+  });
 
   const handleProjectBtnClick = e => {
     transition("projects", e.currentTarget.id);
+  
   };
 
-  const springs = useSpring({
-    from: { height: "0%", width: "0%" },
-    to: { height: "65%", width: "75%" }
-  });
-
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      show ? setModalStyle({
+        opacity: 1
+      }) :
+        setModalStyle({
+          opacity: 0
+        });
+    }, 0);
+    return ()=> clearTimeout(timer);
+  }, [show]);
 
   return (
     <animated.section className="modal-main"
-    style={{...springs}}
+      style={{ ...modalSpringOpen, ...modalStyle }}
     >
       <nav className="modal-nav">
         <button id="P1" onClick={handleProjectBtnClick}
@@ -45,7 +57,8 @@ export default function Projects(props) {
       </button>
 
       {!view.tab ?
-        <div className="home-inner-window" style={{...props.opacity}}>
+        <animated.div className="home-inner-window"
+        >
           <header>
             <h1>PROJECTS</h1>
           </header>
@@ -59,9 +72,11 @@ export default function Projects(props) {
             <br></br>
             <p>Please have a look through my work above...</p>
           </main>
-        </div>
+        </animated.div>
         :
-        <div className="inner-window">
+        <div className="inner-window" 
+        style={{ ...modalStyle }}
+        >
           {view.tab === "P1" && <ShowFinder />}
           {view.tab === "P2" && <MadCap />}
           {view.tab === "P3" && <QuizApp />}
