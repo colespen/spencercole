@@ -1,5 +1,5 @@
-import { useState, useEffect, Fragment } from 'react';
-import { useSpring } from '@react-spring/web';
+import { useState, Fragment } from 'react';
+// import { useSpring } from '@react-spring/web';
 import classNames from 'classnames';
 
 import './styles.scss';
@@ -12,11 +12,12 @@ import Contact from './Contact';
 import useVisualMode from '../hooks/useVisualMode';
 
 
+
 export default function Main() {
   const [show, setShow] = useState(false);
 
   const handleShowHideWindow = e => {
-    handleModalOpen();
+    // handleModalOpen();
     if (!show) {
       setShow(true);
     } else {
@@ -34,18 +35,18 @@ export default function Main() {
   });
 
 
-  const [modalSpringOpen, api1] = useSpring(() => ({
-    from: {height: "0%"},
-    config: { mass: 1.3, tension: 365, friction: 24 }
-  }), []);
+  // const [modalSpringOpen, api1] = useSpring(() => ({
+  //   from: { height: "0%" },
+  //   config: { mass: 1.2, tension: 335, friction: 24 }
+  // }), []);
 
-  const handleModalOpen = () => {
-    api1.start({
-      to: {
-        height: !show ? "65%" : "0%",
-      },
-    });
-  };
+  // const handleModalOpen = () => {
+  //   api1.start({
+  //     to: {
+  //       height: !show ? "65%" : "0%",
+  //     },
+  //   });
+  // };
 
   // const [modalSpringClose, api2] = useSpring(() => ({
   //   // ref: api,
@@ -61,32 +62,27 @@ export default function Main() {
   //     },
   //   });
   // };
- 
 
   return (
     <Fragment>
       {view.page === "home" &&
-        <Home 
-        handleShowHideWindow={handleShowHideWindow}
-        show={show}
+        <Home
+          handleShowHideWindow={handleShowHideWindow}
         />}
       <div className={windowShowHide}>
         {view.page === "projects" &&
           <Projects
-            show={show}
             handleShowHideWindow={handleShowHideWindow}
             view={view} transition={transition}
-            modalSpringOpen={modalSpringOpen}
+            // modalSpringOpen={modalSpringOpen}
           />}
         {view.page === "bio" &&
           <Bio
-            show={show}
             handleShowHideWindow={handleShowHideWindow}
             view={view} transition={transition}
           />}
         {view.page === "contact" &&
           <Contact
-            show={show}
             handleShowHideWindow={handleShowHideWindow}
             view={view} transition={transition}
           />}

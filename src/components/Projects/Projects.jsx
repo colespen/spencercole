@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { animated } from '@react-spring/web';
+import { animated, useSpring } from '@react-spring/web';
 
 import ShowFinder from './ShowFinder';
 import MadCap from './MadCap';
@@ -12,33 +12,45 @@ import '../modal.scss';
 
 export default function Projects(props) {
   const {
-    handleShowHideWindow, view, transition, modalSpringOpen, show, 
+    handleShowHideWindow, view, transition, 
   } = props;
 
   const [modalStyle, setModalStyle] = useState({
     opacity: 0
   });
+  const [mainStyle, setMainStyle] = useState({
+    opacity: 0,
+  });
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setModalStyle({opacity: 1})
+    }, 0);
+    return ()=> clearTimeout(timer);
+  }, []);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMainStyle({opacity: 1})
+    }, 100);
+    return ()=> clearTimeout(timer);
+  }, []);
+
+  const springs = useSpring({
+    from: { height: "0%" },
+    to: {height: "65%"},
+    config: { mass: 1.2, tension: 335, friction: 24 }
+  })
+
 
   const handleProjectBtnClick = e => {
     transition("projects", e.currentTarget.id);
-  
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      show ? setModalStyle({
-        opacity: 1
-      }) :
-        setModalStyle({
-          opacity: 0
-        });
-    }, 0);
-    return ()=> clearTimeout(timer);
-  }, [show]);
 
   return (
     <animated.section className="modal-main"
-      style={{ ...modalSpringOpen, ...modalStyle }}
+      style={{ ...springs, ...modalStyle }}
     >
       <nav className="modal-nav">
         <button id="P1" onClick={handleProjectBtnClick}
@@ -63,7 +75,9 @@ export default function Projects(props) {
             <h1>PROJECTS</h1>
           </header>
 
-          <main className="main-description">
+          <main className="main-description"
+          style={{...mainStyle, transition: 'opacity 750ms ease'}}
+          >
             <p>Here is a collection of some projects I have recently completed.</p>
             <br></br>
             <p>I love to focus on creating useful, fun applications.
@@ -74,9 +88,7 @@ export default function Projects(props) {
           </main>
         </animated.div>
         :
-        <div className="inner-window" 
-        style={{ ...modalStyle }}
-        >
+        <div className="inner-window">
           {view.tab === "P1" && <ShowFinder />}
           {view.tab === "P2" && <MadCap />}
           {view.tab === "P3" && <QuizApp />}
