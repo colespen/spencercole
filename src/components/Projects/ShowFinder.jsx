@@ -2,6 +2,8 @@ import { Fragment } from 'react';
 
 import '../modal.scss';
 
+import Carousel from './Carousel';
+
 
 export default function ShowFinder() {
 
@@ -13,7 +15,14 @@ export default function ShowFinder() {
         <h1>ShowFinder</h1>
       </header>
 
-      <img className="project-icon" src="./globeicon.png" alt="project icon" />
+      <Carousel>
+      <img className="project-screenshot" 
+      style={{height: '200px'}}
+      src="./globeicon.png" alt="project icon" />
+      <img className="project-screenshot" src="./showfinder1.png" alt="screenshot 1" />
+      <img className="project-screenshot" src="./showfinder2.png" alt="screenshot 2" />
+      <img className="project-screenshot" src="./showfinder3.png" alt="screenshot 3" />
+      </Carousel>
 
       <main className="tab-description">
         <p>The world needs a very simple, quick app to find shows.</p>

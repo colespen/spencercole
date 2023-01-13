@@ -2,6 +2,9 @@ import { Fragment } from 'react';
 
 import '../modal.scss';
 
+import Carousel from './Carousel';
+
+
 
 export default function MadCap() {
 
@@ -13,8 +16,15 @@ export default function MadCap() {
         <h1>Madcap</h1>
       </header>
 
-      <img className="project-icon" src="./avatar-1.png" alt="project icon"
-      style={{height: '172px'}}/>
+      <Carousel>
+      <img className="project-screenshot" src="./avatar-1.png" alt="project icon"
+      style={{height: '200px', width: '101%'}}/>
+      <img className="project-screenshot" src="./madcap1.png" alt="screenshot 1" />
+      <img className="project-screenshot" src="./madcap2.png" alt="screenshot 2" />
+      <img className="project-screenshot" src="./madcap3.png" alt="screenshot 3" />
+      <img className="project-screenshot" src="./madcap4.png" alt="screenshot 4" />
+      <img className="project-screenshot" src="./madcap5.png" alt="screenshot 5" />
+      </Carousel>
 
       <main className="tab-description">
         <p>this is another project</p>

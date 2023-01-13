@@ -12,14 +12,16 @@
 }
 
 .carousel-content-wrapper {
-    overflow: hidden;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    border-radius: 13px;
 }
 
 .carousel-content {
     display: flex;
-    transition: all 350ms ease-out;
+    align-items: center;
+    transition: all 400ms ease;
     -ms-overflow-style: none;
     /* hide scrollbar in IE and Edge */
     scrollbar-width: none;
@@ -48,31 +50,30 @@
     .left-arrow,
     .right-arrow {
         z-index: 1;
-        // width: 14%;
         // min-width: 63px;
         width: min(20vw, 40rem);
-        max-width: 90px;
+        max-width: 130px;
         height: 20px;
         border-radius: 24px;
         // background-color: #05090f33;
         // border: 1px solid #0e203c;
         background-color: #05090f00;
         border: 1px solid #0e203c00;
-        margin: -3px 3px 3px 3px;
+        margin: -3px 0px 3px 0px;
         img {
-            width: 90%;
-            height: 29px;
+            width: 100%;
+            height: 45px;
         }
     }
     .left-arrow img {
-        filter: drop-shadow(7px 5px 1.5px #121f38);
+        filter: drop-shadow(9px 5px 1.5px #121f38);
     }
     .right-arrow img {
-        filter: drop-shadow(-7px 5px 1.5px #121f38);
+        filter: drop-shadow(-9px 5px 1.5px #121f38);
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .carousel-container {
         width: 50%;
     }

@@ -4,6 +4,8 @@ import '../modal.scss';
 
 import Carousel from './Carousel';
 
+
+
 export default function QuizApp() {
 
 
