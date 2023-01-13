@@ -10,9 +10,18 @@
         font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
         font-weight: 400;
         // font-size: 48px;
-        font-size: clamp(40px, 9vw, 55px);
+        font-size: clamp(40px, 9vw, 59px);
         margin: 10px 0 20px 0;
+
+        text-shadow: 4px 3px 8px rgba(141, 141, 141, 0.837);
+        transition: text-shadow 300ms ease;
+
+        &:hover {
+            text-shadow: 6px 5px 12px rgba(167, 167, 167, 0.928)
+        }
     }
+
+
 
     .navigate {
         margin: 2vw 0 10px 0;
@@ -62,8 +71,10 @@
     // opacity: 1;
 }
 
+
+
 @media only screen and (max-height: 844px) {
-   .title-nav-container {
-    top: 40%;
-   }
+    .title-nav-container {
+        top: 40%;
+    }
 }
