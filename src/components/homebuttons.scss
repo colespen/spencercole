@@ -17,14 +17,13 @@
   position: absolute;
   top: 0;
   left: 1px;
-  border-radius: 12px;
-  background-color: rgba(176, 176, 176, 0.704);
+  border-radius: 5px;
+  background-color: rgba(176, 176, 176, 0.769);
   filter: blur(0.2px);
   transform: translateY(2px);
   transition:
-    transform 600ms cubic-bezier(.3, .7, .4, 1), filter 600ms ease-out
-    
-  // will-change: transform;
+    transform 600ms cubic-bezier(.3, .7, .4, 1),
+    filter 600ms ease-out // will-change: transform;
 }
 
 .edge {
@@ -33,13 +32,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 12px;
+  border-radius: 5px;
   background: #151e26;
   background: linear-gradient(to left,
       #686b70 0%,
-      #2f3136 8%,
-      #151e26 92%,
-      #262c32 100%);
+      #292a2e 8%,
+      #0f161c 92%,
+      #21262c 100%);
+  transition: opacity 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
 .front {
@@ -52,11 +52,11 @@
   align-items: center;
   position: relative;
   padding: 12px 42px;
-  border-radius: 12px;
+  border-radius: 5px;
   background: rgb(78, 80, 84);
   background: linear-gradient(90deg, rgb(84, 86, 90) 0%, rgb(34, 47, 65) 3%, rgb(21, 35, 56) 11%, rgb(8, 17, 31) 80%);
   transform: translateY(-4px);
-  transition: transform 600ms cubic-bezier(.3, .7, .4, 1), filter 250ms ease-out;
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1), filter 800ms ease-out;
   // will-change: transform;
   // &:active {
   //   background-color: blue;
@@ -64,14 +64,19 @@
 }
 
 .btn-main:hover {
-  filter: brightness(105%);
+  filter: brightness(120%);
 }
 
 .btn-main:hover .front {
-  filter: saturate(205%);
-  transform: translateY(-7px);
+  filter: saturate(130%);
+  transform: translateY(-9px);
   transition:
-    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    transform 175ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.btn-main:hover .edge {
+  opacity: 0.92;
+  transition: opacity 175ms cubic-bezier(.3, .7, .4, 1);
 }
 
 .btn-main:active .front {
@@ -79,16 +84,20 @@
   transition: transform 34ms;
 }
 
+
+
 .btn-main:hover .shadow {
-  transform: translateY(3px);
+  transform: translateY(2.5px);
   transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
   background: rgba(177, 177, 177, 0.895);
-  background: linear-gradient(90deg,rgb(100, 116, 139) 90%,rgb(76, 82, 91) 51%,rgb(99, 115, 135) 11%, rgba(176, 176, 176, 0.895) 3%);
+  background: linear-gradient(90deg, rgb(83, 96, 115) 90%, rgb(66, 71, 79) 51%, rgb(90, 105, 123) 11%, rgba(155, 155, 155, 0.895) 3%);
+  filter: blur(0.3px);
 }
 
 .btn-main:active .shadow {
-  transform: translateY(1px);
+  transform: translateY(1.5px);
   transition: transform 34ms;
+  background-color: rgba(65, 65, 65, 0.912);
 }
 
 .btn-main:focus:not(:focus-visible) {

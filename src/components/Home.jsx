@@ -45,18 +45,11 @@ export default function Home({ handleShowHideWindow }) {
         >
           <button class="btn-main" id="projects"
             onClick={handleShowHideWindow}
-          // style={{ transform: 'perspective(700px) rotateX(0deg) rotateY(15deg)' }}
+            style={{ transform: 'perspective(45px) rotateX(4deg) rotateY(2deg)' }}
           >
-            <span class="shadow"
-            // style={{ transform: 'perspective(700px) rotateX(0deg) rotateY(15deg)' }}
-
-            ></span>
-            <span class="edge"
-            // style={{ transform: 'perspective(700px) rotateX(0deg) rotateY(15deg)' }}
-            ></span>
-            <span class="front"
-            // style={{ transform: 'perspective(-100px) rotateX(10deg) rotateY(30deg)' }}
-            >
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
               projects
             </span>
           </button>
@@ -67,12 +60,13 @@ export default function Home({ handleShowHideWindow }) {
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front">
-              bio
+              biø
             </span>
           </button>
 
           <button class="btn-main" id="contact"
             onClick={handleShowHideWindow}
+            style={{ transform: 'perspective(40px) rotateX(9deg) rotateY(-2deg)' }}
           >
             <span class="shadow"></span>
             <span class="edge"></span>
