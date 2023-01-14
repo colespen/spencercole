@@ -41,10 +41,10 @@ export default function Home({ handleShowHideWindow }) {
           style={{ transform: titleSpring.xys.to(perspective) }}
         >Spencer Cole</animated.h1>
 
-        <div className="navigate" id="projects"
-          onClick={handleShowHideWindow}
+        <div className="navigate"
         >
-          <button class="btn-main"
+          <button class="btn-main" id="projects"
+            onClick={handleShowHideWindow}
           // style={{ transform: 'perspective(700px) rotateX(0deg) rotateY(15deg)' }}
           >
             <span class="shadow"
