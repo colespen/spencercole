@@ -23,7 +23,7 @@ export default function Main() {
     } else {
       setShow(false);
     }
-    transition(e.currentTarget.id, "");
+  transition(e.currentTarget.id, "");
   };
 
   const { view, transition } = useVisualMode("home", "");

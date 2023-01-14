@@ -1,0 +1,96 @@
+.btn-main {
+  height: 35px;
+  width: 28%;
+  max-width: 103px;
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+}
+
+.shadow {
+  height: 100%;
+  width: 98%;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  border-radius: 12px;
+  background-color: rgba(176, 176, 176, 0.704);
+  filter: blur(0.2px);
+  transform: translateY(2px);
+  transition:
+    transform 600ms cubic-bezier(.3, .7, .4, 1), filter 600ms ease-out
+    
+  // will-change: transform;
+}
+
+.edge {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  background: #151e26;
+  background: linear-gradient(to left,
+      #686b70 0%,
+      #2f3136 8%,
+      #151e26 92%,
+      #262c32 100%);
+}
+
+.front {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 12px 42px;
+  border-radius: 12px;
+  background: rgb(78, 80, 84);
+  background: linear-gradient(90deg, rgb(84, 86, 90) 0%, rgb(34, 47, 65) 3%, rgb(21, 35, 56) 11%, rgb(8, 17, 31) 80%);
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1), filter 250ms ease-out;
+  // will-change: transform;
+  // &:active {
+  //   background-color: blue;
+  // }
+}
+
+.btn-main:hover {
+  filter: brightness(105%);
+}
+
+.btn-main:hover .front {
+  filter: saturate(205%);
+  transform: translateY(-7px);
+  transition:
+    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.btn-main:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.btn-main:hover .shadow {
+  transform: translateY(3px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  background: rgba(177, 177, 177, 0.895);
+  background: linear-gradient(90deg,rgb(100, 116, 139) 90%,rgb(76, 82, 91) 51%,rgb(99, 115, 135) 11%, rgba(176, 176, 176, 0.895) 3%);
+}
+
+.btn-main:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.btn-main:focus:not(:focus-visible) {
+  outline: none;
+}

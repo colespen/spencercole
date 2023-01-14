@@ -2,33 +2,32 @@ import { Fragment } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 
 import './styles.scss';
+import './homebuttons.scss';
 
 
 export default function Home({ handleShowHideWindow }) {
 
-  const [spring, api] = useSpring(() => ({
-    xys: [0, 0, 0.8],
-    config: { mass: 5, tension: 200, friction: 100 }
+  //////    Title Movement
+  const [titleSpring, titleApi] = useSpring(() => ({
+    xys: [0, 0, 0.75],
+    config: { mass: 5, tension: 120, friction: 150 }
   }));
 
   const calcXY = (x, y) => [
-    -(y - window.innerHeight / 2) / 2,
-    (x - window.innerWidth / 2) / 20,
+    -(y - window.innerHeight / 2) / 1.5,
+    (x - window.innerWidth / 2) / 40,
     1,
   ];
 
-
   const perspective = (x, y, s) =>
-    `perspective(500px) 
-   rotateX(${x}deg) 
-   rotateY(${y}deg) 
-   scale(${s})`;
+    `perspective(500px) rotateX(${x}deg) 
+   rotateY(${y}deg) scale(${s})`;
 
   const handleMouseMove = ({ clientX: x, clientY: y }) => {
-    api.start({ xys: calcXY(x, y) });
+    titleApi.start({ xys: calcXY(x, y) });
   };
   const handleMouseLeave = () => {
-    api.start({ xys: [0, 0, 1] });
+    titleApi.start({ xys: [0, 0, 0.85] });
   };
 
 
@@ -39,20 +38,64 @@ export default function Home({ handleShowHideWindow }) {
         <animated.h1 className="title"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          style={{ transform: spring.xys.to(perspective) }}
+          style={{ transform: titleSpring.xys.to(perspective) }}
         >Spencer Cole</animated.h1>
 
-        <div className="navigate">
-          <button className="nav-btn" id="projects"
+        <div className="navigate" id="projects"
+          onClick={handleShowHideWindow}
+        >
+          <button class="btn-main"
+          // style={{ transform: 'perspective(700px) rotateX(0deg) rotateY(15deg)' }}
+          >
+            <span class="shadow"
+            // style={{ transform: 'perspective(700px) rotateX(0deg) rotateY(15deg)' }}
+
+            ></span>
+            <span class="edge"
+            // style={{ transform: 'perspective(700px) rotateX(0deg) rotateY(15deg)' }}
+            ></span>
+            <span class="front"
+            // style={{ transform: 'perspective(-100px) rotateX(10deg) rotateY(30deg)' }}
+            >
+              projects
+            </span>
+          </button>
+
+          <button class="btn-main" id="bio"
             onClick={handleShowHideWindow}
+          >
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              bio
+            </span>
+          </button>
+
+          <button class="btn-main" id="contact"
+            onClick={handleShowHideWindow}
+          >
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+              contact
+            </span>
+          </button>
+
+          {/* <button  className="nav-btn" id="projects"
+            onClick={handleShowHideWindow}
+            // onMouseEnter={}
+            // onMouseLeave={}
           >projects
           </button>
+
           <button className="nav-btn" id="bio"
             onClick={handleShowHideWindow}
           >bio</button>
+
           <button className="nav-btn" id="contact"
             onClick={handleShowHideWindow}
-          >contact</button>
+          >contact</button> */}
+
         </div>
 
       </div>
