@@ -15,18 +15,23 @@ import useVisualMode from '../hooks/useVisualMode';
 
 export default function Main() {
   const [show, setShow] = useState(false);
+
+  //// For Modal Stain Transition
   const [flash, setFlash] = useState(0);
+  const [border, setBorder] = useState(0);
   const [clicks, setClicks] = useState(0);
 
   const handleShowHideWindow = e => {
     setClicks(prev => prev + 1);
     if (!show) {
       setShow(true);
+      setBorder(1);
       if (clicks % 4 === 0 && clicks !== 0) {
         setFlash(1);
-      } 
+      }
     } else {
       setShow(false);
+      setBorder(0);
       setFlash(0);
     }
     transition(e.currentTarget.id, "");
@@ -75,10 +80,13 @@ export default function Main() {
         <Home
           handleShowHideWindow={handleShowHideWindow}
         />}
+      <section className="modal-stain border"
+        style={{ opacity: border }}
+      ></section>
       <section className="modal-stain"
         style={{ opacity: flash }}
       ></section>
-      <section className="modal-flash"
+      <section className="modal-stain flash"
         style={{ opacity: flash }}
       ></section>
       <div className={windowShowHide}>

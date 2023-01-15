@@ -89,7 +89,7 @@ export default function Bio(props) {
             transition: 'opacity 600ms ease-out'
           }}
         >
-          <p>Full-stack web developer with a highly creative background in music production. Using
+          <p>I am a full-stack web developer with a highly creative background in music composition and production. Using
             ingenuity, my eye for design and attention to detail, I strive to create an intuitive and visually
             stunning experience for the user. Working with cutting-edge tools, I produce high-performance
             and well-tested products.</p>
