@@ -9,6 +9,9 @@
   cursor: pointer;
   outline-offset: 4px;
   transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .shadow {
@@ -17,10 +20,12 @@
   position: absolute;
   top: 0;
   left: 1px;
-  border-radius: 5px;
+  border-radius: 1px;
   background-color: rgba(176, 176, 176, 0.769);
-  filter: blur(0.2px);
-  transform: translateY(2px);
+  filter: blur(0.1px);
+  border-top-left-radius: 9px;
+  border-top-right-radius: 5px;
+  transform: translateY(1.5px);
   transition:
     transform 600ms cubic-bezier(.3, .7, .4, 1),
     filter 600ms ease-out // will-change: transform;
@@ -32,13 +37,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 5px;
+  border-radius: 1px;
   background: #151e26;
   background: linear-gradient(to left,
-      #686b70 0%,
-      #292a2e 8%,
-      #0f161c 92%,
-      #21262c 100%);
+      #2a3037 0%,
+      #0f161c 8%,
+      #292a2e 92%,
+      #4f5255 100%,
+    );
+  border-top-left-radius: 9px;
+  border-top-right-radius: 5px;
   transition: opacity 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
@@ -52,9 +60,16 @@
   align-items: center;
   position: relative;
   padding: 12px 42px;
-  border-radius: 5px;
+  border-radius: 1px;
   background: rgb(78, 80, 84);
-  background: linear-gradient(90deg, rgb(84, 86, 90) 0%, rgb(34, 47, 65) 3%, rgb(21, 35, 56) 11%, rgb(8, 17, 31) 80%);
+  background: linear-gradient(90deg, rgb(96, 98, 102) 0%, rgb(40, 55, 77) 3%, rgb(24, 40, 64) 11%, rgb(9, 19, 35) 80%);
+  border-top-left-radius: 9px;
+  border-top-right-radius: 5px;
+  border-left: 6px solid #686b70;
+  border-right: 5px solid #151e26;
+  border-bottom: 4px solid #262c32;
+
+
   transform: translateY(-4px);
   transition: transform 600ms cubic-bezier(.3, .7, .4, 1), filter 800ms ease-out;
   // will-change: transform;
@@ -64,18 +79,18 @@
 }
 
 .btn-main:hover {
-  filter: brightness(120%);
+  filter: brightness(130%);
 }
 
 .btn-main:hover .front {
-  filter: saturate(130%);
+  filter: saturate(120%);
   transform: translateY(-9px);
   transition:
     transform 175ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
 .btn-main:hover .edge {
-  opacity: 0.92;
+  opacity: 0.95;
   transition: opacity 175ms cubic-bezier(.3, .7, .4, 1);
 }
 
@@ -91,7 +106,7 @@
   transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
   background: rgba(177, 177, 177, 0.895);
   background: linear-gradient(90deg, rgb(83, 96, 115) 90%, rgb(66, 71, 79) 51%, rgb(90, 105, 123) 11%, rgba(155, 155, 155, 0.895) 3%);
-  filter: blur(0.3px);
+  filter: blur(0.2px);
 }
 
 .btn-main:active .shadow {

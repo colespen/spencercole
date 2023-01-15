@@ -58,7 +58,7 @@ export default function Contact(props) {
   const springs = useSpring({
     from: { width: "0%" },
     to: { width: "75%" },
-    config: { mass: 1.5, tension: 170, friction: 30 }
+    config: { mass: 2.3, tension: 160, friction: 30 }
   });
 
   // const handleBioBtnClick = e => {
@@ -82,7 +82,9 @@ export default function Contact(props) {
       </button>
 
       <div className="home-inner-window">
-        <header className="contact-header">
+        <header className="contact-header"
+        style={{...modalStyle, transition: 'opacity 800ms ease-in'}}
+        >
           <h1>CONNECT</h1>
         </header>
 

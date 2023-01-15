@@ -7,21 +7,26 @@ import Carousel from './Carousel';
 
 export default function ShowFinder() {
 
+ 
+
+  const link = { 
+    href: "https://www.showfinder.ninja/", target: "_blank", rel: "noreferrer"
+  }
 
   return (
     <Fragment>
 
-      <header>
-        <h1>ShowFinder</h1>
+      <header className="tab-header">
+        <h1><a {...link}>ShowFinder</a></h1>
       </header>
 
       <Carousel>
-      <img className="project-screenshot" 
-      style={{height: '200px'}}
-      src="./globeicon.png" alt="project icon" />
-      <img className="project-screenshot" src="./showfinder1.png" alt="screenshot 1" />
-      <img className="project-screenshot" src="./showfinder2.png" alt="screenshot 2" />
-      <img className="project-screenshot" src="./showfinder3.png" alt="screenshot 3" />
+        <a {...link}><img className="project-screenshot"
+          style={{ height: '200px' }}
+          src="./globeicon.png" alt="project icon" /></a>
+        <a {...link}><img className="project-screenshot" src="./showfinder1.png" alt="screenshot 1" /></a>
+        <a {...link}><img className="project-screenshot" src="./showfinder2.png" alt="screenshot 2" /></a>
+        <a {...link}><img className="project-screenshot" src="./showfinder3.png" alt="screenshot 3" /></a>
       </Carousel>
 
       <main className="tab-description">

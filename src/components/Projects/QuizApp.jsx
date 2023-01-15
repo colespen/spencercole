@@ -12,7 +12,7 @@ export default function QuizApp() {
   return (
     <Fragment>
 
-      <header>
+      <header className="tab-header">
         <h1>QuizApp</h1>
       </header>
 

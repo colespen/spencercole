@@ -41,6 +41,7 @@ export default function Home({ handleShowHideWindow }) {
           style={{ transform: titleSpring.xys.to(perspective) }}
         >Spencer Cole</animated.h1>
 
+
         <div className="navigate"
         >
           <button class="btn-main" id="projects"
@@ -57,7 +58,9 @@ export default function Home({ handleShowHideWindow }) {
           <button class="btn-main" id="bio"
             onClick={handleShowHideWindow}
           >
-            <span class="shadow"></span>
+            <span class="shadow"
+            style={{width:"99%", left: "1px"}}
+            ></span>
             <span class="edge"></span>
             <span class="front">
               biø

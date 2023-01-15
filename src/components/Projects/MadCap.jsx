@@ -12,7 +12,7 @@ export default function MadCap() {
   return (
     <Fragment>
 
-      <header>
+      <header className="tab-header">
         <h1>Madcap</h1>
       </header>
 

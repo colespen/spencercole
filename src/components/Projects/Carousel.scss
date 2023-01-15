@@ -1,81 +1,176 @@
 .carousel-container {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
 }
 
 .carousel-wrapper {
-    width: 100%;
-    display: flex;
-    position: relative;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
 }
 
 .carousel-content-wrapper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    // border-radius: 13px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  // border-radius: 13px;
 }
 
 .carousel-content {
-    display: flex;
-    align-items: center;
-    transition: all 400ms ease;
-    -ms-overflow-style: none;
-    /* hide scrollbar in IE and Edge */
-    scrollbar-width: none;
-    /* hide scrollbar in Firefox */
+  display: flex;
+  align-items: center;
+  transition: all 400ms ease, opacity 600ms ease;
+  /* hide scrollbar in IE and Edge */
+  -ms-overflow-style: none;
+  /* hide scrollbar in Firefox */
+  scrollbar-width: none;
 }
 
 /* hide scrollbar in webkit browser */
 .carousel-content::-webkit-scrollbar,
 .carousel-content::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .carousel-content>* {
-    width: 100%;
-    flex-shrink: 0;
-    flex-grow: 1;
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 
 ///////////////
 /// Buttons
 
 .carousel-buttons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-    .left-arrow,
-    .right-arrow {
-        z-index: 1;
-        // min-width: 63px;
-        width: min(20vw, 40rem);
-        max-width: 130px;
-        height: 20px;
-        border-radius: 24px;
-        // background-color: #05090f33;
-        // border: 1px solid #0e203c;
-        background-color: #05090f00;
-        border: 1px solid #0e203c00;
-        margin: -3px 0px 3px 0px;
-        img {
-            width: 100%;
-            height: 45px;
-        }
+  .left-arrow,
+  .right-arrow {
+    z-index: 1;
+    width: min(20vw, 40rem);
+    // min-width: 63px;
+    max-width: 140px;
+    height: 20px;
+    border-radius: 24px;
+    background-color: #05090f00;
+    border: 1px solid #0e203c00;
+    margin: -10px 0px 3px 0px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 55px;
+      
     }
-    .left-arrow img {
-        filter: drop-shadow(9px 5px 1.5px #121f38);
+  }
+  
+  .left-arrow img {
+    filter: drop-shadow(9px 5px 1.5px #121f38);
+    transition: filter 250ms ease-out;
+    &:hover {
+      filter: drop-shadow(-19px 5px 0.5px #121f38) brightness(125%);
     }
-    .right-arrow img {
-        filter: drop-shadow(-9px 5px 1.5px #121f38);
+    &:active {
+      filter: invert(65%);
     }
+  }
+  
+  .right-arrow img {
+    filter: drop-shadow(-9px 5px 1.5px #121f38);
+    transition: all 250ms ease-out;
+    &:hover {
+      filter: drop-shadow(19px 5px 0.5px #121f38) brightness(125%);
+    }
+    &:active {
+      filter: invert(65%);
+    }
+  }
+  
+}
+.left-arrow:active .carousel-content {
+  opacity: 0;
 }
 
 @media only screen and (max-width: 1000px) {
-    .carousel-container {
-        width: 50%;
-    }
+  .carousel-container {
+    width: 50%;
+  }
+}
+
+////////////////////////////////
+/////  Carousel Fades
+/////////////////////////////
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-moz-keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-o-keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-ms-keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }

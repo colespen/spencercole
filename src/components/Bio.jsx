@@ -8,33 +8,44 @@ export default function Bio(props) {
     // view, 
     // transition 
   } = props;
-  
+
   const [modalStyle, setModalStyle] = useState({
     opacity: 0
   });
   const [mainStyle, setMainStyle] = useState({
     opacity: 0,
   });
-  
+  const [navStyle, setNavStyle] = useState({
+    opacity: 0,
+  });
+
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      setModalStyle({opacity: 1})
+      setModalStyle({ opacity: 1 });
     }, 0);
-    return ()=> clearTimeout(timer);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setMainStyle({ opacity: 1 });
-    }, 700);
+    }, 800);
     return () => clearTimeout(timer);
   }, []);
-  
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setNavStyle({ opacity: 1 });
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
 
   const springs = useSpring({
     from: { height: "0%", width: "0%" },
     to: { height: "65%", width: "75%" },
-    config: { mass: 2, tension: 250, friction: 28 }
+    config: { mass: 2.1, tension: 250, friction: 28 }
   });
 
   // const handleBioBtnClick = e => {
@@ -45,11 +56,15 @@ export default function Bio(props) {
   return (
     <animated.section className="modal-main"
       style={{ ...springs, ...modalStyle }}>
-      <nav className="modal-nav">
+      <nav className="modal-nav"
+      style={{...navStyle}}
+      >
         <button id="P1"
+          style={{ width: "26%" }}
         // onClick={handleBioButtonClick}
         >Passions</button>
         <button id="P2"
+          style={{ width: "26%" }}
         // onClick={handleBioButtonClick}
         >Extra</button>
       </nav>
@@ -58,12 +73,21 @@ export default function Bio(props) {
       </button>
 
       <div className="home-inner-window">
-        <header className="bio-header">
+        <header className="bio-header"
+          style={{
+            ...mainStyle,
+            transition: 'opacity 600ms ease-in'
+          }}
+        >
           <h1>LIFE</h1>
         </header>
 
         <main className="main-description"
-        style={{...mainStyle, transition: 'opacity 600ms ease'}}
+          style={{
+            ...mainStyle,
+            marginTop: '25px',
+            transition: 'opacity 600ms ease-out'
+          }}
         >
           <p>Full-stack web developer with a highly creative background in music production. Using
             ingenuity, my eye for design and attention to detail, I strive to create an intuitive and visually
@@ -73,7 +97,7 @@ export default function Bio(props) {
           <p>who is good a this</p>
           <p>and love this and this</p>
           <br></br>
-          <p>I have accomplished these things...</p>
+          <p><a href="https://docs.google.com/document/d/1EnxTwBGiWjiEPK8DkzJdpTd0Hh2cz1mgbzSocljhtyw/edit#heading=h.5x0d5h95i329">I have accomplished these things...</a></p>
         </main>
       </div>
 
