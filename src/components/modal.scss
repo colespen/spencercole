@@ -14,18 +14,6 @@
   align-items: center;
   transition: opacity 300ms ease;
 
-  .modal-stain {
-    background: #1e3352;
-    border-radius: 10px;
-    position: fixed;
-    width: 75%;
-    max-width: 1200px;
-    height: 65%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
 
   .close-btn {
     background-color: transparent;

@@ -72,6 +72,37 @@
   // opacity: 1;
 }
 
+.modal-stain {
+  z-index: -90;
+  background: #5e2d0557;
+  border-radius: 5px;
+  border: 6px solid #003e9c;
+  position: fixed;
+  width: 75%;
+  max-width: 1200px;
+  height: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  transition: opacity 2.8s ease-out;
+}
+.modal-flash {
+  z-index: -100;
+  background: #c0dafe;
+  border-radius: 6px;
+  // border: 8px solid #0042a5;
+  position: fixed;
+  width: 75%;
+  max-width: 1200px;
+  height: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  transition: opacity 100ms ease-out;
+}
+
 
 
 @media only screen and (max-height: 844px) {

@@ -44,36 +44,36 @@ export default function Home({ handleShowHideWindow }) {
 
         <div className="navigate"
         >
-          <button class="btn-main" id="projects"
+          <button className="btn-main" id="projects"
             onClick={handleShowHideWindow}
             style={{ transform: 'perspective(45px) rotateX(4deg) rotateY(2deg)' }}
           >
-            <span class="shadow"></span>
-            <span class="edge"></span>
-            <span class="front">
+            <span className="shadow"></span>
+            <span className="edge"></span>
+            <span className="front">
               projects
             </span>
           </button>
 
-          <button class="btn-main" id="bio"
+          <button className="btn-main" id="bio"
             onClick={handleShowHideWindow}
           >
-            <span class="shadow"
+            <span className="shadow"
             style={{width:"99%", left: "1px"}}
             ></span>
-            <span class="edge"></span>
-            <span class="front">
+            <span className="edge"></span>
+            <span className="front">
               bio
             </span>
           </button>
 
-          <button class="btn-main" id="contact"
+          <button className="btn-main" id="contact"
             onClick={handleShowHideWindow}
             style={{ transform: 'perspective(40px) rotateX(9deg) rotateY(-2deg)' }}
           >
-            <span class="shadow"></span>
-            <span class="edge"></span>
-            <span class="front">
+            <span className="shadow"></span>
+            <span className="edge"></span>
+            <span className="front">
               contact
             </span>
           </button>

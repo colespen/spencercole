@@ -15,15 +15,21 @@ import useVisualMode from '../hooks/useVisualMode';
 
 export default function Main() {
   const [show, setShow] = useState(false);
+  const [flash, setFlash] = useState(0);
+  const [clicks, setClicks] = useState(0);
 
   const handleShowHideWindow = e => {
-    // handleModalOpen();
+    setClicks(prev => prev + 1);
     if (!show) {
       setShow(true);
+      if (clicks % 4 === 0 && clicks !== 0) {
+        setFlash(1);
+      } 
     } else {
       setShow(false);
+      setFlash(0);
     }
-  transition(e.currentTarget.id, "");
+    transition(e.currentTarget.id, "");
   };
 
   const { view, transition } = useVisualMode("home", "");
@@ -69,13 +75,18 @@ export default function Main() {
         <Home
           handleShowHideWindow={handleShowHideWindow}
         />}
-        <section classname="modal-stain"></section>
+      <section className="modal-stain"
+        style={{ opacity: flash }}
+      ></section>
+      <section className="modal-flash"
+        style={{ opacity: flash }}
+      ></section>
       <div className={windowShowHide}>
         {view.page === "projects" &&
           <Projects
             handleShowHideWindow={handleShowHideWindow}
             view={view} transition={transition}
-            // modalSpringOpen={modalSpringOpen}
+          // modalSpringOpen={modalSpringOpen}
           />}
         {view.page === "bio" &&
           <Bio
