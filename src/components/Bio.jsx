@@ -37,7 +37,7 @@ export default function Bio(props) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setNavStyle({ opacity: 1 });
-    }, 1000);
+    }, 1250);
     return () => clearTimeout(timer);
   }, []);
 

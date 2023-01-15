@@ -106,7 +106,7 @@ export default function Projects(props) {
             <br></br>
             <p>I love to focus on creating useful, fun applications.
               <br></br>
-              I'm perpetually in search of a new challenges and enjoy discovering the latest tools available.</p>
+              I'm perpetually in search of a new challenge and enjoy discovering the latest tools available.</p>
             <br></br>
             <p>Please have a look through my work above...</p>
           </main>

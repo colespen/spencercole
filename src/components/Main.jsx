@@ -69,6 +69,7 @@ export default function Main() {
         <Home
           handleShowHideWindow={handleShowHideWindow}
         />}
+        <section classname="modal-stain"></section>
       <div className={windowShowHide}>
         {view.page === "projects" &&
           <Projects

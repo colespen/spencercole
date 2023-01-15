@@ -7,11 +7,11 @@ import Carousel from './Carousel';
 
 export default function ShowFinder() {
 
- 
 
-  const link = { 
+
+  const link = {
     href: "https://www.showfinder.ninja/", target: "_blank", rel: "noreferrer"
-  }
+  };
 
   return (
     <Fragment>

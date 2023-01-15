@@ -8,27 +8,30 @@ import Carousel from './Carousel';
 
 export default function QuizApp() {
 
+  const link = {
+    href: "https://github.com/colespen/Quiz-App", target: "_blank", rel: "noreferrer"
+  };
 
   return (
     <Fragment>
 
       <header className="tab-header">
-        <h1>QuizApp</h1>
+      <h1><a {...link}>QuizApp</a></h1>
       </header>
 
       <Carousel>
-        <img className="project-screenshot" 
-        src="./quizapp1.png" alt="screenshot 1"/>
-        <img className="project-screenshot" 
-        src="./quizapp1a.png" alt="screenshot 2"/>
-        <img className="project-screenshot" 
-        src="./quizapp2.png" alt="screenshot 3"/>
-        <img className="project-screenshot" 
-        src="./quizapp3.png" alt="screenshot 4"/>
-        <img className="project-screenshot" 
-        src="./quizapp4.png" alt="screensho t5"/>
-        <img className="project-screenshot" 
-        src="./quizapp5.png" alt="screenshot 6"/>
+        <a {...link}><img className="project-screenshot"
+          src="./quizapp1.png" alt="screenshot 1" /></a>
+        <a {...link}><img className="project-screenshot"
+          src="./quizapp1a.png" alt="screenshot 2" /></a>
+        <a {...link}><img className="project-screenshot"
+          src="./quizapp2.png" alt="screenshot 3" /></a>
+        <a {...link}><img className="project-screenshot"
+          src="./quizapp3.png" alt="screenshot 4" /></a>
+        <a {...link}><img className="project-screenshot"
+          src="./quizapp4.png" alt="screensho t5" /></a>
+        <a {...link}><img className="project-screenshot"
+          src="./quizapp5.png" alt="screenshot 6" /></a>
       </Carousel>
 
       <main className="tab-description">

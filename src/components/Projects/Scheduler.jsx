@@ -7,9 +7,9 @@ import Carousel from './Carousel';
 
 export default function Scheduler() {
 
-  const link = { 
+  const link = {
     href: "https://github.com/colespen/scheduler", target: "_blank", rel: "noreferrer"
-  }
+  };
 
   return (
     <Fragment>
@@ -19,7 +19,7 @@ export default function Scheduler() {
       </header>
 
       <Carousel>
-      <a {...link}><img className="project-screenshot"
+        <a {...link}><img className="project-screenshot"
           src="./scheduler1.png" alt="screenshot 1" /></a>
         <a {...link}><img className="project-screenshot"
           src="./scheduler2.png" alt="screenshot 3" /></a>

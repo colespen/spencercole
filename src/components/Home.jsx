@@ -63,7 +63,7 @@ export default function Home({ handleShowHideWindow }) {
             ></span>
             <span class="edge"></span>
             <span class="front">
-              biø
+              bio
             </span>
           </button>
 
