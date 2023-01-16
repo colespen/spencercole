@@ -43,8 +43,8 @@ export default function Bio(props) {
 
 
   const springs = useSpring({
-    from: { height: "0%", width: "0%" },
-    to: { height: "65%", width: "75%" },
+    from: { height: "0%", width: "0%", maxWidth: "0px" },
+    to: { height: "75%", width: "83%", maxWidth: "850px" },
     config: { mass: 2.1, tension: 250, friction: 28 }
   });
 

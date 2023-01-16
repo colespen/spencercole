@@ -39,7 +39,8 @@ export default function Home({ handleShowHideWindow }) {
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           style={{ transform: titleSpring.xys.to(perspective) }}
-        >Spencer Cole</animated.h1>
+        >Spencer Cole
+        </animated.h1>
 
 
         <div className="navigate"
@@ -59,7 +60,7 @@ export default function Home({ handleShowHideWindow }) {
             onClick={handleShowHideWindow}
           >
             <span className="shadow"
-            style={{width:"99%", left: "1px"}}
+              // style={{ width: "98%", left: "1px" }}
             ></span>
             <span className="edge"></span>
             <span className="front">
@@ -77,21 +78,6 @@ export default function Home({ handleShowHideWindow }) {
               contact
             </span>
           </button>
-
-          {/* <button  className="nav-btn" id="projects"
-            onClick={handleShowHideWindow}
-            // onMouseEnter={}
-            // onMouseLeave={}
-          >projects
-          </button>
-
-          <button className="nav-btn" id="bio"
-            onClick={handleShowHideWindow}
-          >bio</button>
-
-          <button className="nav-btn" id="contact"
-            onClick={handleShowHideWindow}
-          >contact</button> */}
 
         </div>
 

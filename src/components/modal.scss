@@ -2,9 +2,10 @@
   background: #1e3352;
   border-radius: 10px;
   position: fixed;
-  width: 75%;
-  // max-width: 1200px;
-  height: 65%;
+  width: 83%;
+  // width: 75%;
+  max-width: 850px;
+  height: 75%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -177,7 +178,7 @@
   border-radius: 10px;
   min-height: 285px;
   height: fit-content;
-  width: 62%;
+  width: 89%;
   min-width: 233px;
   max-width: 330px;
   padding: 19px;
@@ -199,7 +200,7 @@
   textarea {
     background-color: #0f1926;
     color: #f4e5e0;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     resize: vertical;
 
     &:focus {
@@ -210,7 +211,7 @@
   input[type="text"],
   input[type="email"] {
     font-size: 16px;
-    height: 27px;
+    height: 23px;
   }
 
   input[type="submit"] {
@@ -218,7 +219,7 @@
     min-height: 26px;
     color: #f4e5e0;
     font-weight: 600;
-    margin-bottom: 0;
+    padding-bottom: 2px;
     cursor: pointer;
   }
 }
@@ -227,26 +228,14 @@
 
 @media only screen and (max-width: 600px) {
   .modal-main {
-    width: 83%
+    width: 86%
   }
 
   .inner-window {
     width: 88%;
   }
-
-  // .main-description {
-  //     width: 100%;
-  // }
 }
 
-@media only screen and (max-width: 1260px) {
-
-
-  .main-description:not(.contact) {
-    width: 100%;
-  }
-
-}
 
 @media only screen and (max-width: 775px) {
   .modal-main {

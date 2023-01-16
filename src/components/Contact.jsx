@@ -56,9 +56,9 @@ export default function Contact(props) {
   }, []);
 
   const springs = useSpring({
-    from: { width: "0%" },
-    to: { width: "75%" },
-    config: { mass: 2.3, tension: 160, friction: 30 }
+    from: { width: "0%",  maxWidth: "0px" },
+    to: { width: "83%",  maxWidth: "850px" },
+    config: { mass: 4.9, tension: 120, friction: 35 }
   });
 
   // const handleBioBtnClick = e => {

@@ -10,7 +10,7 @@
     font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
     font-weight: 400;
     font-size: clamp(44px, 9vw, 64px);
-    margin: 10px 0 20px 0;
+    margin: 10px 0 10px 0;
     text-shadow: 4px 3px 8px rgba(141, 141, 141, 0.837);
     transition: text-shadow 300ms ease;
     user-select: none;
@@ -62,9 +62,10 @@
   border-radius: 10px;
   border: 6px solid #0042a5;
   position: fixed;
-  width: 75%;
-  max-width: 1200px;
-  height: 65%;
+  width: 83%;
+  max-width: 850px;
+  // width: 75%;
+  height: 75%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -89,5 +90,22 @@
 @media only screen and (max-height: 844px) {
   .title-nav-container {
     top: 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-stain {
+
+    .border,
+    .flash {
+      width: 86%;
+    }
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .title-nav-container .navigate {
+    scale: 95%;
+    width: 81%;
   }
 }

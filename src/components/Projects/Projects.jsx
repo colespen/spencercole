@@ -48,7 +48,7 @@ export default function Projects(props) {
 
   const springs = useSpring({
     from: { height: "0%" },
-    to: { height: "65%" },
+    to: { height: "75%" },
     config: { mass: 1.3, tension: 335, friction: 24 }
   });
 

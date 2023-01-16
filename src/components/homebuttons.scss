@@ -1,11 +1,14 @@
 .btn-main {
-  height: 35px;
-  width: 28%;
+  // height: 35px;
+  // width: 28%;
+  height: 39px;
+    width: 31%;
   max-width: 103px;
   position: relative;
   border: none;
   background: transparent;
   padding: 0;
+  margin: 3px;
   cursor: pointer;
   outline-offset: 4px;
   transition: filter 250ms;
@@ -68,7 +71,6 @@
   border-left: 6px solid #686b70;
   border-right: 5px solid #151e26;
   border-bottom: 4px solid #262c32;
-
 
   transform: translateY(-4px);
   transition: transform 600ms cubic-bezier(.3, .7, .4, 1), filter 800ms ease-out;
