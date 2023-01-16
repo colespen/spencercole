@@ -3,7 +3,7 @@
   border-radius: 10px;
   position: fixed;
   width: 75%;
-  max-width: 1200px;
+  // max-width: 1200px;
   height: 65%;
   top: 50%;
   left: 50%;
@@ -161,7 +161,8 @@
 
 .main-description {
   // width: 50%;
-  width: 36%;
+  // width: 36%;
+  width: 60%;
   font-size: clamp(12px, 3.6vw, 20px);
   display: flex;
   justify-content: center;
@@ -178,6 +179,7 @@
   height: fit-content;
   width: 62%;
   min-width: 233px;
+  max-width: 330px;
   padding: 19px;
   display: flex;
   justify-content: space-between;
@@ -240,9 +242,10 @@
 @media only screen and (max-width: 1260px) {
 
 
-  .main-description {
+  .main-description:not(.contact) {
     width: 100%;
   }
+
 }
 
 @media only screen and (max-width: 775px) {

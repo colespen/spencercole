@@ -88,7 +88,7 @@ export default function Contact(props) {
           <h1>CONNECT</h1>
         </header>
 
-        <main className="main-description"
+        <main className="main-description contact"
           style={{
             alignItems: 'center',
             opacity: mainStyle.opacity1,
