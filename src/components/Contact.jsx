@@ -33,7 +33,7 @@ export default function Contact(props) {
       setMainStyle(prev => (
         { ...prev, opacity1: 1 }
       ));
-    }, 750);
+    }, 950);
     return () => clearTimeout(timer);
   }, []);
 
@@ -58,7 +58,7 @@ export default function Contact(props) {
   const springs = useSpring({
     from: { width: "0%",  maxWidth: "0px" },
     to: { width: "83%",  maxWidth: "850px" },
-    config: { mass: 4.9, tension: 120, friction: 35 }
+    config: { mass: 4.9, tension: 120, friction: 42 }
   });
 
   // const handleBioBtnClick = e => {
@@ -92,7 +92,7 @@ export default function Contact(props) {
           style={{
             alignItems: 'center',
             opacity: mainStyle.opacity1,
-            transition: 'opacity 300ms ease',
+            transition: 'opacity 800ms ease-in',
           }}
         >
           <p style={{

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 
 import './modal.scss';
+import LinkPreview from './LinkPreview';
 
 export default function Bio(props) {
   const { handleShowHideWindow
@@ -30,7 +31,7 @@ export default function Bio(props) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setMainStyle({ opacity: 1 });
-    }, 800);
+    }, 900);
     return () => clearTimeout(timer);
   }, []);
 
@@ -57,7 +58,7 @@ export default function Bio(props) {
     <animated.section className="modal-main"
       style={{ ...springs, ...modalStyle }}>
       <nav className="modal-nav"
-      style={{...navStyle}}
+        style={{ ...navStyle }}
       >
         <button id="P1"
           style={{ width: "26%" }}
@@ -97,7 +98,13 @@ export default function Bio(props) {
           <p>who is good a this</p>
           <p>and love this and this</p>
           <br></br>
-          <p><a href="https://docs.google.com/document/d/1EnxTwBGiWjiEPK8DkzJdpTd0Hh2cz1mgbzSocljhtyw/edit#heading=h.5x0d5h95i329">I have accomplished these things...</a></p>
+          
+            <LinkPreview
+              href="https://docs.google.com/document/d/1EnxTwBGiWjiEPK8DkzJdpTd0Hh2cz1mgbzSocljhtyw/preview"
+              // title="Spencer Cole - Full Stack Developer"
+              image="./spencer_cole_cv.png"
+            >Here is my Resume</LinkPreview>
+          
         </main>
       </div>
 
