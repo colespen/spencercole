@@ -1,5 +1,4 @@
 import { useState, Fragment } from 'react';
-// import { useSpring } from '@react-spring/web';
 import classNames from 'classnames';
 
 import './styles.scss';
@@ -14,6 +13,7 @@ import useVisualMode from '../hooks/useVisualMode';
 
 
 export default function Main() {
+
   const [show, setShow] = useState(false);
 
   //// For Modal Stain Transition
@@ -45,56 +45,28 @@ export default function Main() {
     "display-none": !show,
   });
 
-
-  // const [modalSpringOpen, api1] = useSpring(() => ({
-  //   from: { height: "0%" },
-  //   config: { mass: 1.2, tension: 335, friction: 24 }
-  // }), []);
-
-  // const handleModalOpen = () => {
-  //   api1.start({
-  //     to: {
-  //       height: !show ? "65%" : "0%",
-  //     },
-  //   });
-  // };
-
-  // const [modalSpringClose, api2] = useSpring(() => ({
-  //   // ref: api,
-  //   from: {height: "65%"},
-  //   config: { tension: 365, friction: 23 }
-  // }), []);
-
-  // const handleModalClose = () => {
-  //   api2.start({
-  //     to: {
-  //       height: "0%",
-  //       // opacity: modalSprings.opacity.get() === 1 ? 0 : 1
-  //     },
-  //   });
-  // };
-
   return (
     <Fragment>
       {view.page === "home" &&
         <Home
           handleShowHideWindow={handleShowHideWindow}
         />}
-      <section className="modal-stain border"
+
+      <section className="modal-stain light-border"
         style={{ opacity: border }}
       ></section>
-      <section className="modal-stain"
+      <section className="modal-stain heavy-border"
         style={{ opacity: flash }}
       ></section>
       <section className="modal-stain flash"
         style={{ opacity: flash }}
       ></section>
+
       <div className={windowShowHide}>
         {view.page === "projects" &&
           <Projects
             handleShowHideWindow={handleShowHideWindow}
             view={view} transition={transition}
-          // modalSpringOpen={modalSpringOpen}
           />}
         {view.page === "bio" &&
           <Bio
