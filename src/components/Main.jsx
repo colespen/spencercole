@@ -5,7 +5,7 @@ import './styles.scss';
 
 import Home from './Home';
 import Projects from './Projects/Projects';
-import Bio from './Bio';
+import Bio from './Bio/Bio';
 import Contact from './Contact';
 
 import useVisualMode from '../hooks/useVisualMode';
@@ -76,7 +76,7 @@ export default function Main() {
         {view.page === "contact" &&
           <Contact
             handleShowHideWindow={handleShowHideWindow}
-            view={view} transition={transition}
+            // view={view} transition={transition}
           />}
       </div>
     </Fragment>

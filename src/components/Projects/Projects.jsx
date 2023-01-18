@@ -94,7 +94,7 @@ export default function Projects(props) {
         <animated.div className="home-inner-window"
         >
           <header
-            style={{ ...mainStyle, transition: 'opacity 1.2s ease' }}
+            style={{ ...mainStyle, transition: 'opacity 2.2s ease' }}
           >
             <h1>PROJECTS</h1>
           </header>

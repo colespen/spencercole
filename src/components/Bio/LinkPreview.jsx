@@ -3,13 +3,13 @@ import { useTransition, animated } from "@react-spring/web";
 
 import "./LinkPreview.scss";
 
-import useOutsideClick from "../hooks/useOutsideClick";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
 export default function LinkPreview(props) {
   const { href, image } = props;
   const [isShown, setIsShown] = useState(false);
 
-  const transition = useTransition(isShown, {
+  const fadeSpring = useTransition(isShown, {
     from: {opacity: 0},
     enter: {opacity: 1},
     leave: {opacity: 0},
@@ -37,7 +37,7 @@ export default function LinkPreview(props) {
             </a>
           </div>
         )} */}
-        {transition((style, item) =>
+        {fadeSpring((style, item) =>
           item &&
            <animated.div className="card" style={style}>
             <a className="inner-card-link"

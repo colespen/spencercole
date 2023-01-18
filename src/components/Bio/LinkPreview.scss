@@ -3,12 +3,17 @@
   width: 90%;
   max-width: 470px;
   height: fit-content;
-  top: 51%;
+  top: 50.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   z-index: 100;
+  box-shadow: -18px -12px 25px #061122;
+  transition: box-shadow 400ms ease;
+  &:hover {
+    box-shadow: -28px -20px 40px #03080f;
+  }
 }
 
 .inner-card-link {
@@ -27,13 +32,18 @@
 }
 
 .link-with-preview {
+  width: 100%;
   position: relative;
   cursor: pointer;
+  
+  padding-bottom: 4px;
+  padding-left: 5px;
+  border-left: 7px solid #3b5275;
+  box-sizing: unset;
+  left: -12px;
+  border-radius: 3px;
   &:hover {
-    text-decoration: underline;
-    text-underline-offset: 5.5px;
-    text-decoration-thickness: 9px;
-    text-decoration-color: #192538;
+    background-color: #3e609132;
   }
 }
 
