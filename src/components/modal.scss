@@ -3,7 +3,6 @@
   border-radius: 10px;
   position: fixed;
   width: 83%;
-  // width: 75%;
   max-width: 850px;
   height: 75%;
   top: 50%;
@@ -31,8 +30,6 @@
 
   header {
     font-size: clamp(15px, 3.5vw, 27px);
-    // width: 85%;
-    // top: 7%;
     width: 40%;
     top: 8%;
     left: 8%;
@@ -58,7 +55,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: opacity 500ms ease-out;
+  // transition: opacity 500ms ease-out;
 
   .tab-description {
     font-size: clamp(12px, 3.6vw, 20px);
@@ -159,7 +156,6 @@
 }
 
 .main-description {
-  // width: 65%;
   width: 100%;
   font-size: clamp(12px, 3.6vw, 20px);
   display: flex;

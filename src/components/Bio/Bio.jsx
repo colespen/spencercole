@@ -1,5 +1,5 @@
 import { useState, useEffect, Fragment } from 'react';
-import { useTransition, animated, useSpring } from '@react-spring/web';
+import { animated, useSpring } from '@react-spring/web';
 
 import '../modal.scss';
 import LinkPreview from './LinkPreview';
@@ -11,8 +11,6 @@ export default function Bio(props) {
     handleShowHideWindow, view, transition
   } = props;
 
-  const [isShown, setIsShown] = useState(false);
-  
   const [modalStyle, setModalStyle] = useState({
     opacity: 0
   });
@@ -52,16 +50,10 @@ export default function Bio(props) {
     config: { mass: 2.1, tension: 250, friction: 28 }
   });
 
-  
+
   const handleBioBtnClick = e => {
     transition("bio", e.currentTarget.id);
   };
-  
-  const fadeSpring = useTransition(view.tab, {
-    from: {opacity: 0},
-    enter: {opacity: 1},
-    leave: {opacity: 0},
-  });
 
 
   return (
@@ -73,11 +65,11 @@ export default function Bio(props) {
       >
         <button id="P1"
           style={{ width: "26%" }}
-        onClick={handleBioBtnClick}
+          onClick={handleBioBtnClick}
         >Passions</button>
         <button id="P2"
           style={{ width: "26%" }}
-        onClick={handleBioBtnClick}
+          onClick={handleBioBtnClick}
         >Extra</button>
       </nav>
 
@@ -87,7 +79,7 @@ export default function Bio(props) {
 
       {!view.tab ?
         <div className="home-inner-window">
-          <header className="bio-header"
+          <header
             style={{
               ...mainStyle,
               transition: 'opacity 600ms ease-in'
@@ -115,15 +107,14 @@ export default function Bio(props) {
         </div>
         :
         <Fragment>
-        {fadeSpring((style, item) =>
-        item &&
-        <animated.div className="home-inner-window"
-        style={style}
-        >
-          {view.tab === "P1" && <Passions />}
-          {view.tab === "P2" && <Extra />}
-        </animated.div>
-        )}
+          
+            <animated.div className="home-inner-window"
+            style={{width: "80%"}}
+            >
+              {view.tab === "P1" && <Passions />}
+              {view.tab === "P2" && <Extra />}
+            </animated.div>
+       
         </Fragment>
       }
     </animated.section>

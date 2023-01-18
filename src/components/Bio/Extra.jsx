@@ -13,18 +13,16 @@ export default function Extra() {
 
   return (
     <Fragment>
-      <header className="tab-header">
-        {/* <h1><a {...link}>Passions</a></h1>
-         */}
-        <h1>Extra</h1>
+      <header className="tab-header"
+        style={{ width: "100%" }}>
+        <h1
+        >Musical Projects <br></br>& Collaborations.</h1>
       </header>
 
-      <main className="tab-description">
-        <h3>Musical Projects
-          <br></br>& Collaborations.
-        </h3>
+      <main className="extra-description">
+        <br></br>
         <h4>Solo Work</h4>
-        <ul>
+        <ul className="extra-list">
           <li><a href="">
             Bandcamp</a></li>
           <li><a href="">
@@ -36,23 +34,32 @@ export default function Extra() {
         </ul>
         <br></br>
         <h4>Collaborative</h4>
-        <ul>
+        <ul className="extra-list">
           <li><a href="">
             Weaves</a></li>
           <li><a href="">
             Pink Blob (Morgan Waters)</a></li>
           <li><a href="">
-            Our Founder</a></li>
+            Scrap Arts Music</a></li>
+          <li><a href="">
+            Our Founders</a></li>
         </ul>
-
-        <p>
+        <br></br>
+        <br></br>
+        <p style={{ fontSize: "16px" }}>
           I have been found on stages all around the world peforming with great artists such as
           <br></br>
-          Jeremy Dutcher, The Weather Station, the Toronto Sympony Orchestra, July Talk and Weaves...
+          Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, The Toronto Sympony Orchestra, July Talk,
+          <br></br>
+          <br></br>
+          and . . .
+          <br></br>
           <br></br>
           sharing the stage with great artists such as
           <br></br>
-          Mitski, Tuneyards, Marilyn Manson and
+          Mitski, Tuneyards and Marilyn Manson 
+          <br></br>
+          (to name a few).
         </p>
       </main>
     </Fragment>
