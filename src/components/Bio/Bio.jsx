@@ -55,8 +55,11 @@ export default function Bio(props) {
 
 
   const handleBioBtnClick = e => {
-    transition("bio", e.currentTarget.id);
-    if (view.tab !== "") {
+    transition("bio", e.currentTarget.id);  
+  };
+  
+  useEffect(() => {
+    if (view.tab) {
       const timer = setTimeout(() => {
         setBioNavStyle({ opacity: 1 });
       }, 3000);
@@ -64,7 +67,7 @@ export default function Bio(props) {
     } else {
       setBioNavStyle({ opacity: 0 })
     }
-  };
+  }, [view.tab])
 
 
   return (
@@ -82,7 +85,7 @@ export default function Bio(props) {
           style={{ width: "22%" }}
           onClick={handleBioBtnClick}
         >Music</button>
-       {view.tab && <button id=""
+       {view.tab && <button
           style={{ ...bioNavStyle, transition: 'opacity 600ms ease-in', width: "16%" }}
           onClick={handleBioBtnClick}
         >Bio</button>}

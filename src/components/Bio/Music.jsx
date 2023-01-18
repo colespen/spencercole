@@ -73,13 +73,12 @@ export default function Music() {
           <li><a href="https://fb.watch/i88G_19GcW/" {...link}>
             Our Founders</a></li>
         </ul>
-        <br></br>
         <p className="music-bio"
           style={{ ...subStyle, transition: "opacity 3.6s ease" }}
         >
           I have been found on stages all around the world peforming with great artists such as
           <br></br>
-          Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé . . .
+          Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé
           <br></br>
           <br></br>
           . . . and . . .

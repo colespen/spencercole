@@ -34,10 +34,10 @@ export default function Main() {
       setBorder(0);
       setFlash(0);
     }
-    transition(e.currentTarget.id, "");
+    transition(e.currentTarget.id, null);
   };
 
-  const { view, transition } = useVisualMode("home", "");
+  const { view, transition } = useVisualMode("home", null);
 
   const windowShowHide = classNames(
     "window", {
