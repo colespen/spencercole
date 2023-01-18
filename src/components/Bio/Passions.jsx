@@ -27,14 +27,14 @@ export default function Passions() {
     <Fragment>
 
       <header className="tab-header"
-        style={{ ...mainStyle, transition: "opacity 1.5s ease" }}
+        style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
         <h1>Passions</h1>
       </header>
 
 
       <main className="main-description"
-        style={{ ...mainStyle, transition: "opacity 1s ease" }}
+        style={{ ...mainStyle, transition: "opacity 500ms ease-in" }}
       >
         <h3>Things that thrill me</h3>
         <br></br>
@@ -47,7 +47,7 @@ export default function Passions() {
             <br></br>
             as it is beautiful
           </li>
-          <li>Music. <br></br>(checkout Extra)</li>
+          <li>Music. <br></br>(performing, and especially composing)</li>
         </ul>
       </main>
     </Fragment>

@@ -4,7 +4,7 @@ import { animated, useSpring } from '@react-spring/web';
 import '../modal.scss';
 import LinkPreview from './LinkPreview';
 import Passions from './Passions';
-import Extra from './Extra';
+import Music from './Music';
 
 export default function Bio(props) {
   const {
@@ -70,7 +70,7 @@ export default function Bio(props) {
         <button id="P2"
           style={{ width: "26%" }}
           onClick={handleBioBtnClick}
-        >Extra</button>
+        >Music</button>
       </nav>
 
       <button className="close-btn" onClick={handleShowHideWindow}>
@@ -109,10 +109,10 @@ export default function Bio(props) {
         <Fragment>
           
             <animated.div className="home-inner-window"
-            style={{width: "80%"}}
+            style={{width: "80%", height: "85%"}}
             >
               {view.tab === "P1" && <Passions />}
-              {view.tab === "P2" && <Extra />}
+              {view.tab === "P2" && <Music />}
             </animated.div>
        
         </Fragment>

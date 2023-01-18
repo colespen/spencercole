@@ -26,7 +26,7 @@ export default function Main() {
     if (!show) {
       setShow(true);
       setBorder(1);
-      if (clicks % 4 === 0 && clicks !== 0) {
+      if (clicks % 8 === 0 && clicks !== 0) {
         setFlash(1);
       }
     } else {
