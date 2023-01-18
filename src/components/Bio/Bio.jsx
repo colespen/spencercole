@@ -20,6 +20,9 @@ export default function Bio(props) {
   const [navStyle, setNavStyle] = useState({
     opacity: 0,
   });
+  const [bioNavStyle, setBioNavStyle] = useState({
+    opacity: 0,
+  });
 
 
   useEffect(() => {
@@ -53,6 +56,14 @@ export default function Bio(props) {
 
   const handleBioBtnClick = e => {
     transition("bio", e.currentTarget.id);
+    if (e.currentTarget.id !== "") {
+      const timer = setTimeout(() => {
+        setBioNavStyle({ opacity: 1 });
+      }, 3000);
+      return () => clearTimeout(timer);
+    } else {
+      setBioNavStyle({ opacity: 0 })
+    }
   };
 
 
@@ -64,13 +75,17 @@ export default function Bio(props) {
         style={{ ...navStyle }}
       >
         <button id="P1"
-          style={{ width: "26%" }}
+          style={{ width: "30%" }}
           onClick={handleBioBtnClick}
         >Passions</button>
         <button id="P2"
-          style={{ width: "26%" }}
+          style={{ width: "22%" }}
           onClick={handleBioBtnClick}
         >Music</button>
+       {view.tab && <button id=""
+          style={{ ...bioNavStyle, transition: 'opacity 600ms ease-in', width: "16%" }}
+          onClick={handleBioBtnClick}
+        >Bio</button>}
       </nav>
 
       <button className="close-btn" onClick={handleShowHideWindow}>

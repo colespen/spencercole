@@ -1,7 +1,9 @@
 .card {
   position: fixed;
-  width: 90%;
-  max-width: 470px;
+  // width: 90%;
+  // max-width: 470px;
+  width: 105%;
+    max-width: 530px;
   height: fit-content;
   top: 50.5%;
   left: 50%;
@@ -39,9 +41,9 @@
   padding-bottom: 4px;
   padding-left: 5px;
   border-left: 7px solid #3b5275;
-  box-sizing: unset;
   left: -12px;
   border-radius: 3px;
+  // box-sizing: unset;
   &:hover {
     background-color: #3e609132;
   }

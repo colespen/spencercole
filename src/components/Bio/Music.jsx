@@ -25,13 +25,13 @@ export default function Music() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setSecondStyle({ opacity: 1 });
-    }, 850);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
   useEffect(() => {
     const timer = setTimeout(() => {
       setSubStyle({ opacity: 1 });
-    }, 1800);
+    }, 1900);
     return () => clearTimeout(timer);
   }, []);
 
@@ -65,7 +65,7 @@ export default function Music() {
           <li><a href="https://www.youtube.com/watch?v=BEV1Zn2OJaY" {...link}>
             Weaves</a></li>
           <li><a href="https://www.instagram.com/p/ChXYjZtAvIg/?utm_source=ig_web_copy_link" {...link}>
-            Pink Blob</a>
+            Pink Blob </a>
             <a href="https://open.spotify.com/artist/09cw41atwDSbFQWxWfd1ni?si=2LGpYXWkSpie_NnajWot4Q" {...link}>(Morgan Waters)</a>
           </li>
           <li><a href="" {...link}>
@@ -75,14 +75,14 @@ export default function Music() {
         </ul>
         <br></br>
         <p className="music-bio"
-          style={{ ...subStyle, transition: "opacity 3.2s ease-in" }}
+          style={{ ...subStyle, transition: "opacity 3.6s ease" }}
         >
           I have been found on stages all around the world peforming with great artists such as
           <br></br>
-          Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, The Toronto Sympony Orchestra, July Talk,
+          Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé . . .
           <br></br>
           <br></br>
-          and . . .
+          . . . and . . .
           <br></br>
           <br></br>
           sharing the stage with great artists such as
