@@ -49,14 +49,14 @@ export default function Bio(props) {
 
   const springs = useSpring({
     from: { height: "0%", width: "0%", maxWidth: "0px" },
-    to: { height: "75%", width: "83%", maxWidth: "850px" },
+    to: { height: "75%", width: "88%", maxWidth: "850px" },
     config: { mass: 2.1, tension: 250, friction: 28 }
   });
 
 
   const handleBioBtnClick = e => {
     transition("bio", e.currentTarget.id);
-    if (e.currentTarget.id !== "") {
+    if (view.tab !== "") {
       const timer = setTimeout(() => {
         setBioNavStyle({ opacity: 1 });
       }, 3000);

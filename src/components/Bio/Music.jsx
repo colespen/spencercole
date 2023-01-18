@@ -68,9 +68,9 @@ export default function Music() {
             Pink Blob </a>
             <a href="https://open.spotify.com/artist/09cw41atwDSbFQWxWfd1ni?si=2LGpYXWkSpie_NnajWot4Q" {...link}>(Morgan Waters)</a>
           </li>
-          <li><a href="" {...link}>
+          <li><a href="https://vimeo.com/scrapartsmusic/agreement#t=161s" {...link}>
             Scrap Arts Music</a></li>
-          <li><a href="" {...link}>
+          <li><a href="https://fb.watch/i88G_19GcW/" {...link}>
             Our Founders</a></li>
         </ul>
         <br></br>

@@ -51,10 +51,7 @@ export default function Projects(props) {
     to: { height: "75%" },
     config: { mass: 1.3, tension: 335, friction: 24 }
   });
-
-
-
-
+  
   const handleProjectBtnClick = e => {
     transition("projects", e.currentTarget.id);
   };
