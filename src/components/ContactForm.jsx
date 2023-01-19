@@ -2,8 +2,9 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 
-export default function ContactForm() {
+export default function ContactForm(props) {
   const form = useRef();
+  
 
   const sendEmail = e => {
     e.preventDefault();
@@ -14,9 +15,12 @@ export default function ContactForm() {
       form.current,
       process.env.REACT_APP_PUBLIC_KEY)
       .then(
+        props.setFormSubmitted(true),
         result => console.log(result.text),
         error => console.log(error.text)
       );
+
+
     e.target.reset();
   };
 

@@ -5,6 +5,9 @@ import ContactForm from './ContactForm';
 import './modal.scss';
 
 export default function Contact(props) {
+
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const { handleShowHideWindow,
     // view, 
     // transition 
@@ -102,12 +105,13 @@ export default function Contact(props) {
             Contact me.
           </p>
           <br></br>
-          <ContactForm />
+          <ContactForm setFormSubmitted={setFormSubmitted}/>
           <br></br>
           <p style={{
+            height: '25px',
             opacity: mainStyle.opacity3, transition: 'opacity 300ms ease'
           }}>
-            thanks!
+            {formSubmitted ? "thanks!" : ""}
           </p>
         </main>
       </div>
