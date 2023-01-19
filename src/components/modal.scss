@@ -227,6 +227,10 @@
   }
 }
 
+#contact-me {
+  visibility: hidden;
+}
+
 ////////////////////////////////////////////////////
 
 @media only screen and (max-width: 600px) {
@@ -247,6 +251,9 @@
   .modal-main {
     .contact-header {
       visibility: hidden;
+    }
+    #contact-me {
+      visibility:visible;
     }
   }
 }

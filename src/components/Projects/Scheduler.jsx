@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 
 import '../modal.scss';
 
@@ -7,6 +7,17 @@ import Carousel from './Carousel';
 
 export default function Scheduler() {
 
+  const [mainStyle, setMainStyle] = useState({
+    opacity: 0,
+  });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMainStyle({ opacity: 1 });
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
+
   const link = {
     href: "https://github.com/colespen/scheduler", target: "_blank", rel: "noreferrer"
   };
@@ -14,7 +25,9 @@ export default function Scheduler() {
   return (
     <Fragment>
 
-      <header className="tab-header">
+      <header className="tab-header"
+        style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
+      >
         <h1><a {...link}>Scheduler</a></h1>
       </header>
 
@@ -27,7 +40,9 @@ export default function Scheduler() {
           src="./scheduler3.png" alt="screenshot 4" /></a>
       </Carousel>
 
-      <main className="tab-description">
+      <main className="tab-description"
+        style={{ ...mainStyle, transition: "opacity 500ms ease" }}
+      >
         <p>this is another project</p>
         <br></br>
         <p>React.js, Node.js, Express and WebSockets ('ws')</p>

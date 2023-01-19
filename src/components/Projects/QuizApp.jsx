@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 
 import '../modal.scss';
 
@@ -8,6 +8,17 @@ import Carousel from './Carousel';
 
 export default function QuizApp() {
 
+  const [mainStyle, setMainStyle] = useState({
+    opacity: 0,
+  });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMainStyle({ opacity: 1 });
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
+
   const link = {
     href: "https://github.com/colespen/Quiz-App", target: "_blank", rel: "noreferrer"
   };
@@ -15,8 +26,10 @@ export default function QuizApp() {
   return (
     <Fragment>
 
-      <header className="tab-header">
-      <h1><a {...link}>QuizApp</a></h1>
+      <header className="tab-header"
+        style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
+      >
+        <h1><a {...link}>QuizApp</a></h1>
       </header>
 
       <Carousel>
@@ -34,7 +47,9 @@ export default function QuizApp() {
           src="./quizapp5.png" alt="screenshot 6" /></a>
       </Carousel>
 
-      <main className="tab-description">
+      <main className="tab-description"
+        style={{ ...mainStyle, transition: "opacity 500ms ease" }}
+      >
         <p>this is another project</p>
         <p>It's the first team project I was ever invloved in.
           <br></br>

@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 
 import '../modal.scss';
 
@@ -7,6 +7,16 @@ import Carousel from './Carousel';
 
 export default function ShowFinder() {
 
+  const [mainStyle, setMainStyle] = useState({
+    opacity: 0,
+  });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMainStyle({ opacity: 1 });
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
 
 
   const link = {
@@ -16,7 +26,9 @@ export default function ShowFinder() {
   return (
     <Fragment>
 
-      <header className="tab-header">
+      <header className="tab-header"
+        style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
+      >
         <h1><a {...link}>ShowFinder</a></h1>
       </header>
 
@@ -29,7 +41,9 @@ export default function ShowFinder() {
         <a {...link}><img className="project-screenshot" src="./showfinder3.png" alt="screenshot 3" /></a>
       </Carousel>
 
-      <main className="tab-description">
+      <main className="tab-description"
+        style={{ ...mainStyle, transition: "opacity 500ms ease" }}
+      >
         <p>The world needs a very simple, quick app to find shows.</p>
         <br></br>
         <p>This app provides this convience with a simple interface, mapping all nearby shows, including links to artists, venues and ticket informnation</p>

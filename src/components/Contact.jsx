@@ -56,8 +56,8 @@ export default function Contact(props) {
   }, []);
 
   const springs = useSpring({
-    from: { width: "0%",  maxWidth: "0px" },
-    to: { width: "88%",  maxWidth: "1000px" },
+    from: { width: "0%", maxWidth: "0px" },
+    to: { width: "88%", maxWidth: "1000px" },
     config: { mass: 5.2, tension: 120, friction: 42 }
   });
 
@@ -83,7 +83,7 @@ export default function Contact(props) {
 
       <div className="home-inner-window">
         <header className="contact-header"
-        style={{...modalStyle, transition: 'opacity 800ms ease-in'}}
+          style={{ ...modalStyle, transition: 'opacity 800ms ease-in' }}
         >
           <h1>CONNECT</h1>
         </header>
@@ -95,9 +95,10 @@ export default function Contact(props) {
             transition: 'opacity 800ms ease',
           }}
         >
-          <p style={{
-            opacity: mainStyle.opacity2, transition: 'opacity 1.5s ease'
-          }}>
+          <p id="contact-me"
+            style={{
+              opacity: mainStyle.opacity2, transition: 'opacity 1.5s ease'
+            }}>
             Contact me.
           </p>
           <br></br>
