@@ -76,7 +76,8 @@ export default function Music() {
         <p className="music-bio"
           style={{ ...subStyle, transition: "opacity 3.6s ease" }}
         >
-          I have been found on stages all around the world peforming with great artists such as
+          I have been found on stages all around the world
+          <br></br>peforming with great artists such as
           <br></br>
           Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé
           <br></br>
