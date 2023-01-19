@@ -1,6 +1,10 @@
 .passion-list {
   list-style: none;
-  border-left: 9px solid #3b5275;
+  padding-left: 5px;
+  border-left: 7px solid #3b5275;
+  border-bottom-left-radius: 5px;
+  margin-left: 35px;
+
 }
 .passion-list > li {
   padding: 10px 0 10px 0;
@@ -14,11 +18,11 @@
   padding: 3px 0 3px 0;
   width: 100%;
   position: relative;
-  padding-left: 35px;
+  padding-left: 5px;
   margin-bottom: 5px;
-  border-left: 9px solid #3b5275;
-  left: -39px;
+  border-left: 7px solid #3b5275;
   border-radius: 3px;
+  left: -12px;
   cursor: pointer;
   &:hover {
     background-color: #3e609132;
@@ -29,12 +33,20 @@
 }
 
 .music {
-  justify-content: space-between;
+  font-size: clamp(12px, 2.5vw, 20px);
+  justify-content: space-evenly;
   height: 100%;
+  h3 {
+    font-weight: 400;
+  }
 }
 
 .music-bio {
+  font-size: clamp(12px, 2vw, 20px);
   color: #a8b9d4;
   font-size: 1.68vh;
-  padding-top: 2%;
+  padding-top: 1.25vw;
+  strong {
+    color: inherit;
+  }
 }

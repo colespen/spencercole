@@ -29,14 +29,16 @@ export default function Passions() {
       <header className="tab-header"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
-        <h1>Passions</h1>
+        {/* <h1>Passions</h1> */}
       </header>
 
 
       <main className="main-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease-in" }}
       >
-        <h3>Things that thrill me</h3>
+        <h3
+        style={{fontSize: "130%", fontWeight: "400"}}
+        >Things that thrill me</h3>
         <br></br>
         <ul className="passion-list">
           <li>the process of creation <br></br>

@@ -36,11 +36,17 @@
     position: fixed;
     h1 {
       font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
+
     }
   }
 
   .tab-header {
+    h1 {
+      font-weight: 400;
+    }
     a {
+      font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
+      font-size: 95%;
       text-decoration: none;
       transition: color 150ms ease, text-shadow 650ms ease;
     }
@@ -160,7 +166,8 @@
 
 .main-description {
   width: 100%;
-  font-size: clamp(12px, 2.5vw, 20px);
+  
+  font-size: clamp(14px, 2.5vw, 20px);
   display: flex;
   justify-content: center;
   flex-direction: column;

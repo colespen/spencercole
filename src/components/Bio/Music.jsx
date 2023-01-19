@@ -46,15 +46,16 @@ export default function Music() {
       <main className="main-description music">
         <h3 style={{ ...firstStyle, transition: "opacity 400ms ease-out", paddingBottom: "10px" }}>Solo Projects</h3>
         <ul className="extra-list"
-          style={{ ...firstStyle, transition: "opacity 1200ms ease", paddingBottom: "10px" }}
+          style={{ ...firstStyle, transition: "opacity 1200ms ease" }}
         >
           <li><a href="https://spencercole.bandcamp.com/" {...link}>
-            Bandcamp</a></li>
-          <li><a href="https://open.spotify.com/artist/5CeHgBIzA6ix6H1EZ7Rl67" {...link}>
-            Spotify</a></li>
-          <li><a href="https://music.apple.com/ca/artist/spencer-cole/782422551" {...link}>
-            Apple Music</a></li>
-          <li><a href="https://hyperfollow.com/spencercole" {...link}>
+            all releases</a></li>
+          <li><a href="https://open.spotify.com/album/50FbtklNm2N4lOKogGwRCO?si=PG0Jc1SyROiTaCzXOqhMFg" {...link}>
+            BROKEN (piano)</a></li>
+          <li><a href="https://music.apple.com/us/album/how-to-waste/1593461387" {...link}>
+            How To Waste</a></li>
+          <li style={{margin: "0px"}}
+          ><a href="https://hyperfollow.com/spencercole" {...link}>
             etc...</a></li>
         </ul>
         <br></br>
@@ -79,7 +80,9 @@ export default function Music() {
           I have been found on stages all around the world
           <br></br>peforming with great artists such as
           <br></br>
-          Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé
+          <strong>
+            Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé
+          </strong>
           <br></br>
           <br></br>
           . . . and . . .
@@ -87,7 +90,9 @@ export default function Music() {
           <br></br>
           sharing the stage with great artists such as
           <br></br>
-          Mitski, Tuneyards and Marilyn Manson
+          <strong>
+            Mitski, Tuneyards and Marilyn Manson
+          </strong>
           <br></br>
           (to name a few).
         </p>
