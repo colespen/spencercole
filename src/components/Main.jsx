@@ -26,7 +26,7 @@ export default function Main() {
     if (!show) {
       setShow(true);
       setBorder(1);
-      if (clicks % 8 === 0 && clicks !== 0) {
+      if (clicks % 6 === 0 && clicks !== 0) {
         setFlash(1);
       }
     } else {
@@ -56,10 +56,10 @@ export default function Main() {
       <section className="modal-stain light-border"
         style={{ opacity: border }}
       ></section>
-      <section className="modal-stain heavy-border"
+      <section className="modal-stain flash"
         style={{ opacity: flash }}
       ></section>
-      <section className="modal-stain flash"
+      <section className="modal-stain heavy-border"
         style={{ opacity: flash }}
       ></section>
 

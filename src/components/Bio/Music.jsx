@@ -40,38 +40,59 @@ export default function Music() {
     target: "_blank", rel: "noreferrer"
   };
 
+  const myBandcamp = "https://spencercole.bandcamp.com/";
+  const brokenSpotify = "https://open.spotify.com/album/50FbtklNm2N4lOKogGwRCO?si=PG0Jc1SyROiTaCzXOqhMFg";
+  const brokenClip = "https://www.facebook.com/28103861/videos/10106365357818982/";
+  const wasteSpotify = "https://music.apple.com/us/album/how-to-waste/1593461387";
+  const hyperFollow = "https://hyperfollow.com/spencercole";
+  const weavesVid = "https://www.youtube.com/watch?v=BEV1Zn2OJaY";
+  const pinkBlobClip = "https://www.instagram.com/p/ChXYjZtAvIg/?utm_source=ig_web_copy_link";
+  const pinkBlobRecord = "https://open.spotify.com/artist/09cw41atwDSbFQWxWfd1ni?si=2LGpYXWkSpie_NnajWot4Q";
+  const scrapArtsClip = "https://vimeo.com/scrapartsmusic/agreement#t=161s";
+  const oFclip = "https://fb.watch/i88G_19GcW/";
+
 
   return (
     <Fragment>
       <main className="main-description music">
-        <h3 style={{ ...firstStyle, transition: "opacity 400ms ease-out", paddingBottom: "10px" }}>Solo Projects</h3>
+        <h3 style={{
+          ...firstStyle, transition: "opacity 400ms ease-out", paddingBottom: "10px"
+        }}>
+          Solo Projects</h3>
         <ul className="extra-list"
           style={{ ...firstStyle, transition: "opacity 1200ms ease" }}
         >
-          <li><a href="https://spencercole.bandcamp.com/" {...link}>
+          <li><a href={myBandcamp} {...link}>
             all releases</a></li>
-          <li><a href="https://open.spotify.com/album/50FbtklNm2N4lOKogGwRCO?si=PG0Jc1SyROiTaCzXOqhMFg" {...link}>
-            BROKEN (piano)</a></li>
-          <li><a href="https://music.apple.com/us/album/how-to-waste/1593461387" {...link}>
+          <li><a href={brokenSpotify} {...link}>
+            BROKEN
+            <a className="inner-link"
+              href={brokenClip} {...link}>(piano)</a>
+          </a></li>
+          <li><a href={wasteSpotify} {...link}>
             How To Waste</a></li>
-          <li style={{margin: "0px"}}
-          ><a href="https://hyperfollow.com/spencercole" {...link}>
-            etc...</a></li>
+          <li style={{ margin: "0px" }}
+          ><a href={hyperFollow} {...link}>
+              etc...</a></li>
         </ul>
         <br></br>
-        <h3 style={{ ...secondStyle, transition: "opacity 800ms ease-out", paddingBottom: "10px" }}>Collaborative</h3>
+        <h3 style={{
+          ...secondStyle, transition: "opacity 800ms ease-out", paddingBottom: "10px"
+        }}>
+          Collaborative</h3>
         <ul className="extra-list"
           style={{ ...secondStyle, transition: "opacity 2.2s ease", paddingBottom: "10px" }}
         >
-          <li><a href="https://www.youtube.com/watch?v=BEV1Zn2OJaY" {...link}>
+          <li><a href={weavesVid} {...link}>
             Weaves</a></li>
-          <li><a href="https://www.instagram.com/p/ChXYjZtAvIg/?utm_source=ig_web_copy_link" {...link}>
-            Pink Blob </a>
-            <a href="https://open.spotify.com/artist/09cw41atwDSbFQWxWfd1ni?si=2LGpYXWkSpie_NnajWot4Q" {...link}>(Morgan Waters)</a>
+          <li><a href={pinkBlobClip} {...link}>
+            Pink Blob<a className="inner-link"
+              href={pinkBlobRecord} {...link}>(Morgan Waters)</a></a>
+
           </li>
-          <li><a href="https://vimeo.com/scrapartsmusic/agreement#t=161s" {...link}>
+          <li><a href={scrapArtsClip} {...link}>
             Scrap Arts Music</a></li>
-          <li><a href="https://fb.watch/i88G_19GcW/" {...link}>
+          <li><a href={oFclip} {...link}>
             Our Founders</a></li>
         </ul>
         <p className="music-bio"

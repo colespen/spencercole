@@ -6,7 +6,7 @@ import "./LinkPreview.scss";
 import useOutsideClick from "../../hooks/useOutsideClick";
 
 export default function LinkPreview(props) {
-  const { href, image } = props;
+  const { pClass, divClass, imgClass, href, image } = props;
   const [isShown, setIsShown] = useState(false);
 
   const fadeSpring = useTransition(isShown, {
@@ -25,17 +25,17 @@ export default function LinkPreview(props) {
   return (
     <Fragment>
       <p ref={ref}
-        className="link-with-preview"
+        className={pClass}
         onClick={handleSetIsShown}
       >
         <span> {props.children} </span>
 
         {fadeSpring((style, item) =>
           item &&
-          <animated.div className="card" style={style}>
+          <animated.div className={divClass} style={style}>
             <a className="inner-card-link"
               href={href} target="_blank" rel="noreferrer">
-              <img src={image} className="card-img-top" alt="link popup" />
+              <img src={image} className={imgClass} alt="link popup" />
             </a>
           </animated.div>
         )}

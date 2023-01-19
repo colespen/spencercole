@@ -56,13 +56,28 @@
 .modal-stain {
   position: fixed;
   width: 88%;
-  max-width: 850px;
+  max-width: 1000px;
   // width: 75%;
   height: 75%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   
+  &.light-border {
+    pointer-events: none;
+    z-index: 0;
+    background: #141b34;
+    border: 10px solid #19294370;
+    border-radius: 10px;
+    transition: opacity 1.5s ease-out;
+  }
+  &.flash {
+    pointer-events: none;
+    z-index: 0;
+    background: #c9dfff;
+    border-radius: 10px;
+    transition: opacity 125ms ease-out;
+  }
   &.heavy-border {
     pointer-events: none;
     z-index: 0;
@@ -72,22 +87,7 @@
     transition: opacity 1.9s ease-out;
   }
   
-  &.light-border {
-    pointer-events: none;
-    z-index: 0;
-    background: #141b34;
-    border: 10px solid #15233970;
-    border-radius: 10px;
-    transition: opacity 850ms ease-out;
-  }
   
-  &.flash {
-    pointer-events: none;
-    z-index: 0;
-    background: #c9dfff;
-    border-radius: 10px;
-    transition: opacity 125ms ease-out;
-  }
 }
 
 

@@ -1,6 +1,7 @@
 import { useState, useEffect, Fragment } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 
+// import './Bio.scss'
 import '../modal.scss';
 import LinkPreview from './LinkPreview';
 import Passions from './Passions';
@@ -49,15 +50,15 @@ export default function Bio(props) {
 
   const springs = useSpring({
     from: { height: "0%", width: "0%", maxWidth: "0px" },
-    to: { height: "75%", width: "88%", maxWidth: "850px" },
+    to: { height: "75%", width: "88%", maxWidth: "1000px" },
     config: { mass: 2.1, tension: 250, friction: 28 }
   });
 
 
   const handleBioBtnClick = e => {
-    transition("bio", e.currentTarget.id);  
+    transition("bio", e.currentTarget.id);
   };
-  
+
   useEffect(() => {
     if (view.tab) {
       const timer = setTimeout(() => {
@@ -65,10 +66,11 @@ export default function Bio(props) {
       }, 2000);
       return () => clearTimeout(timer);
     } else {
-      setBioNavStyle({ opacity: 0 })
+      setBioNavStyle({ opacity: 0 });
     }
-  }, [view.tab])
+  }, [view.tab]);
 
+  const cvPrev = "https://docs.google.com/document/d/1EnxTwBGiWjiEPK8DkzJdpTd0Hh2cz1mgbzSocljhtyw/edit?usp=sharing"
 
   return (
     <animated.section className="modal-main"
@@ -85,7 +87,7 @@ export default function Bio(props) {
           style={{ width: "22%" }}
           onClick={handleBioBtnClick}
         >Music</button>
-       {view.tab && <button
+        {view.tab && <button
           style={{ ...bioNavStyle, transition: 'opacity 600ms ease-in', width: "16%" }}
           onClick={handleBioBtnClick}
         >Bio</button>}
@@ -100,7 +102,7 @@ export default function Bio(props) {
           <header
             style={{
               ...mainStyle,
-              transition: 'opacity 600ms ease-in'
+              transition: 'opacity 300ms ease-out'
             }}
           >
             <h1>LIFE</h1>
@@ -110,30 +112,37 @@ export default function Bio(props) {
             style={{
               ...mainStyle,
               marginTop: '25px',
-              transition: 'opacity 600ms ease-out'
+              transition: 'opacity 600ms ease-in'
             }}
           >
-            <p>I am a full-stack web developer with a highly creative background in music composition and production. Using ingenuity, my eye for design and attention to detail, I strive to create an intuitive and memorable experience for the user. Working with cutting-edge tools, <br></br> 
-            I produce high-performance and well-tested products.</p>
+            <p className="bio-description">
+              <LinkPreview pClass={"rooftop-with-preview"} divClass={"rooftop-card"}
+                href="./s_cole_rooftop.jpg"
+                image="./s_cole_rooftop.jpg"
+              >I</LinkPreview>
+              &nbsp;&nbsp;
+              am a full-stack web developer with a highly creative background in music composition and production. Using ingenuity, my eye for design and attention to detail, I strive to create an intuitive and memorable experience for the user. Working with cutting-edge tools, <br></br>
+              I produce high-performance and well-tested products.
+            </p>
             <br></br>
 
-            <LinkPreview
-              href="https://docs.google.com/document/d/1EnxTwBGiWjiEPK8DkzJdpTd0Hh2cz1mgbzSocljhtyw/preview"
+            <LinkPreview pClass={"link-with-preview"} divClass={"card"}
+              href={cvPrev}
               image="./spencer_cole_cv.png"
-            >Here is my Resume</LinkPreview>
+            >&nbsp;Here is my Resume</LinkPreview>
 
           </main>
         </div>
         :
         <Fragment>
-          
-            <animated.div className="home-inner-window"
-            style={{width: "80%", height: "85%"}}
-            >
-              {view.tab === "P1" && <Passions />}
-              {view.tab === "P2" && <Music />}
-            </animated.div>
-       
+
+          <animated.div className="home-inner-window"
+            style={{ width: "80%", height: "85%" }}
+          >
+            {view.tab === "P1" && <Passions />}
+            {view.tab === "P2" && <Music />}
+          </animated.div>
+
         </Fragment>
       }
     </animated.section>
