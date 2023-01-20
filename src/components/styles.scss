@@ -42,7 +42,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #08162d;
+  background-color: #08162d9f;
 }
 
 .display-none {
@@ -59,6 +59,7 @@
   width: 88%;
   max-width: 1000px;
   // width: 75%;
+  // height: 75%;
   height: 75%;
   top: 50%;
   left: 50%;
@@ -67,23 +68,23 @@
   &.light-border {
     pointer-events: none;
     z-index: 0;
-    background: #141b34;
+    background: rgba(41, 57, 117, 0.344);
     border: 10px solid #1929431b;
     border-radius: 10px;
-    transition: opacity 800ms ease-out;
-    filter: blur(2px);
+    transition: opacity 500ms ease-out;
+    filter: blur(0.5px);
   }
   &.flash {
     pointer-events: none;
     z-index: 0;
-    background: #e3f6ff;
+    background: #e9f8ff;
     border-radius: 10px;
     transition: opacity 100ms ease-out;
   }
   &.heavy-border {
     pointer-events: none;
     z-index: 0;
-    background: #4b190059;
+    background: #44170059;
     border-radius: 10px;
     border: 6px solid #0042a5;
     transition: opacity 1.9s ease-out;
