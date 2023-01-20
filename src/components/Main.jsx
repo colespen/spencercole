@@ -12,7 +12,6 @@ import Draw from './Draw';
 import useVisualMode from '../hooks/useVisualMode';
 
 
-
 export default function Main() {
 
   const [show, setShow] = useState(false);
