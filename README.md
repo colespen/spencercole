@@ -10,6 +10,8 @@ Have a look see!
 - React Spring
 - React.js
 
+<strong>Deployed with Netlify<strong>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
