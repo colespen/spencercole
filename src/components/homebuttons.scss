@@ -1,13 +1,12 @@
 .btn-main {
   height: 42px;
-  // width: 31%;
   width: 37%;
   max-width: 103px;
   position: relative;
   border: none;
   background: transparent;
   padding: 0;
-  margin: 3px;
+  margin: 5px;
   cursor: pointer;
   outline-offset: 4px;
   transition: filter 250ms;
@@ -27,7 +26,7 @@
   transform: perspective(30px) rotateX(4deg) scale(0.96);
 }
 #contact {
-  transform: perspective(40px) rotateX(9deg) rotateY(-2deg);
+  transform: perspective(45px) rotateX(9deg) rotateY(-3deg);
 }
 
 .shadow {
@@ -76,7 +75,7 @@
   align-items: center;
   position: relative;
   // padding: 12px 42px;
-  padding: 12px 13px 16px 12px;
+  padding: 12px 13px 13px 12px;
   border-radius: 1px;
   background: rgb(78, 80, 84);
   background: linear-gradient(

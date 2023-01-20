@@ -5,10 +5,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: url('../../public/brush-cursor-disabled.png'), pointer;
+  cursor: url("../../public/brush-cursor-disabled.png"), pointer;
 
   .title {
-    font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
+    font-family: "Montserrat", sans-serif, "Courier New", Courier, monospace;
     font-weight: 400;
     font-size: clamp(44px, 9vw, 64px);
     margin: 10px 0 10px 0;
@@ -19,10 +19,9 @@
     -ms-user-select: none;
 
     &:hover {
-      text-shadow: 6px 5px 12px rgba(167, 167, 167, 0.928)
+      text-shadow: 6px 5px 12px rgba(167, 167, 167, 0.928);
     }
   }
-
 
   .navigate {
     margin: 2vw 0 10px 0;
@@ -30,6 +29,7 @@
     justify-content: space-evenly;
     width: 84%;
     max-width: 625px;
+    scale: 110%;
   }
 }
 
@@ -64,11 +64,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
   &.light-border {
     pointer-events: none;
     z-index: 0;
-    background: rgba(41, 57, 117, 0.344);
+    background: rgba(41, 57, 117, 0.494);
     border: 10px solid #1929431b;
     border-radius: 10px;
     transition: opacity 500ms ease-out;
@@ -90,19 +90,15 @@
     transition: opacity 1.9s ease-out;
     filter: blur(0.5px);
   }
-  
-  
 }
 
 #draw-canvas {
   display: block;
   margin: 0;
-  position:fixed;
+  position: fixed;
   inset: 0;
-  cursor: url('../../public/brush-cursor.png'), pointer;
+  cursor: url("../../public/brush-cursor.png"), pointer;
 }
-
-
 
 @media only screen and (max-height: 844px) {
   .title-nav-container {
@@ -112,7 +108,6 @@
 
 @media only screen and (max-width: 600px) {
   .modal-stain {
-
     .border,
     .flash {
       width: 86%;
@@ -122,7 +117,9 @@
 
 @media only screen and (max-width: 470px) {
   .title-nav-container .navigate {
-    scale: 95%;
-    width: 81%;
+    // scale: 95%;
+    // width: 81%;
+    scale: 90%;
+    width: 95%;
   }
 }
