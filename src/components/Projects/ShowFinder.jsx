@@ -46,15 +46,39 @@ export default function ShowFinder() {
       >
         <p>The world needs a very simple, quick app to find shows.</p>
         <br></br>
-        <p>This app provides this convience with a simple interface, mapping all nearby shows, including links to artists, venues and ticket informnation</p>
+        <p>This app provides the user with shows based on date and location input in a convenient interface, including links to artists, venues and ticket information</p>
         <br></br>
-        <p>JS, React, Express
-          <br></br>
-          APIS: RadpidAPI, LocationIQ</p>
-        <p>and this as well.</p>
-        <br></br>
-        <p>check it out here.</p>
+        <p
+          style={{ paddingBottom: "5px" }}
+        >It's live. Give it a click!</p>
+
+        <div style={{ fontSize: "85%", paddingTop: "5px" }}>
+          <h4>Stack:</h4>
+          <ul className="project-stack-list">
+            <li>React Leaflet</li>
+            <li>React.js</li>
+            <li>Express</li>
+            <li>Node.js</li>
+          </ul>
+          <h5 style={{ paddingTop: "5px" }}>APIs:</h5>
+          <ul className="project-stack-list sub">
+            <li>RadpidAPI</li>
+            <li>LocationIQ</li>
+            <li style={{ textDecoration: "line-through" }}>PredictHQ</li>
+            <li style={{ textDecoration: "line-through" }}>Songkick</li>
+            <li style={{ textDecoration: "line-through" }}>Zyla</li>
+          </ul>
+        </div>
       </main>
+
+      <a
+        className="github-icon"
+        style={{ ...mainStyle }}
+        href="https://github.com/colespen/ShowFinder"
+        target="_blank"
+        rel="noreferrer"
+      > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      </a>
     </Fragment>
   );
 }

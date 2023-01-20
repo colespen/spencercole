@@ -51,7 +51,7 @@ export default function Projects(props) {
     to: { height: "75%" },
     config: { mass: 1.3, tension: 335, friction: 24 }
   });
-  
+
   const handleProjectBtnClick = e => {
     transition("projects", e.currentTarget.id);
   };
@@ -88,6 +88,7 @@ export default function Projects(props) {
       </button>
 
       {!view.tab ?
+      
         <animated.div className="home-inner-window"
         >
           <header
@@ -107,11 +108,20 @@ export default function Projects(props) {
             <br></br>
             <p>Please have a look through my work above...</p>
           </main>
+
+          <a
+            className="github-icon"
+            style={{...navStyle}}
+            href="https://github.com/colespen/"
+            target="_blank"
+            rel="noreferrer"
+          > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+          </a>
         </animated.div>
+
         :
-        <animated.div className="inner-window"
-          // style={{ ...tabSprings }}
-        >
+
+        <animated.div className="inner-window">
           {view.tab === "P1" && <ShowFinder />}
           {view.tab === "P2" && <MadCap />}
           {view.tab === "P3" && <QuizApp />}
@@ -119,6 +129,7 @@ export default function Projects(props) {
           {view.tab === "P5" && <Scheduler />}
         </animated.div>
       }
+
     </animated.section>
   );
 }

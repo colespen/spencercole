@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: url('../../public/brush-cursor-disabled.png'), pointer;
 
   .title {
     font-family: 'Montserrat', sans-serif, 'Courier New', Courier, monospace;
@@ -96,7 +97,8 @@
   display: block;
   margin: 0;
   position:fixed;
-  inset: 0
+  inset: 0;
+  cursor: url('../../public/brush-cursor.png'), pointer;
 }
 
 

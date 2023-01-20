@@ -45,13 +45,39 @@ export default function MadCap() {
       <main className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
-        <p>this is another project</p>
+        <p>A fast-paced multiplayer word game where players race to capture letters for each chosen category.</p>
+        <p>Built with Nicholas Kovacs and William Gadd</p>
         <br></br>
+        <p>Stack:</p>
         <p>the stack is this and this and this, Socket.IO</p>
         <p>Material-UI and custom SASS</p>
         <br></br>
-        <p>check it out herreeee.</p>
+        <p
+          style={{ paddingBottom: "5px" }}
+        >It's live. Give it a click!</p>
+
+        <div style={{ fontSize: "85%", paddingTop: "5px" }}>
+          <h4>Stack:</h4>
+          <ul className="project-stack-list">
+            <li>Material UI</li>
+            <li>React.js</li>
+            <li>React Router</li>
+            <li>Socket.IO</li>
+            <li>Express</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+
       </main>
+
+      <a
+        className="github-icon"
+        style={{ ...mainStyle }}
+        href="https://github.com/colespen/MadCap"
+        target="_blank"
+        rel="noreferrer"
+      > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      </a>
     </Fragment>
   );
 }

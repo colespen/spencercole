@@ -43,13 +43,32 @@ export default function Scheduler() {
       <main className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
-        <p>this is another project</p>
+        <p>And finally, Scheduler. My first tase for React, and I loved it.
+          <br></br>
+          I also experimented with WebSockets for the first time and learned how to work with reducers.
+        </p>
         <br></br>
-        <p>React.js, Node.js, Express and WebSockets ('ws')</p>
-        <p>Bootstrap</p>
+        <p>Includes an admin dashboard app.</p>
         <br></br>
-        <p>check it out herreeee.</p>
+        <div style={{ fontSize: "85%", paddingTop: "5px" }}>
+          <h4>Stack:</h4>
+          <ul className="project-stack-list">
+            <li>React.js</li>
+            <li>ws</li>
+            <li>Express</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
       </main>
+
+      <a
+        className="github-icon"
+        style={{ ...mainStyle }}
+        href="https://github.com/colespen/scheduler"
+        target="_blank"
+        rel="noreferrer"
+      > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      </a>
     </Fragment>
   );
 }

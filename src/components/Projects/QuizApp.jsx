@@ -50,17 +50,37 @@ export default function QuizApp() {
       <main className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
-        <p>this is another project</p>
-        <p>It's the first team project I was ever invloved in.
+        <p>Here's another.
           <br></br>
-          working with other devs is very motivating.
+          Explore, Create and Share customized games to challenge your friends.
+        </p>
+        <p>It's the first team build I was ever invloved in
+          <br></br>(with Nicholas Kovacs).
         </p>
         <br></br>
-        <p>the stack is JS, Node.js Express</p>
-        <p>custom CSS</p>
+        <p>I find working with other devs to be very motivating.</p>
         <br></br>
-        <p>check it out herreeee.</p>
+
+        <div style={{ fontSize: "85%", paddingTop: "5px" }}>
+          <h4>Stack:</h4>
+          <ul className="project-stack-list">
+            <li>Bootstrap</li>
+            <li>jQuery</li>
+            <li>Express</li>
+            <li>Node.js</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
       </main>
+
+      <a
+        className="github-icon"
+        style={{ ...mainStyle }}
+        href="https://github.com/colespen/Quiz-App"
+        target="_blank"
+        rel="noreferrer"
+      > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      </a>
     </Fragment>
   );
 }
