@@ -95,7 +95,7 @@ export default function Contact(props) {
           style={{
             alignItems: 'center',
             opacity: mainStyle.opacity1,
-            transition: 'opacity 800ms ease',
+            transition: 'opacity 500ms ease-in',
           }}
         >
           <p id="contact-me"

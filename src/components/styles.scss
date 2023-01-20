@@ -69,20 +69,20 @@
     background: #141b34;
     border: 10px solid #1929431b;
     border-radius: 10px;
-    transition: opacity 1.7s ease-out;
-    filter: blur(5px);
+    transition: opacity 800ms ease-out;
+    filter: blur(2px);
   }
   &.flash {
     pointer-events: none;
     z-index: 0;
-    background: #ffffff;
+    background: #e3f6ff;
     border-radius: 10px;
     transition: opacity 100ms ease-out;
   }
   &.heavy-border {
     pointer-events: none;
     z-index: 0;
-    background: #42160060;
+    background: #4b190059;
     border-radius: 10px;
     border: 6px solid #0042a5;
     transition: opacity 1.9s ease-out;
