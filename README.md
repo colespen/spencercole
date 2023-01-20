@@ -10,7 +10,7 @@ Have a look see!
 - React Spring
 - React.js
 
-<strong>Deployed with Netlify<strong>
+> **Deployed with Netlify**
 
 # Getting Started with Create React App
 
