@@ -21,8 +21,8 @@
   width: 100%;
   max-width: 450px;
   height: fit-content;
-  top: 275%;
-  left: 50%;
+  top: 300%;
+  left: 55%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -67,11 +67,11 @@
 
 .rooftop-with-preview {
   font-size: 185%;
-    font-weight: 800;
-    position: relative;
-    width: 100%;
-    transform: translate(-0.5%, 66%);
-    z-index: 100;
+  font-weight: 800;
+  position: relative;
+  width: 100%;
+  transform: translate(-0.5%, 66%);
+  z-index: 100;
   &:hover span {
     color: #ffffff;
   }
