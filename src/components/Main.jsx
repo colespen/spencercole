@@ -7,6 +7,7 @@ import Home from './Home';
 import Projects from './Projects/Projects';
 import Bio from './Bio/Bio';
 import Contact from './Contact';
+import Draw from './Draw';
 
 import useVisualMode from '../hooks/useVisualMode';
 
@@ -15,6 +16,8 @@ import useVisualMode from '../hooks/useVisualMode';
 export default function Main() {
 
   const [show, setShow] = useState(false);
+  const [isPointerEvent, setIsPointerEvent] = useState("auto");
+  const [isDrawClear, setIsDrawClear] = useState(false);
 
   //// For Modal Stain Transition
   const [flash, setFlash] = useState(0);
@@ -44,13 +47,24 @@ export default function Main() {
     "display-block": show,
     "display-none": !show,
   });
-  
+
+  const handleClearDraw = () => {
+    !isDrawClear ? setIsDrawClear(true) : setIsDrawClear(false);
+  };
 
   return (
+
     <Fragment>
+      <Draw
+        setIsPointerEvent={setIsPointerEvent}
+        isDrawClear={isDrawClear}
+      />
+
       {view.page === "home" &&
         <Home
           handleShowHideWindow={handleShowHideWindow}
+          isPointerEvent={isPointerEvent}
+          handleClearDraw={handleClearDraw}
         />}
 
       <section className="modal-stain light-border"
@@ -77,7 +91,7 @@ export default function Main() {
         {view.page === "contact" &&
           <Contact
             handleShowHideWindow={handleShowHideWindow}
-            // view={view} transition={transition}
+          // view={view} transition={transition}
           />}
       </div>
     </Fragment>

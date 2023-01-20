@@ -7,6 +7,7 @@ import LinkPreview from './LinkPreview';
 import Passions from './Passions';
 import Music from './Music';
 
+
 export default function Bio(props) {
   const {
     handleShowHideWindow, view, transition

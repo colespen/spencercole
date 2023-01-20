@@ -5,7 +5,11 @@ import './styles.scss';
 import './homebuttons.scss';
 
 
-export default function Home({ handleShowHideWindow }) {
+export default function Home(props) {
+
+  const {
+    handleShowHideWindow, isPointerEvent, handleClearDraw
+  } = props;
 
   //////    Title Movement
   const [titleSpring, titleApi] = useSpring(() => ({
@@ -20,7 +24,6 @@ export default function Home({ handleShowHideWindow }) {
   const perspective = (x, y, s) =>
     `perspective(500px) rotateX(${x}deg) 
    rotateY(${y}deg) scale(${s})`;
-  //////
 
   const handleMouseMove = ({ clientX: x, clientY: y }) => {
     titleApi.start({ xys: calcXY(x, y) });
@@ -28,19 +31,26 @@ export default function Home({ handleShowHideWindow }) {
   const handleMouseLeave = () => {
     titleApi.start({ xys: [0, 0, 0.85] });
   };
+  //////
+
+ 
 
 
   return (
     <Fragment>
-      <div className="title-nav-container">
-
+      <div className="title-nav-container"
+        style={{
+          pointerEvents: isPointerEvent,
+          MaxHeight: "100%", width: "100%"
+        }}
+      >
         <animated.h1 className="title"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
+          onClick={handleClearDraw}
           style={{ transform: titleSpring.xys.to(perspective) }}
         >Spencer Cole
         </animated.h1>
-
 
         <div className="navigate">
           <button className="btn-main" id="projects"
