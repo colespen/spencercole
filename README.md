@@ -1,6 +1,14 @@
-# Spencer Cole's Website
-A portfolio.
+# Spencer Cole - Full-Stack Developer 
 
+An SPA portfolio showcasing my work.
+<br>
+Have a look see!
+
+## Stack:
+
+- Custom SASS
+- React Spring
+- React.js
 
 # Getting Started with Create React App
 
