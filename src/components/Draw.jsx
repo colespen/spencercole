@@ -51,7 +51,8 @@ export default function Drawing(props) {
     ctx.lineCap = 'round';
     ctx.lineJoin = "round";
     ctx.strokeStyle = 'midnightblue';
-    ctx.lineWidth = 40;
+    ctx.lineWidth = 80;
+    ctx.imageSmoothingEnabled = true;
     ctxRef.current = ctx;
 
     if (props.isDrawClear) clear();
