@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 10;
   cursor: url("../../public/brush-cursor-disabled.png"), pointer;
 
   .title {
@@ -58,8 +59,6 @@
   position: fixed;
   width: 88%;
   max-width: 1000px;
-  // width: 75%;
-  // height: 75%;
   height: 75%;
   top: 50%;
   left: 50%;
@@ -67,7 +66,7 @@
 
   &.light-border {
     pointer-events: none;
-    z-index: 0;
+    z-index: 20;
     background: rgba(41, 57, 117, 0.52);
     border: 10px solid #19294375;
     border-radius: 10px;
@@ -76,14 +75,14 @@
   }
   &.flash {
     pointer-events: none;
-    z-index: 0;
+    z-index: 20;
     background: #e9f8ff;
     border-radius: 10px;
     transition: opacity 125ms ease-out;
   }
   &.heavy-border {
     pointer-events: none;
-    z-index: 0;
+    z-index: 20;
     background: #3f150043;
     border-radius: 10px;
     border: 6px solid #0042a5;

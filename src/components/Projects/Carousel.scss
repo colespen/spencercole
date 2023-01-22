@@ -75,7 +75,7 @@
       filter: drop-shadow(-19px 5px 0.5px #121f38) brightness(125%);
     }
     &:active {
-      filter: invert(65%);
+      filter: invert(25%);
     }
   }
 
@@ -86,7 +86,7 @@
       filter: drop-shadow(19px 5px 0.5px #121f38) brightness(125%);
     }
     &:active {
-      filter: invert(65%);
+      filter: invert(25%);
     }
   }
 }
