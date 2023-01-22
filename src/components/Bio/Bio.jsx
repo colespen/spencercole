@@ -70,7 +70,8 @@ export default function Bio(props) {
     }
   }, [view.tab]);
 
-  const cvPrev = "https://docs.google.com/document/d/1EnxTwBGiWjiEPK8DkzJdpTd0Hh2cz1mgbzSocljhtyw/edit?usp=sharing";
+  const cvPrev =
+    "https://docs.google.com/document/d/1EnxTwBGiWjiEPK8DkzJdpTd0Hh2cz1mgbzSocljhtyw/edit?usp=sharing";
 
   return (
     <animated.section className="modal-main"
@@ -118,19 +119,25 @@ export default function Bio(props) {
             <p className="bio-description"
               style={{ width: "95%" }}
             >
-              <LinkPreview pClass={"rooftop-with-preview"} divClass={"rooftop-card"}
+              <LinkPreview
+                pClass={"rooftop-with-preview"} divClass={"rooftop-card"}
                 href="./s_cole_rooftop.jpg"
                 image="./s_cole_rooftop.jpg"
-              >I</LinkPreview>
+              >
+                I
+              </LinkPreview>
               &nbsp;&nbsp;
               am a full-stack web developer with a highly creative background in music composition and production. Using ingenuity, my eye for design and attention to detail, I strive to create an intuitive and memorable experience for the user. Working with cutting-edge tools, I produce high-performance and well-tested products.
             </p>
             <br></br>
 
-            <LinkPreview pClass={"link-with-preview"} divClass={"card"}
+            <LinkPreview
+              pClass={"link-with-preview"} divClass={"card"}
               href={cvPrev}
               image="./spencer_cole_cv.png"
-            >&nbsp;Here is my Resume</LinkPreview>
+            >
+              &nbsp;Here is my Resume
+            </LinkPreview>
 
           </main>
         </div>

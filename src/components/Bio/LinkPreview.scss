@@ -72,6 +72,7 @@
   width: 100%;
   transform: translate(-0.5%, 66%);
   z-index: 100;
+  cursor: pointer;
   &:hover span {
     color: #ffffff;
   }
@@ -87,6 +88,9 @@
   object-fit: contain;
   border-radius: 7px;
   cursor: pointer;
+  &:active {
+    cursor: grabbing;
+  }
 }
 .rooftop-card img {
   width: 100%;
