@@ -1,4 +1,7 @@
-import { Fragment, useState, useEffect, useRef } from "react";
+import {
+  Fragment, useState,
+  // useEffect, useRef
+} from "react";
 import { useTransition, animated } from "@react-spring/web";
 // import classNames from "classnames";
 
@@ -10,7 +13,7 @@ import useOutsideClick from "../../hooks/useOutsideClick";
 export default function LinkPreview(props) {
   const { pClass, divClass, imgClass, href, image } = props;
   const [isShown, setIsShown] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
 
   // const popUpClass = classNames(
   //   divClass, {
@@ -18,20 +21,21 @@ export default function LinkPreview(props) {
   //   "display-flex": isLoaded,
   // });
 
-  console.log("isLoaded", isLoaded);  
-  const imgRef = useRef();
+  // console.log("image", image);
+  // console.log("isLoaded", isLoaded);  
+  // const imgRef = useRef();
 
-  useEffect(() => {
-    if (!imgRef.current) {
-      handleIsLoaded();
-    }
-  });
-  const handleIsLoaded = () => {
-    if (!isLoaded) {
-      setIsLoaded(true);
-      console.log("IMAGE LOADED");
-    }
-  };
+  // useEffect(() => {
+  //   if (!imgRef.current) {
+  //     handleIsLoaded();
+  //   }
+  // });
+  // const handleIsLoaded = () => {
+  //   if (!isLoaded) {
+  //     setIsLoaded(true);
+  //     console.log("IMAGE LOADED");
+  //   }
+  // };
 
 
   const handleSetIsShown = () => {
@@ -63,8 +67,8 @@ export default function LinkPreview(props) {
             <a className="inner-card-link"
               href={href} target="_blank" rel="noreferrer"
             >
-              <img src={image} ref={imgRef} className={imgClass} alt="link popup"
-                onLoad={handleIsLoaded}
+              <img src={image} loading={"eager"} className={imgClass} alt="link popup"
+              // onLoad={handleIsLoaded}
               />
             </a>
           </animated.div>
