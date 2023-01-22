@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 /**
  * Custom hook that detects click outside React component.
- **/
+ */
 export default function useOutsideClick(callback, state) {
 
   const ref = useRef();

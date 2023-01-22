@@ -12,7 +12,7 @@ import '../modal.scss';
 
 export default function Projects(props) {
   const {
-    handleShowHideWindow, view, transition,
+    handleShowHideWindow, view, transition, 
   } = props;
 
   const [modalStyle, setModalStyle] = useState({
@@ -57,8 +57,10 @@ export default function Projects(props) {
   };
 
 
+
   return (
-    <animated.section className="modal-main"
+    <animated.section
+      className="modal-main"
       style={{ ...springs, ...modalStyle }}
     >
       <nav className="modal-nav"
@@ -88,7 +90,7 @@ export default function Projects(props) {
       </button>
 
       {!view.tab ?
-      
+
         <animated.div className="home-inner-window"
         >
           <header
@@ -111,7 +113,7 @@ export default function Projects(props) {
 
           <a
             className="github-icon"
-            style={{...navStyle}}
+            style={{ ...navStyle }}
             href="https://github.com/colespen/"
             target="_blank"
             rel="noreferrer"

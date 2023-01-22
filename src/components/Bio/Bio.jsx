@@ -1,7 +1,6 @@
 import { useState, useEffect, Fragment } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 
-// import './Bio.scss'
 import '../modal.scss';
 import LinkPreview from './LinkPreview';
 import Passions from './Passions';

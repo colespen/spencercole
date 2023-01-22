@@ -67,9 +67,9 @@ export default function Drawing(props) {
         onMouseDown={startDraw}
         onMouseUp={stopDraw}
         onMouseMove={draw}
-        onTouchStart={startDraw}
-        onTouchEnd={stopDraw}
-        onTouchMove={draw}
+        // onTouchStart={startDraw}
+        // onTouchEnd={stopDraw}
+        // onTouchMove={draw}
         ref={canvasRef}
       />
     </Fragment>
