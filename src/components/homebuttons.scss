@@ -94,7 +94,7 @@
   transform: translateY(-4px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1),
     filter 800ms ease-out;
-  // will-change: transform;
+  will-change: transform;
   // &:active {
   //   background-color: blue;
   // }
