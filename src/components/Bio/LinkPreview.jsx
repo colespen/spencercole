@@ -67,7 +67,7 @@ export default function LinkPreview(props) {
             <a className="inner-card-link"
               href={href} target="_blank" rel="noreferrer"
             >
-              <img src={image} loading={"eager"} className={imgClass} alt="link popup"
+              <img src={image} className={imgClass} alt="link popup"
               // onLoad={handleIsLoaded}
               />
             </a>
