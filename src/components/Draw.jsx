@@ -64,15 +64,12 @@ export default function Drawing(props) {
     <Fragment>
       <canvas
         id="draw-canvas"
-        // style={{
-        //   display: 'block',
-        //   margin: '0',
-        //   position: 'fixed',
-        //   inset: '0',
-        // }}
         onMouseDown={startDraw}
         onMouseUp={stopDraw}
         onMouseMove={draw}
+        onTouchStart={startDraw}
+        onTouchEnd={stopDraw}
+        onTouchMove={draw}
         ref={canvasRef}
       />
     </Fragment>
