@@ -33,16 +33,19 @@
 }
 
 .music {
-  font-size: clamp(12px, 2.5vw, 20px);
+  // font-size: clamp(12px, 2.5vw, 20px);
+  // font-size: clamp(12px, 3.5vw, 22px);
+  font-size: clamp(12px, 1.5vh, 22px);
   justify-content: space-evenly;
   height: 100%;
+  background: none;
   h3 {
     font-weight: 400;
   }
 }
 
 .music-bio {
-  font-size: clamp(10px, 1.75vw, 20px);
+  font-size: clamp(10px, 1.75vw, 17px);
   color: #a8b9d4;
   padding-top: 1.25vw;
   strong {
@@ -55,5 +58,13 @@
   padding-left: 10px;
   &:hover {
     color: #a8b9d4;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .music {
+    overflow: scroll;
+    display: block;
+
   }
 }

@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { useTransition, animated } from "@react-spring/web";
-import classNames from "classnames";
+// import classNames from "classnames";
 
 import "./LinkPreview.scss";
 
@@ -11,11 +11,15 @@ export default function LinkPreview(props) {
   const [isShown, setIsShown] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const popUpClass = classNames(
-    divClass, {
-    "display-none": !isLoaded,
-    "display-flex": isLoaded,
-  });
+  // const popUpClass = classNames(
+  //   divClass, {
+  //   "display-none": !isLoaded,
+  //   "display-flex": isLoaded,
+  // });
+
+  const handleIsLoaded = () => {
+    setIsLoaded(true);
+  };
 
   const handleSetIsShown = () => {
     setIsShown(!isShown);
@@ -23,9 +27,6 @@ export default function LinkPreview(props) {
 
   const ref = useOutsideClick(handleSetIsShown, isShown);
 
-  const handleIsLoaded = () => {
-    setIsLoaded(true);
-  };
 
   const fadeSpring = useTransition(isShown, {
     from: { opacity: 0 },
@@ -42,19 +43,21 @@ export default function LinkPreview(props) {
       >
         <span> {props.children} </span>
 
-        {fadeSpring((style, item) =>
-          item &&
-          <animated.div className={popUpClass} style={style}>
-            <a className="inner-card-link"
-              href={href} target="_blank" rel="noreferrer"
-            >
-              <img src={image} className={imgClass} alt="link popup"
-                onLoad={handleIsLoaded}
-              />
-            </a>
-          </animated.div>
-        )}
+        {isLoaded &&
 
+          fadeSpring((style, item) =>
+            item &&
+            <animated.div className={divClass} style={style}>
+              <a className="inner-card-link"
+                href={href} target="_blank" rel="noreferrer"
+              >
+                <img src={image} className={imgClass} alt="link popup"
+                  onLoad={handleIsLoaded}
+                />
+              </a>
+            </animated.div>
+          )
+        }
       </p>
     </Fragment>
   );

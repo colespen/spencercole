@@ -59,7 +59,7 @@
     border-radius: 24px;
     background-color: #05090f00;
     border: 1px solid #0e203c00;
-    margin: -10px 0px 3px 0px;
+    margin: -5px 0px 3px 0px;
     cursor: pointer;
 
     img {
@@ -99,3 +99,10 @@
     width: 50%;
   }
 }
+@media only screen and (max-height: 750px) {
+  .carousel-container {
+    margin-top: 5%;
+  }
+}
+
+
