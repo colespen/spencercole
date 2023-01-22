@@ -46,11 +46,11 @@ export default function ShowFinder() {
       >
         <p>The world needs a very simple, quick app to find shows.</p>
         <br></br>
-        <p>This app provides the user with shows based on date and location input in a convenient interface, including links to artists, venues and ticket information</p>
+        <p>This app provides the user with shows mapped to date and location input in a convenient interface, including relative links to artists, venues and ticket information</p>
         <br></br>
         <p
           style={{ paddingBottom: "5px" }}
-        >It's live. Give it a click!</p>
+        >It's live. <br/>Give it a click!</p>
 
         <div style={{ fontSize: "85%", paddingTop: "5px" }}>
           <h4>Stack:</h4>
