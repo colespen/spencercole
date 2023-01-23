@@ -15,6 +15,13 @@ export default function Drawing(props) {
     ctxRef.current.moveTo(offsetX, offsetY);
     setDrawing(true);
   };
+  const startTouchDraw = (e) => {
+    props.setIsPointerEvent("none");
+    const { offsetX, offsetY } = e;
+    ctxRef.current.beginPath();
+    ctxRef.current.moveTo(offsetX, offsetY);
+    setDrawing(true);
+  };
 
   const stopDraw = () => {
     props.setIsPointerEvent("auto");
@@ -25,6 +32,12 @@ export default function Drawing(props) {
   const draw = ({ nativeEvent }) => {
     if (!drawing) return;
     const { offsetX, offsetY } = nativeEvent;
+    ctxRef.current.lineTo(offsetX, offsetY);
+    ctxRef.current.stroke();
+  };
+  const touchDraw = (e) => {
+    if (!drawing) return;
+    const { offsetX, offsetY } = e;
     ctxRef.current.lineTo(offsetX, offsetY);
     ctxRef.current.stroke();
   };
@@ -67,9 +80,9 @@ export default function Drawing(props) {
         onMouseDown={startDraw}
         onMouseUp={stopDraw}
         onMouseMove={draw}
-        onTouchStart={startDraw}
+        onTouchStart={startTouchDraw}
         onTouchEnd={stopDraw}
-        onTouchMove={draw}
+        onTouchMove={touchDraw}
         ref={canvasRef}
       />
     </Fragment>
