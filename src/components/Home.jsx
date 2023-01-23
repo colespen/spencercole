@@ -21,7 +21,7 @@ export default function Home(props) {
     const timer = setTimeout(() => {
       setOpacity(1)
       return () => clearTimeout(timer)
-    }, 150) 
+    }, 250) 
   }, [])
 
 
