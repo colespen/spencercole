@@ -57,11 +57,10 @@ export default function Carousel(props) {
 
   return (
     <>
-      {imageLoaded ?
-
-        <div className="carousel-container" ref={imgRef}
-          style={{ ...mainStyle, transition: "opacity 1.5s ease" }}
-        >
+      <div className="carousel-container" ref={imgRef}
+        style={{ ...mainStyle, transition: "opacity 1.5s ease" }}
+      >
+        {imageLoaded ?
           <div className="carousel-wrapper">
 
             <div
@@ -85,18 +84,17 @@ export default function Carousel(props) {
               </button>
             </div>
           </div>
-
-        </div>
-        :
-        <ClipLoader
-          cssOverride={override}
-          size={50}
-          color="#728db8"
-          className="image-loading"
-          id="carousel-spinner"
-          aria-label="loading spinner"
-        />
-      }
+          :
+          <ClipLoader
+            cssOverride={override}
+            size={50}
+            color="#728db8"
+            className="image-loading"
+            id="carousel-spinner"
+            aria-label="loading spinner"
+          />
+        }
+      </div>
     </>
   );
 }
