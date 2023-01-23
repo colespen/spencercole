@@ -92,10 +92,11 @@
 }
 
 #draw-canvas {
-  display: block;
+  touch-action: none;
   margin: 0;
-  position: fixed;
   inset: 0;
+  display: block;
+  position: fixed;
   cursor: url("../../public/brush-cursor.png"), pointer;
 }
 
