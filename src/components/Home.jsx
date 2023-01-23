@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, Fragment } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 
 import './styles.scss';
@@ -21,7 +21,7 @@ export default function Home(props) {
     const timer = setTimeout(() => {
       setOpacity(1)
       return () => clearTimeout(timer)
-    }, 250) 
+    }, 150) 
   }, [])
 
 
