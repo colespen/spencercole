@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { useState, useEffect, useRef, Fragment } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 
 import './styles.scss';
@@ -10,6 +10,20 @@ export default function Home(props) {
   const {
     handleShowHideWindow, isPointerEvent, handleClearDraw
   } = props;
+
+  const [opacity, setOpacity] = useState(0);
+  // const [isFirstLoad, setIsFirstLoad] = useState(true)
+  // const isFirstLoad = useRef(true)
+  // console.log("is First Load? ", isFirstLoad)
+
+  useEffect(() => {
+    // setIsFirstLoad(false);
+    const timer = setTimeout(() => {
+      setOpacity(1)
+      return () => clearTimeout(timer)
+    }, 150) 
+  }, [])
+
 
   //////    Title Movement
   const [titleSpring, titleApi] = useSpring(() => ({
@@ -33,15 +47,18 @@ export default function Home(props) {
   };
   //////
 
- 
+
 
 
   return (
     <Fragment>
       <div className="title-nav-container"
         style={{
+          opacity,
           pointerEvents: isPointerEvent,
-          MaxHeight: "100%", width: "100%"
+          // maxHeight: "100%", 
+          width: "100%",
+          transition: "opacity 750ms ease"
         }}
       >
         <animated.h1 className="title"

@@ -15,17 +15,18 @@ import useVisualMode from '../hooks/useVisualMode';
 export default function Main() {
 
   const [show, setShow] = useState(false);
-
+  
   const [isPointerEvent, setIsPointerEvent] = useState("auto");
   const [isDrawClear, setIsDrawClear] = useState(false);
-
+  
   //// For Modal Stain Transition
   const [isStainVisible, setIsStainVisible] = useState("hidden");
   const [flash, setFlash] = useState(0);
   const [border, setBorder] = useState(0);
   const [clicks, setClicks] = useState(0);
-
+  
   const { view, transition } = useVisualMode("home", null);
+  
 
   const windowShowHide = classNames(
     "window", {
