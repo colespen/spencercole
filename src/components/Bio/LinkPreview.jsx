@@ -1,13 +1,12 @@
-import {
-  Fragment, useState,
-  // useEffect, useRef
-} from "react";
+import { Fragment, useState, useRef } from "react";
+
 import { useTransition, animated } from "@react-spring/web";
-// import classNames from "classnames";
 
 import "./LinkPreview.scss";
 
+import useOnLoadImages from "../../hooks/useOnLoadImages";
 import useOutsideClick from "../../hooks/useOutsideClick";
+
 
 
 export default function LinkPreview(props) {
@@ -15,27 +14,15 @@ export default function LinkPreview(props) {
   const [isShown, setIsShown] = useState(false);
   // const [isLoaded, setIsLoaded] = useState(false);
 
-  // const popUpClass = classNames(
-  //   divClass, {
-  //   "display-none": !isLoaded,
-  //   "display-flex": isLoaded,
-  // });
 
-  // console.log("image", image);
-  // console.log("isLoaded", isLoaded);  
-  // const imgRef = useRef();
+  const imgRef = useRef(null);
+  const imageLoaded = useOnLoadImages(imgRef);
 
-  // useEffect(() => {
-  //   if (!imgRef.current) {
-  //     handleIsLoaded();
-  //   }
-  // });
   // const handleIsLoaded = () => {
-  //   if (!isLoaded) {
-  //     setIsLoaded(true);
-  //     console.log("IMAGE LOADED");
-  //   }
+  //   setIsLoaded(true);
+  //   console.log("IMAGE LOADED? ", isLoaded);
   // };
+
 
 
   const handleSetIsShown = () => {
@@ -53,27 +40,31 @@ export default function LinkPreview(props) {
 
   return (
     <Fragment>
-      <p ref={ref}
-        className={pClass}
-        onClick={handleSetIsShown}
-      >
-        <span> {props.children} </span>
+      <div ref={imgRef}>
+        <p
+          ref={ref}
+          className={pClass}
+          onClick={handleSetIsShown}
+        >
+          <span> {props.children} </span>
 
+          {imageLoaded && fadeSpring((style, item) =>
+            item &&
+            <animated.div
 
+              className={divClass} style={style}>
+              <a className="inner-card-link"
+                href={href} target="_blank" rel="noreferrer"
+              >
+                <img src={image} className={imgClass} alt="link popup"
+                // onLoad={handleIsLoaded}
+                />
+              </a>
+            </animated.div>
+          )}
 
-        {fadeSpring((style, item) =>
-          item &&
-          <animated.div className={divClass} style={style}>
-            <a className="inner-card-link"
-              href={href} target="_blank" rel="noreferrer"
-            >
-              <img src={image} className={imgClass} alt="link popup"
-              // onLoad={handleIsLoaded}
-              />
-            </a>
-          </animated.div>
-        )}
-      </p>
+        </p>
+      </div>
     </Fragment>
   );
 };
