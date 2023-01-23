@@ -20,7 +20,7 @@ export default function Main() {
   const [isDrawClear, setIsDrawClear] = useState(false);
   
   //// For Modal Stain Transition
-  const [isStainVisible, setIsStainVisible] = useState("hidden");
+  const [isStainVisible, setIsStainVisible] = useState("visible");
   const [flash, setFlash] = useState(0);
   const [border, setBorder] = useState(0);
   const [clicks, setClicks] = useState(0);
@@ -53,9 +53,13 @@ export default function Main() {
   };
 
   useEffect(() => {
-    view.page === "home" ?
-      setIsStainVisible("visible") : setIsStainVisible("hidden");
+    view.page !== "home" ?
+      setIsStainVisible("hidden") : setIsStainVisible("visible");
   }, [view.page]);
+
+  const handleOnMouseEnter = () => {
+    if (isStainVisible === "hidden") setIsStainVisible("visible");
+  }
 
   return (
 
@@ -73,12 +77,12 @@ export default function Main() {
         />}
 
       <section className="modal-stain light-border"
-        style={{ opacity: border, visibility: isStainVisible }}
-      ></section>
-      <section className="modal-stain flash"
-        style={{ opacity: flash, visibility: isStainVisible }}
+        style={{ opacity: border, visibility: isStainVisible}}
       ></section>
       <section className="modal-stain heavy-border"
+        style={{ opacity: flash, visibility: isStainVisible }}
+      ></section>
+      <section className="modal-stain flash"
         style={{ opacity: flash, visibility: isStainVisible }}
       ></section>
 
@@ -86,16 +90,19 @@ export default function Main() {
         {view.page === "projects" &&
           <Projects
             handleShowHideWindow={handleShowHideWindow}
+            handleOnMouseEnter={handleOnMouseEnter}
             view={view} transition={transition}
           />}
         {view.page === "bio" &&
           <Bio
             handleShowHideWindow={handleShowHideWindow}
+            handleOnMouseEnter={handleOnMouseEnter}
             view={view} transition={transition}
           />}
         {view.page === "contact" &&
           <Contact
             handleShowHideWindow={handleShowHideWindow}
+            handleOnMouseEnter={handleOnMouseEnter}
           // view={view} transition={transition}
           />}
       </div>

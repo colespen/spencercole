@@ -12,7 +12,8 @@ import '../modal.scss';
 
 export default function Projects(props) {
   const {
-    handleShowHideWindow, view, transition, 
+    handleShowHideWindow, view, transition,
+    handleOnMouseEnter
   } = props;
 
   const [modalStyle, setModalStyle] = useState({
@@ -85,7 +86,11 @@ export default function Projects(props) {
         </button>
       </nav>
 
-      <button className="close-btn" onClick={handleShowHideWindow}>
+      <button
+        className="close-btn"
+        onClick={handleShowHideWindow}
+        onMouseEnter={handleOnMouseEnter}
+      >
         <img src="./close.png" alt="close-window" />
       </button>
 

@@ -9,7 +9,8 @@ import Music from './Music';
 
 export default function Bio(props) {
   const {
-    handleShowHideWindow, view, transition
+    handleShowHideWindow, view, transition,
+    handleOnMouseEnter
   } = props;
 
   const [modalStyle, setModalStyle] = useState({
@@ -94,7 +95,11 @@ export default function Bio(props) {
         >Bio</button>}
       </nav>
 
-      <button className="close-btn" onClick={handleShowHideWindow}>
+      <button
+        className="close-btn"
+        onClick={handleShowHideWindow}
+        onMouseEnter={handleOnMouseEnter}
+      >
         <img src="./close.png" alt="close-window" />
       </button>
 

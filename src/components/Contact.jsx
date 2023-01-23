@@ -8,7 +8,7 @@ export default function Contact(props) {
 
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const { handleShowHideWindow,
+  const { handleShowHideWindow, handleOnMouseEnter
     // view, 
     // transition 
   } = props;
@@ -80,7 +80,11 @@ export default function Contact(props) {
                 // onClick={handleBioButtonClick}
                 >Extra</button> */}
       </nav>
-      <button className="close-btn" onClick={handleShowHideWindow}>
+      <button
+        className="close-btn"
+        onClick={handleShowHideWindow}
+        onMouseEnter={handleOnMouseEnter}
+      >
         <img src="./close.png" alt="close-window" />
       </button>
 
@@ -105,7 +109,7 @@ export default function Contact(props) {
             Contact me.
           </p>
           <br></br>
-          <ContactForm setFormSubmitted={setFormSubmitted}/>
+          <ContactForm setFormSubmitted={setFormSubmitted} />
           <br></br>
           <p style={{
             height: '25px',
