@@ -94,6 +94,11 @@
   opacity: 0;
 }
 
+#carousel-spinner {
+  position: relative;
+    left: 18%;
+}
+
 @media only screen and (max-width: 1001px) {
   .carousel-container {
     width: 50%;
