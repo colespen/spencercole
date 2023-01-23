@@ -48,8 +48,8 @@ export default function LinkPreview(props) {
         >
           <span> {props.children} </span>
 
-          {imageLoaded && fadeSpring((style, item) =>
-            item &&
+          {fadeSpring((style, item) =>
+            item && imageLoaded &&
             <animated.div
 
               className={divClass} style={style}>
