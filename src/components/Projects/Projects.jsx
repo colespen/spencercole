@@ -13,7 +13,7 @@ import '../modal.scss';
 export default function Projects(props) {
   const {
     handleShowHideWindow, view, transition,
-    handleOnMouseEnter
+    handleOnMouseEnter, setIsSpringRest
   } = props;
 
   const [modalStyle, setModalStyle] = useState({
@@ -50,7 +50,9 @@ export default function Projects(props) {
   const springs = useSpring({
     from: { height: "0%" },
     to: { height: "75%" },
-    config: { mass: 1.3, tension: 335, friction: 24 }
+    config: { mass: 1.3, tension: 335, friction: 24 },
+    onStart: () => setIsSpringRest(false),
+    onRest: () => setIsSpringRest(true),
   });
 
   const handleProjectBtnClick = e => {

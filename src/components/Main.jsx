@@ -15,18 +15,18 @@ import useVisualMode from '../hooks/useVisualMode';
 export default function Main() {
 
   const [show, setShow] = useState(false);
-  
+
   const [isPointerEvent, setIsPointerEvent] = useState("auto");
   const [isDrawClear, setIsDrawClear] = useState(false);
-  
+
   //// For Modal Stain Transition
   const [isStainVisible, setIsStainVisible] = useState("visible");
+  const [isSpringRest, setIsSpringRest] = useState(false);
   const [flash, setFlash] = useState(0);
   const [border, setBorder] = useState(0);
   const [clicks, setClicks] = useState(0);
-  
+
   const { view, transition } = useVisualMode("home", null);
-  
 
   const windowShowHide = classNames(
     "window", {
@@ -58,8 +58,12 @@ export default function Main() {
   }, [view.page]);
 
   const handleOnMouseEnter = () => {
-    if (isStainVisible === "hidden") setIsStainVisible("visible");
-  }
+    if (isSpringRest && isStainVisible === "hidden") {
+      setIsStainVisible("visible");
+    };
+  };
+
+  console.log("view ", view);
 
   return (
 
@@ -77,7 +81,7 @@ export default function Main() {
         />}
 
       <section className="modal-stain light-border"
-        style={{ opacity: border, visibility: isStainVisible}}
+        style={{ opacity: border, visibility: isStainVisible }}
       ></section>
       <section className="modal-stain heavy-border"
         style={{ opacity: flash, visibility: isStainVisible }}
@@ -91,18 +95,21 @@ export default function Main() {
           <Projects
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
+            setIsSpringRest={setIsSpringRest}
             view={view} transition={transition}
           />}
         {view.page === "bio" &&
           <Bio
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
+            setIsSpringRest={setIsSpringRest}
             view={view} transition={transition}
           />}
         {view.page === "contact" &&
           <Contact
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
+            setIsSpringRest={setIsSpringRest}
           // view={view} transition={transition}
           />}
       </div>

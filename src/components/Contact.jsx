@@ -8,9 +8,9 @@ export default function Contact(props) {
 
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const { handleShowHideWindow, handleOnMouseEnter
-    // view, 
-    // transition 
+  const { handleShowHideWindow, handleOnMouseEnter,
+    setIsSpringRest
+    // view, transition 
   } = props;
 
   const [mainStyle, setMainStyle] = useState({
@@ -61,7 +61,9 @@ export default function Contact(props) {
   const springs = useSpring({
     from: { width: "0%", maxWidth: "0px" },
     to: { width: "88%", maxWidth: "1000px" },
-    config: { mass: 5.2, tension: 120, friction: 42 }
+    config: { mass: 5.2, tension: 120, friction: 42 },
+    onStart: () => setIsSpringRest(false),
+    onRest: () => setIsSpringRest(true),
   });
 
   // const handleBioBtnClick = e => {

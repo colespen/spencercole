@@ -67,17 +67,17 @@
   &.light-border {
     pointer-events: none;
     // z-index: 20;
-    background: rgba(41, 57, 117, 0.52);
-    border: 10px solid #19294375;
+    background: rgba(41, 57, 117, 0.686);
+    border: 10px solid rgba(41, 57, 117, 0.225);
     border-radius: 10px;
-    transition: opacity 900ms ease-out;
+    transition: opacity 1.2s ease-out;
     filter: blur(0.5px);
   }
   &.flash {
     pointer-events: none;
     z-index: 0;
     background: #e9f8ff;
-    border: 1px solid #1e3352;;
+    border: 1px solid #1e3352;
     border-radius: 10px;
     transition: opacity 125ms ease-out;
   }

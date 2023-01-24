@@ -58,7 +58,7 @@ export default function Home(props) {
           pointerEvents: isPointerEvent,
           // maxHeight: "100%", 
           width: "100%",
-          transition: "opacity 700ms ease"
+          transition: "opacity 850ms ease"
         }}
       >
         <animated.h1 className="title"

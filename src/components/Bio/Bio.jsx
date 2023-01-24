@@ -10,7 +10,7 @@ import Music from './Music';
 export default function Bio(props) {
   const {
     handleShowHideWindow, view, transition,
-    handleOnMouseEnter
+    handleOnMouseEnter, setIsSpringRest
   } = props;
 
   const [modalStyle, setModalStyle] = useState({
@@ -52,7 +52,9 @@ export default function Bio(props) {
   const springs = useSpring({
     from: { height: "0%", width: "0%", maxWidth: "0px" },
     to: { height: "75%", width: "88%", maxWidth: "1000px" },
-    config: { mass: 2.1, tension: 250, friction: 28 }
+    config: { mass: 2.1, tension: 250, friction: 28 },
+    onStart: () => setIsSpringRest(false),
+    onRest: () => setIsSpringRest(true),
   });
 
 
