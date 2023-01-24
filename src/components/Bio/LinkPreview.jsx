@@ -59,7 +59,7 @@ export default function LinkPreview(props) {
         >
           <span> {props.children} </span>
 
-          {fadeSpring((style, item) =>
+          {imageLoaded && fadeSpring((style, item) =>
             item &&
             <animated.div
               className={popUpDivClass} style={style}>
