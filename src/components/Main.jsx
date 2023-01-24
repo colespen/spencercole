@@ -38,7 +38,7 @@ export default function Main() {
     setClicks(prev => prev + 1);
     if (!show) {
       setShow(true);
-      (clicks % 6 === 0 && clicks !== 0) ?
+      (clicks % 4 === 0 && clicks !== 0) ?
         setFlash(1) : setBorder(1);
     } else {
       setShow(false);
@@ -63,7 +63,6 @@ export default function Main() {
     };
   };
 
-  console.log("view ", view);
 
   return (
 
