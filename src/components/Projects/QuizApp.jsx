@@ -34,17 +34,17 @@ export default function QuizApp() {
 
       <Carousel>
         <a {...link}><img className="project-screenshot"
-          src="./quizapp1.png" alt="screenshot 1" /></a>
+          src="./images/quizapp1.png" alt="screenshot 1" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./quizapp1a.png" alt="screenshot 2" /></a>
+          src="./images/quizapp1a.png" alt="screenshot 2" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./quizapp2.png" alt="screenshot 3" /></a>
+          src="./images/quizapp2.png" alt="screenshot 3" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./quizapp3.png" alt="screenshot 4" /></a>
+          src="./images/quizapp3.png" alt="screenshot 4" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./quizapp4.png" alt="screensho t5" /></a>
+          src="./images/quizapp4.png" alt="screensho t5" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./quizapp5.png" alt="screenshot 6" /></a>
+          src="./images/quizapp5.png" alt="screenshot 6" /></a>
       </Carousel>
 
       <main className="tab-description"
@@ -79,7 +79,7 @@ export default function QuizApp() {
         href="https://github.com/colespen/Quiz-App"
         target="_blank"
         rel="noreferrer"
-      > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      > <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
       </a>
     </Fragment>
   );

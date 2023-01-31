@@ -35,15 +35,15 @@ export default function Jungle() {
 
       <Carousel>
         <a {...link}><img className="project-screenshot"
-          src="./jungle1.png" alt="screenshot 1" /></a>
+          src="./images/jungle1.png" alt="screenshot 1" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./jungle2.png" alt="screenshot 3" /></a>
+          src="./images/jungle2.png" alt="screenshot 3" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./jungle3.png" alt="screenshot 4" /></a>
+          src="./images/jungle3.png" alt="screenshot 4" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./jungle4.png" alt="screensho t5" /></a>
+          src="./images/jungle4.png" alt="screensho t5" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./jungle5.png" alt="screenshot 6" /></a>
+          src="./images/jungle5.png" alt="screenshot 6" /></a>
       </Carousel>
 
       <main className="tab-description"
@@ -75,7 +75,7 @@ export default function Jungle() {
         href="https://github.com/colespen/Jungle"
         target="_blank"
         rel="noreferrer"
-      > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      > <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
       </a>
     </Fragment>
   );

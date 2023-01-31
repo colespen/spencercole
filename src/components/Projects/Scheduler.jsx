@@ -33,11 +33,11 @@ export default function Scheduler() {
 
       <Carousel>
         <a {...link}><img className="project-screenshot"
-          src="./scheduler1.png" alt="screenshot 1" /></a>
+          src="./images/scheduler1.png" alt="screenshot 1" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./scheduler2.png" alt="screenshot 3" /></a>
+          src="./images/scheduler2.png" alt="screenshot 3" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./scheduler3.png" alt="screenshot 4" /></a>
+          src="./images/scheduler3.png" alt="screenshot 4" /></a>
       </Carousel>
 
       <main className="tab-description"
@@ -67,7 +67,7 @@ export default function Scheduler() {
         href="https://github.com/colespen/scheduler"
         target="_blank"
         rel="noreferrer"
-      > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      > <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
       </a>
     </Fragment>
   );

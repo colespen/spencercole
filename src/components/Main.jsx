@@ -10,6 +10,8 @@ import Contact from './Contact';
 import Draw from './Draw';
 
 import useVisualMode from '../hooks/useVisualMode';
+// import useCacheImages from '../hooks/useCacheImages';
+// import { imageArray } from "../data/imageArray";
 
 
 export default function Main() {
@@ -62,6 +64,8 @@ export default function Main() {
       setIsStainVisible("visible");
     };
   };
+
+
 
 
   return (

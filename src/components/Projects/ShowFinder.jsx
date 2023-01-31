@@ -33,12 +33,17 @@ export default function ShowFinder() {
       </header>
 
       <Carousel>
+        <a {...link}><img className="project-screenshot" style={{ height: '200px' }}
+          src="./images/globeicon.png" alt="project icon" /></a>
         <a {...link}><img className="project-screenshot"
-          style={{ height: '200px' }}
-          src="./globeicon.png" alt="project icon" /></a>
-        <a {...link}><img className="project-screenshot" src="./showfinder1.png" alt="screenshot 1" /></a>
-        <a {...link}><img className="project-screenshot" src="./showfinder2.png" alt="screenshot 2" /></a>
-        <a {...link}><img className="project-screenshot" src="./showfinder3.png" alt="screenshot 3" /></a>
+          src="./images/showfinder1.png" alt="screenshot 1" />
+        </a>
+        <a {...link}><img className="project-screenshot"
+          src="./images/showfinder2.png" alt="screenshot 2" />
+        </a>
+        <a {...link}><img className="project-screenshot"
+          src="./images/showfinder3.png" alt="screenshot 3" />
+        </a>
       </Carousel>
 
       <main className="tab-description"
@@ -49,9 +54,9 @@ export default function ShowFinder() {
         <p>This app provides the user with shows mapped to date and location input in a convenient interface, including relative links to artists, venues and ticket information</p>
         <br></br>
         <p style={{ paddingBottom: "5px" }}>
-        <a 
-          className="its-live" {...link}
-        >It's Live!</a></p>
+          <a
+            className="its-live" {...link}
+          >It's Live!</a></p>
 
         <div style={{ fontSize: "85%", paddingTop: "5px" }}>
           <h4>Stack:</h4>
@@ -78,7 +83,7 @@ export default function ShowFinder() {
         href="https://github.com/colespen/ShowFinder"
         target="_blank"
         rel="noreferrer"
-      > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      > <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
       </a>
     </Fragment>
   );

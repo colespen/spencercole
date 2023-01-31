@@ -102,7 +102,7 @@ export default function Bio(props) {
         onClick={handleShowHideWindow}
         onMouseEnter={handleOnMouseEnter}
       >
-        <img src="./close.png" alt="close-window" />
+        <img src="./images/close.png" alt="close-window" />
       </button>
 
       {!view.tab ?
@@ -128,8 +128,8 @@ export default function Bio(props) {
             >
               <LinkPreview
                 pClass={"rooftop-with-preview"} divClass={"rooftop-card"}
-                image="./s_cole_rooftop.png"
-                href="./s_cole_rooftop.jpg"
+                image="./images/s_cole_rooftop.png"
+                href="./images/s_cole_rooftop.jpg"
               >
                 I
               </LinkPreview>
@@ -140,7 +140,7 @@ export default function Bio(props) {
 
             <LinkPreview
               pClass={"link-with-preview"} divClass={"card"}
-              image="./spencer_cole_cv.png"
+              image="./images/spencer_cole_cv.png"
               href={cvPrev}
             >
               &nbsp;Here is my Resume

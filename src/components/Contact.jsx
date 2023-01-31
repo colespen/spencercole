@@ -87,7 +87,7 @@ export default function Contact(props) {
         onClick={handleShowHideWindow}
         onMouseEnter={handleOnMouseEnter}
       >
-        <img src="./close.png" alt="close-window" />
+        <img src="./images/close.png" alt="close-window" />
       </button>
 
       <div className="home-inner-window">

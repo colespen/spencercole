@@ -70,21 +70,21 @@ export default function Projects(props) {
         style={{ ...navStyle }}
       >
         <button id="P1" onClick={handleProjectBtnClick}>
-          <img className="tab-icon" src="./globeicon.png" alt="showfinder tab" />
+          <img className="tab-icon" src="./images/globeicon.png" alt="showfinder tab" />
         </button>
         <button id="P2" onClick={handleProjectBtnClick}>
-          <img className="tab-icon" src="./avatar-1.png" alt="madcap tab" />
+          <img className="tab-icon" src="./images/avatar-1.png" alt="madcap tab" />
         </button>
         <button id="P3" onClick={handleProjectBtnClick}>
-          <img className="tab-icon" src="./quizappicon.png" alt="quizapp tab"
+          <img className="tab-icon" src="./images/quizappicon.png" alt="quizapp tab"
             style={{ height: "28px", paddingTop: "1px" }} />
         </button>
         <button id="P4" onClick={handleProjectBtnClick}>
-          <img className="tab-icon" src="./jungleicon.png" alt="jungle tab"
+          <img className="tab-icon" src="./images/jungleicon.png" alt="jungle tab"
             style={{ height: "33px", paddingBottom: "3px" }} />
         </button>
         <button id="P5" onClick={handleProjectBtnClick}>
-          <img className="tab-icon" src="./schedulericon.png" alt="scheduler tab" />
+          <img className="tab-icon" src="./images/schedulericon.png" alt="scheduler tab" />
         </button>
       </nav>
 
@@ -93,7 +93,7 @@ export default function Projects(props) {
         onClick={handleShowHideWindow}
         onMouseEnter={handleOnMouseEnter}
       >
-        <img src="./close.png" alt="close-window" />
+        <img src="./images/close.png" alt="close-window" />
       </button>
 
       {!view.tab ?
@@ -124,7 +124,7 @@ export default function Projects(props) {
             href="https://github.com/colespen/"
             target="_blank"
             rel="noreferrer"
-          > <img src="./github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+          > <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
           </a>
         </animated.div>
 
