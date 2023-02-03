@@ -5,6 +5,7 @@ An SPA portfolio showcasing my work.
 It's Live - Have a look see! 
 > https://www.spencercole.net/
 <br>
+
 ## Stack:
 
 - Custom SASS
@@ -20,13 +21,13 @@ It's Live - Have a look see!
 
 <br>
 
-![home](https://github.com/colespen/ShowFinder/blob/master/client/docs/1_grabbing_location.png)
+![home](/docs/home.png?raw=true "home")
 
-![bio](https://github.com/colespen/ShowFinder/blob/master/client/docs/2_shows_date_range.png)
+![bio](/docs/bio.png?raw=true "bio")
 
-![projects_responsive](https://github.com/colespen/ShowFinder/blob/master/client/docs/3_select_artist.png)
+![projects_responsive](/docs/projects_mobile.png?raw=true "projects responsve")
 
-![home_responsive](https://github.com/colespen/ShowFinder/blob/master/client/docs/4_mobile_responsive.png)
+![home_responsive](/docs/home_mobile.png?raw=true "home responsive")
 
 
 # Getting Started with Create React App
