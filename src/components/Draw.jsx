@@ -67,14 +67,14 @@ export default function Drawing(props) {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     const alpha = () => {
-      let percent = 25;
-      percent -= clicks * 2;
+      let percent = 28;
+      percent -= clicks * 3;
       if (percent < 2) return 1;
       return percent;
     };
-    ctx.strokeStyle = `hsl(${240 - clicks * 2}, 
-      ${64 + clicks * 3}%, 
-      ${27 + clicks}%, ${alpha()}%)`;
+    ctx.strokeStyle = `hsl(${243 - (clicks * 3)}, 
+      ${60 + (clicks * 4)}%, 
+      ${15 + (clicks * 2)}%, ${alpha()}%)`;
   }, [clicks]);
 
   useEffect(() => {
@@ -92,10 +92,11 @@ export default function Drawing(props) {
     ctx.lineWidth = 80;
     ctx.imageSmoothingEnabled = true;
     ctxRef.current = ctx;
-
+    
     if (props.isDrawClear) {
       clear();
-      ctx.strokeStyle = `hsl(240, 64%, 27%)`;
+      ctx.strokeStyle = `hsl(240, 64%, 17%, 29%)`;
+      // ctx.strokeStyle = `hsl(240, 64%, 27%, 25%)`;
       // ctx.strokeStyle = 'midnightblue';
       setClicks(0);
     }

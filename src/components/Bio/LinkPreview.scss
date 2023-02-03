@@ -1,8 +1,7 @@
 .card {
   position: fixed;
   width: 105%;
-  max-width: 680px;
-  // max-width: 620px;
+  max-width: 750px;
   height: fit-content;
   top: 50.5%;
   left: 50%;
@@ -21,9 +20,7 @@
   position: fixed;
   width: 100%;
   max-width: 450px;
-  // max-width: 400px;
   height: fit-content;
-  // top: 350%;
   top: 250%;
   left: 55%;
   transform: translate(-50%, -50%);
@@ -137,4 +134,13 @@
     &:hover {
       box-shadow: none;
     }
+}
+
+@media only screen and (max-height: 1000px) {
+  .card {
+    max-width: 75vh;
+  }
+  .rooftop-card {
+    max-width: 45vh;
+  }
 }

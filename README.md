@@ -8,9 +8,9 @@ It's Live - Have a look see!
 
 ## Stack:
 
-- Custom SASS
 - React Spring
 - React.js
+- Custom SCSS
 
 > **Deployed with Netlify**
 <br>
