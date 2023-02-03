@@ -1,7 +1,8 @@
 .card {
   position: fixed;
   width: 105%;
-  max-width: 680px;
+  // max-width: 680px;
+  max-width: 625px;
   height: fit-content;
   top: 50.5%;
   left: 50%;
@@ -22,7 +23,8 @@
   max-width: 450px;
   // max-width: 400px;
   height: fit-content;
-  top: 350%;
+  // top: 350%;
+  top: 250%;
   left: 55%;
   transform: translate(-50%, -50%);
   display: flex;
