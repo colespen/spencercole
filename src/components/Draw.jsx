@@ -5,6 +5,7 @@ import './styles.scss';
 
 export default function Drawing(props) {
   const [drawing, setDrawing] = useState(false);
+  const [clicks, setClicks] = useState(0);
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
 
@@ -26,21 +27,18 @@ export default function Drawing(props) {
       const canvasTouchY = clientTouchY - offsetTop;
       return { x: canvasTouchX, y: canvasTouchY };
     }
-
   }
 
   const startDraw = ({ nativeEvent }) => {
     props.setIsPointerEvent("none");
-
-    const mousePos = getMousePosOnCanvas(nativeEvent); 
-
+    const mousePos = getMousePosOnCanvas(nativeEvent);
     // const { offsetX, offsetY } = nativeEvent;
     ctxRef.current.beginPath();
     ctxRef.current.moveTo(mousePos.x, mousePos.y);
-
     ctxRef.current.fill(); // ******
 
     setDrawing(true);
+    setClicks(prev => prev + 1);
   };
 
   const draw = ({ nativeEvent }) => {
@@ -66,9 +64,27 @@ export default function Drawing(props) {
     );
   };
 
+  // to change color on clicks
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    const alpha = () => {
+      let percent = 25;
+      percent -= clicks * 2;
+      if (percent < 2) return 1;
+      return percent;
+    };
+    ctx.strokeStyle = `hsl(${240 - clicks * 2}, 
+      ${64 + clicks * 3}%, 
+      ${27 + clicks}%, ${alpha()}%)`;
+    console.log(`hsl(${240 - clicks * 2}, 
+        ${64 + clicks * 3}%, 
+        ${27 + clicks}%, ${alpha()}%)`);
+  }, [clicks]);
+
   useEffect(() => {
     const canvas = canvasRef.current; // *****
-    // to supports higher screen densities, double screen density
+    // to supports higher screen densities, 2X screen density
     canvas.width = window.innerWidth * 2;
     canvas.height = window.innerHeight * 2;
     canvas.style.width = `${window.innerWidth}px`;
@@ -78,14 +94,18 @@ export default function Drawing(props) {
     ctx.scale(2, 2);
     ctx.lineCap = 'round';
     ctx.lineJoin = "round";
-    ctx.strokeStyle = 'midnightblue';
     ctx.lineWidth = 80;
+    // ctx.strokeStyle = `hsl(240, 64%, 27%)`;
     ctx.imageSmoothingEnabled = true;
     ctxRef.current = ctx;
 
-    if (props.isDrawClear) clear();
+    if (props.isDrawClear) {
+      clear();
+      ctx.strokeStyle = `hsl(240, 64%, 27%)`;
+      // ctx.strokeStyle = 'midnightblue';
+      setClicks(0);
+    }
   }, [props.isDrawClear]);
-
 
 
 
