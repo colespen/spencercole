@@ -128,7 +128,7 @@ export default function Bio(props) {
             >
               <LinkPreview
                 pClass={"rooftop-with-preview"} divClass={"rooftop-card"}
-                image="./images/s_cole_rooftop.png"
+                image="./images/s_cole_rooftop_comp.jpg"
                 href="./images/s_cole_rooftop.jpg"
               >
                 I
@@ -140,7 +140,7 @@ export default function Bio(props) {
 
             <LinkPreview
               pClass={"link-with-preview"} divClass={"card"}
-              image="./images/spencer_cole_cv.png"
+              image="./images/spencer_cole_cv.jpg"
               href={cvPrev}
             >
               &nbsp;Here is my Resume
