@@ -35,9 +35,9 @@ export default function Jungle() {
 
       <Carousel>
         <a {...link}><img className="project-screenshot"
-          src="./images/jungle1.png" alt="screenshot 1" /></a>
+          src="./images/jungle1.jpg" alt="screenshot 1" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./images/jungle2.png" alt="screenshot 3" /></a>
+          src="./images/jungle2.jpg" alt="screenshot 3" /></a>
         <a {...link}><img className="project-screenshot"
           src="./images/jungle3.png" alt="screenshot 4" /></a>
         <a {...link}><img className="project-screenshot"

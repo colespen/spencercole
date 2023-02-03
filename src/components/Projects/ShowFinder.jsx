@@ -36,13 +36,16 @@ export default function ShowFinder() {
         <a {...link}><img className="project-screenshot" style={{ height: '200px' }}
           src="./images/globeicon.png" alt="project icon" /></a>
         <a {...link}><img className="project-screenshot"
-          src="./images/showfinder1.png" alt="screenshot 1" />
+          src="./images/showfinder1.jpg" alt="screenshot 1" />
         </a>
         <a {...link}><img className="project-screenshot"
-          src="./images/showfinder2.png" alt="screenshot 2" />
+          src="./images/showfinder2.jpg" alt="screenshot 2" />
         </a>
         <a {...link}><img className="project-screenshot"
-          src="./images/showfinder3.png" alt="screenshot 3" />
+          src="./images/showfinder3.jpg" alt="screenshot 3" />
+        </a>
+        <a {...link}><img className="project-screenshot"
+          src="./images/showfinder4.jpg" alt="screenshot 3" />
         </a>
       </Carousel>
 

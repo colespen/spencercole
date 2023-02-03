@@ -33,7 +33,7 @@ export default function LinkPreview(props) {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-    config: { duration: 250 },
+    config: { duration: 300 },
   });
 
   const override = {
