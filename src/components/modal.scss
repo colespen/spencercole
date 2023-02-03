@@ -152,6 +152,8 @@
     display: flex;
     align-items: center;
     transition: color 200ms ease;
+    cursor: pointer;
+
 
     &:hover {
       background: rgba(78, 80, 84, 0.142);

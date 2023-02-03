@@ -52,7 +52,8 @@ export default function LinkPreview(props) {
   return (
     <Fragment>
       <div ref={imgRef}>
-        <p
+      {/* was <p></p> */}
+        <div
           ref={clickRef}
           className={pClass}
           onClick={handleSetIsShown}
@@ -82,7 +83,7 @@ export default function LinkPreview(props) {
             </animated.div>
           )}
 
-        </p>
+        </div>
       </div>
     </Fragment>
   );

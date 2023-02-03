@@ -73,10 +73,11 @@
   z-index: 100;
   cursor: pointer;
   &:hover span {
+    transition: color 50ms ease;
     color: #ffffff;
   }
   span {
-    transition: color 300ms ease;
+    transition: color 1000ms ease-out;
     color: #f4e5e079;
   }
 }

@@ -56,7 +56,7 @@ export default function ShowFinder() {
         <br></br>
         <p>This app provides the user with shows mapped to date and location input in a convenient interface, including relative links to artists, venues and ticket information</p>
         <br></br>
-        <p style={{ paddingBottom: "5px" }}>
+        <p style={{ paddingBottom: "10px" }}>
           <a
             className="its-live" {...link}
           >It's Live!</a></p>

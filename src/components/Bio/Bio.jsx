@@ -123,7 +123,7 @@ export default function Bio(props) {
               transition: 'opacity 600ms ease-in'
             }}
           >
-            <p className="bio-description"
+            <div className="bio-description"
               style={{ width: "95%" }}
             >
               <LinkPreview
@@ -135,7 +135,7 @@ export default function Bio(props) {
               </LinkPreview>
               &nbsp;&nbsp;
               am a full-stack web developer with a highly creative background in music composition and production. Using ingenuity, my eye for design and attention to detail, I strive to create an intuitive and memorable experience for the user. Working with cutting-edge tools, I produce high-performance and well-tested products.
-            </p>
+            </div>
             <br></br>
 
             <LinkPreview

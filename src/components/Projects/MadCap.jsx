@@ -52,9 +52,9 @@ export default function MadCap() {
         <p>the stack is this and this and this, Socket.IO</p>
         <p>Material-UI and custom SASS</p>
         <br></br>
-        <p
-          style={{ paddingBottom: "5px" }}
-        >It's live. Give it a click!</p>
+        <p style={{ paddingBottom: "10px" }}
+        ><a className="its-live" {...link}
+        >It's Live!</a></p>
 
         <div style={{ fontSize: "85%", paddingTop: "5px" }}>
           <h4>Stack:</h4>
