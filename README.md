@@ -2,8 +2,9 @@
 
 An SPA portfolio showcasing my work.
 <br>
-Have a look see!
-
+It's Live - Have a look see! 
+> https://www.spencercole.net/
+<br>
 ## Stack:
 
 - Custom SASS
@@ -11,6 +12,22 @@ Have a look see!
 - React.js
 
 > **Deployed with Netlify**
+<br>
+
+<br>
+
+### **Developed & Designed by Spencer Cole**
+
+<br>
+
+![home](https://github.com/colespen/ShowFinder/blob/master/client/docs/1_grabbing_location.png)
+
+![bio](https://github.com/colespen/ShowFinder/blob/master/client/docs/2_shows_date_range.png)
+
+![projects_responsive](https://github.com/colespen/ShowFinder/blob/master/client/docs/3_select_artist.png)
+
+![home_responsive](https://github.com/colespen/ShowFinder/blob/master/client/docs/4_mobile_responsive.png)
+
 
 # Getting Started with Create React App
 
