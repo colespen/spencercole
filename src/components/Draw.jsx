@@ -32,10 +32,9 @@ export default function Drawing(props) {
   const startDraw = ({ nativeEvent }) => {
     props.setIsPointerEvent("none");
     const mousePos = getMousePosOnCanvas(nativeEvent);
-    // const { offsetX, offsetY } = nativeEvent;
     ctxRef.current.beginPath();
     ctxRef.current.moveTo(mousePos.x, mousePos.y);
-    ctxRef.current.fill(); // ******
+    ctxRef.current.fill(); //** 
 
     setDrawing(true);
     setClicks(prev => prev + 1);
@@ -43,8 +42,7 @@ export default function Drawing(props) {
 
   const draw = ({ nativeEvent }) => {
     if (!drawing) return;
-    // const { offsetX, offsetY } = nativeEvent;
-    const mousePos = getMousePosOnCanvas(nativeEvent); // ******
+    const mousePos = getMousePosOnCanvas(nativeEvent);
     ctxRef.current.lineTo(mousePos.x, mousePos.y);
     ctxRef.current.stroke();
   };
@@ -77,25 +75,21 @@ export default function Drawing(props) {
     ctx.strokeStyle = `hsl(${240 - clicks * 2}, 
       ${64 + clicks * 3}%, 
       ${27 + clicks}%, ${alpha()}%)`;
-    console.log(`hsl(${240 - clicks * 2}, 
-        ${64 + clicks * 3}%, 
-        ${27 + clicks}%, ${alpha()}%)`);
   }, [clicks]);
 
   useEffect(() => {
-    const canvas = canvasRef.current; // *****
+    const canvas = canvasRef.current;
     // to supports higher screen densities, 2X screen density
     canvas.width = window.innerWidth * 2;
     canvas.height = window.innerHeight * 2;
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
     // setting the context to enable draw
-    const ctx = canvas.getContext('2d'); // *****
+    const ctx = canvas.getContext('2d');
     ctx.scale(2, 2);
     ctx.lineCap = 'round';
     ctx.lineJoin = "round";
     ctx.lineWidth = 80;
-    // ctx.strokeStyle = `hsl(240, 64%, 27%)`;
     ctx.imageSmoothingEnabled = true;
     ctxRef.current = ctx;
 

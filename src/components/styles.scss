@@ -96,7 +96,7 @@
 #draw-canvas {
   // might interfere w touch draw 
   // or buttons
-  // touch-action: none;
+  touch-action: none;
 
   margin: 0;
   inset: 0;
