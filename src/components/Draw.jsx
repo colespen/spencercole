@@ -10,28 +10,29 @@ export default function Drawing(props) {
 
   ////// get position for touch events
   function getMousePosOnCanvas(event) {
-    // console.log(event);
-    const clientX = event.clientX || event.touches[0].clientX;
-    const clientY = event.clientY || event.touches[0].clientY;
     const { offsetLeft, offsetTop } = event.target;
-    const canvasX = clientX - offsetLeft;
-    const canvasY = clientY - offsetTop;
-    // console.log(canvasX, canvasY)
-    // if (canvasX && canvasY >= 2) {
-      return { x: canvasX, y: canvasY };
-    // }
-    // if (canvasX < 2) {
-    //   return { x: 1, y: canvasY };
-    // }
-    // if (canvasY < 2) {
-    //   return { x: canvasX, y: 1 };
-    // }
+
+    if (event.type === "mousedown" || event.type === "mousemove") {
+      const clientMouseX = event.clientX;
+      const clientMouseY = event.clientY;
+      const canvasMouseX = clientMouseX - offsetLeft;
+      const canvasMouseY = clientMouseY - offsetTop;
+      return { x: canvasMouseX, y: canvasMouseY };
+    }
+    if (event.type === "touchstart" || event.type === "touchmove") {
+      const clientTouchX = event.touches[0].clientX;
+      const clientTouchY = event.touches[0].clientY;
+      const canvasTouchX = clientTouchX - offsetLeft;
+      const canvasTouchY = clientTouchY - offsetTop;
+      return { x: canvasTouchX, y: canvasTouchY };
+    }
+
   }
 
-  const startDraw = (nativeEvent) => {
+  const startDraw = ({ nativeEvent }) => {
     props.setIsPointerEvent("none");
 
-    const mousePos = getMousePosOnCanvas(nativeEvent); // ******
+    const mousePos = getMousePosOnCanvas(nativeEvent); 
 
     // const { offsetX, offsetY } = nativeEvent;
     ctxRef.current.beginPath();
@@ -42,7 +43,7 @@ export default function Drawing(props) {
     setDrawing(true);
   };
 
-  const draw = (nativeEvent) => {
+  const draw = ({ nativeEvent }) => {
     if (!drawing) return;
     // const { offsetX, offsetY } = nativeEvent;
     const mousePos = getMousePosOnCanvas(nativeEvent); // ******
