@@ -19,6 +19,7 @@
     user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    cursor: url("../../public/eraser.png"), pointer;
 
     &:hover {
       text-shadow: 6px 5px 12px rgba(167, 167, 167, 0.928);

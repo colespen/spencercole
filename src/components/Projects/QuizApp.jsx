@@ -34,7 +34,7 @@ export default function QuizApp() {
 
       <Carousel>
         <a {...link}><img className="project-screenshot"
-          src="./images/quizapp1.png" alt="screenshot 1" /></a>
+          src="./images/quizapp1.jpg" alt="screenshot 1" /></a>
         <a {...link}><img className="project-screenshot"
           src="./images/quizapp1a.png" alt="screenshot 2" /></a>
         <a {...link}><img className="project-screenshot"
