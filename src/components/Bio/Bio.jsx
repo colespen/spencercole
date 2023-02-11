@@ -57,6 +57,13 @@ export default function Bio(props) {
     onRest: () => setIsSpringRest(true),
   });
 
+  const glowSpring = useSpring({
+    loop: { reverse: true },
+    from: { opacity: 0.2, color: "#f4e5e0" },
+    to: { opacity: 1, color: "#75ffe6d4" },
+    delay: 1250,
+    config: { tension: 225, friction: 50 }
+  });
 
   const handleBioBtnClick = e => {
     transition("bio", e.currentTarget.id);
@@ -131,7 +138,9 @@ export default function Bio(props) {
                 image="./images/s_cole_rooftop_comp.jpg"
                 href="./images/s_cole_rooftop.jpg"
               >
-                I
+                <animated.span id="iButton" style={{ ...glowSpring }}>
+                  I
+                </animated.span>
               </LinkPreview>
               &nbsp;&nbsp;
               am a full-stack web developer with a highly creative background in music composition and production. Using ingenuity, my eye for design and attention to detail, I strive to create an intuitive and memorable experience for the user. Working with cutting-edge tools, I produce high-performance and well-tested products.
