@@ -60,8 +60,15 @@
   position: relative;
   // cursor: pointer;
   &:hover {
-    background-color: hsla(215, 40%, 41%, 0.196);
-    box-shadow: 0px -6px 0px #3b527591;
+    // background-color: hsla(215, 40%, 41%, 0.196);
+    background: rgb(62, 97, 145);
+    background: linear-gradient(
+      0deg,
+      rgba(62, 97, 145, 0.1923144257703081) 26%,
+      rgba(62, 97, 145, 0.03265056022408963) 47%,
+      rgba(62, 97, 145, 0) 73%
+    );
+    box-shadow: 6px 0px 0px #3b527591;
   }
 }
 
@@ -71,12 +78,20 @@
   position: relative;
   width: 100%;
   transform: translate(-0.5%, 66%);
+  border-radius: 3px;
   z-index: 100;
-  // border-radius: 3px;
   cursor: pointer;
-  // &:hover {
-  //   background-color: #3e619117;
-  // }
+  &:hover {
+    // background-color: hsla(215, 40%, 41%, 0.09);
+    background: rgb(62, 97, 145);
+    background: linear-gradient(
+      180deg,
+      rgba(62, 97, 145, 0.1923144257703081) 13%,
+      rgba(62, 97, 145, 0.052258403361344574) 41%,
+      rgba(62, 97, 145, 0) 76%
+    );
+    box-shadow: 6px 0px 0px #3b527591;
+  }
   // &:hover span {
   //   transition: color 50ms ease;
   //   color: #ffffff;
@@ -122,7 +137,6 @@
   }
 }
 
-
 .transform-none {
   transform: none;
 }
@@ -137,9 +151,9 @@
   &.rooftop-card {
     left: 53.5%;
   }
-    &:hover {
-      box-shadow: none;
-    }
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 @media only screen and (max-height: 1000px) {
@@ -152,6 +166,6 @@
 }
 @media only screen and (max-width: 400px) {
   .rooftop-with-preview {
-    transform: translate(-0.25%, 66%)
+    transform: translate(-0.25%, 66%);
   }
 }

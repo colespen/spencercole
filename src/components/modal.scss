@@ -189,22 +189,6 @@
   }
 }
 
-.bio-description {
-  cursor: pointer;
-  border-radius: 5px;
-  &:hover {
-    // background-color: hsla(215, 40%, 41%, 0.09);
-    background: rgb(62, 97, 145);
-    background: linear-gradient(
-      0deg,
-      rgba(62, 97, 145, 0.1923144257703081) 20%,
-      rgba(62, 97, 145, 0.11388305322128855) 44%,
-      rgba(62, 97, 145, 0) 79%
-    );
-    box-shadow: 0px 6px 0px #3b527591;
-  }
-}
-
 ///////////////////////////////////////////////
 
 // .tab-description {

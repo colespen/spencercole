@@ -59,10 +59,10 @@ export default function Bio(props) {
 
   const glowSpring = useSpring({
     loop: { reverse: true },
-    from: { opacity: 0.2, color: "#f4e5e0" },
+    from: { opacity: 0.8, color: "#3b5275" },
     to: { opacity: 1, color: "#75ffe6d4" },
     delay: 1250,
-    config: { tension: 225, friction: 50 }
+    config: { tension: 250, friction: 50 }
   });
 
   const handleBioBtnClick = e => {
