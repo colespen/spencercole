@@ -10,9 +10,6 @@ import Contact from './Contact';
 import Draw from './Draw';
 
 import useVisualMode from '../hooks/useVisualMode';
-// import useCacheImages from '../hooks/useCacheImages';
-// import { imageArray } from "../data/imageArray";
-
 
 export default function Main() {
 
@@ -66,8 +63,6 @@ export default function Main() {
   };
 
 
-
-
   return (
 
     <Fragment>
@@ -113,7 +108,6 @@ export default function Main() {
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
             setIsSpringRest={setIsSpringRest}
-          // view={view} transition={transition}
           />}
       </div>
     </Fragment>

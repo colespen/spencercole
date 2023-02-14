@@ -12,9 +12,7 @@ export default function Home(props) {
   } = props;
 
   const [opacity, setOpacity] = useState(0);
-  // const [isFirstLoad, setIsFirstLoad] = useState(true)
-  // const isFirstLoad = useRef(true)
-  // console.log("is First Load? ", isFirstLoad)
+
 
   useEffect(() => {
     // setIsFirstLoad(false);

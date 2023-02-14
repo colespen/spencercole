@@ -30,7 +30,7 @@
       max-width: 18px;
     }
     &:hover {
-      filter: contrast(0.55);
+      filter: contrast(0.4);
     }
   }
 
@@ -294,6 +294,9 @@
     cursor: pointer;
     &:hover {
       background-color: #001128;
+    }
+    &:active {
+      background-color: #112037;
     }
   }
 }
