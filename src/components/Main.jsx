@@ -1,4 +1,4 @@
-import { useState, Fragment, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 
 import './styles.scss';
@@ -64,8 +64,7 @@ export default function Main() {
 
 
   return (
-
-    <Fragment>
+    <>
       <Draw
         setIsPointerEvent={setIsPointerEvent}
         isDrawClear={isDrawClear}
@@ -110,6 +109,6 @@ export default function Main() {
             setIsSpringRest={setIsSpringRest}
           />}
       </div>
-    </Fragment>
+    </>
   );
 }
