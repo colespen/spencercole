@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, Fragment } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import './styles.scss';
 
@@ -105,7 +105,7 @@ export default function Drawing(props) {
 
 
   return (
-    <Fragment>
+    <>
       <canvas
         id="draw-canvas"
         ref={canvasRef}
@@ -116,6 +116,6 @@ export default function Drawing(props) {
         onTouchEnd={stopDraw}
         onTouchMove={draw}
       />
-    </Fragment>
+    </>
   );
 }

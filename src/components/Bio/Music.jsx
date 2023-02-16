@@ -1,11 +1,11 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect } from 'react';
 
 import './Bio.scss';
 import '../modal.scss';
 
 
 export default function Music() {
-
+  
   const [firstStyle, setFirstStyle] = useState({
     opacity: 0,
   });
@@ -53,7 +53,7 @@ export default function Music() {
 
 
   return (
-    <Fragment>
+    <>
       <main className="main-description music">
         <h3 style={{
           ...firstStyle, transition: "opacity 400ms ease-out", paddingBottom: "10px"
@@ -118,6 +118,6 @@ export default function Music() {
           (to name a few).
         </p>
       </main>
-    </Fragment>
+    </>
   );
 }

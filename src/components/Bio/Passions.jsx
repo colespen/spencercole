@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect } from 'react';
 
 import '../modal.scss';
 import './Bio.scss'
@@ -24,7 +24,7 @@ export default function Passions() {
 
 
   return (
-    <Fragment>
+    <>
 
       <header className="tab-header"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
@@ -52,6 +52,6 @@ export default function Passions() {
           <li>Music. <br></br>(performing, and especially composing)</li>
         </ul>
       </main>
-    </Fragment>
+    </>
   );
 }

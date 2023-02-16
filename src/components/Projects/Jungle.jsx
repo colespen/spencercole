@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect } from 'react';
 
 import '../modal.scss';
 
@@ -25,7 +25,7 @@ export default function Jungle() {
 
 
   return (
-    <Fragment>
+    <>
 
       <header className="tab-header"
         style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
@@ -77,6 +77,6 @@ export default function Jungle() {
         rel="noreferrer"
       > <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
       </a>
-    </Fragment>
+    </>
   );
 }

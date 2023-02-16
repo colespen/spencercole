@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 
 import '../modal.scss';
@@ -158,7 +158,7 @@ export default function Bio(props) {
           </main>
         </div>
         :
-        <Fragment>
+        <>
 
           <animated.div className="home-inner-window"
             style={{ width: "80%", height: "85%" }}
@@ -167,7 +167,7 @@ export default function Bio(props) {
             {view.tab === "P2" && <Music />}
           </animated.div>
 
-        </Fragment>
+        </>
       }
     </animated.section>
   );

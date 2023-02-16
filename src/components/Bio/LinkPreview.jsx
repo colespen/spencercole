@@ -1,4 +1,4 @@
-import { Fragment, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { useTransition, animated } from "@react-spring/web";
 import classNames from "classnames";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -50,7 +50,7 @@ export default function LinkPreview(props) {
 
 
   return (
-    <Fragment>
+    <>
       <div ref={imgRef}>
       {/* was <p></p> */}
         <div
@@ -85,6 +85,6 @@ export default function LinkPreview(props) {
 
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };

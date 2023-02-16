@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect } from 'react';
 
 import '../modal.scss';
 
@@ -6,7 +6,6 @@ import Carousel from './Carousel';
 
 
 export default function ShowFinder() {
-
   const [mainStyle, setMainStyle] = useState({
     opacity: 0,
   });
@@ -24,8 +23,7 @@ export default function ShowFinder() {
   };
 
   return (
-    <Fragment>
-
+    <>
       <header className="tab-header"
         style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
       >
@@ -86,8 +84,9 @@ export default function ShowFinder() {
         href="https://github.com/colespen/ShowFinder"
         target="_blank"
         rel="noreferrer"
-      > <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      >
+        <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
       </a>
-    </Fragment>
+    </>
   );
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 
 import './styles.scss';
@@ -49,7 +49,7 @@ export default function Home(props) {
 
 
   return (
-    <Fragment>
+    <>
       <div className="title-nav-container"
         style={{
           opacity,
@@ -102,6 +102,6 @@ export default function Home(props) {
         </div>
 
       </div>
-    </Fragment>
+    </>
   );
 }
