@@ -66,22 +66,10 @@ export default function Contact(props) {
     onRest: () => setIsSpringRest(true),
   });
 
-  // const handleBioBtnClick = e => {
-  //     transition("bio", e.currentTarget.id);
-  // };
-
 
   return (
     <animated.section className="modal-main"
       style={{ overflow: 'hidden', ...springs, ...modalStyle }}>
-      <nav className="modal-nav">
-        {/* <button id="P1" 
-                // onClick={handleBioButtonClick}
-                >Passions</button>
-                <button id="P2" 
-                // onClick={handleBioButtonClick}
-                >Extra</button> */}
-      </nav>
       <button
         className="close-btn"
         onClick={handleShowHideWindow}
