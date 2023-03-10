@@ -62,6 +62,7 @@ export default function Music() {
           }}>
           Solo Projects
         </h3>
+          {/* TODO: link entire list to anchor! */}
         <ul className="extra-list"
           style={{ ...firstStyle, transition: "opacity 1200ms ease" }}
         >
@@ -78,11 +79,12 @@ export default function Music() {
           </li>
           <li style={{ margin: "0px" }}><a href={hyperFollow} {...link}>
             etc...</a>
-            <span><img alt="arrow" src="./share.png"></img></span>
+            <a className="inner-link" href={tvReel} {...link}><img alt="arrow" src="./share.png"></img></a>
             <a className="inner-link"
               href={tvReel} {...link}>TV</a>
           </li>
         </ul>
+
         <br></br>
         <h3 className="music-header"
           style={{
@@ -90,6 +92,7 @@ export default function Music() {
           }}>
           Collaborative
         </h3>
+
         <ul className="extra-list"
           style={{ ...secondStyle, transition: "opacity 2.2s ease", paddingBottom: "10px" }}
         >
@@ -109,6 +112,7 @@ export default function Music() {
           <li><a href={oFclip} {...link}>
             Our Founders</a></li>
         </ul>
+
         <p className="music-bio"
           style={{ ...subStyle, transition: "opacity 3.6s ease" }}
         >
@@ -116,7 +120,8 @@ export default function Music() {
           <br></br>peforming with great artists such as
           <br></br>
           <strong>
-            Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé
+            Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, 
+            <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé
           </strong>
           <br></br>
           <br></br>
