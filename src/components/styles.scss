@@ -68,7 +68,6 @@
 
   &.light-border {
     pointer-events: none;
-    // z-index: 20;
     background: rgba(41, 57, 117, 0.52);
     border: 10px solid rgba(41, 57, 117, 0.107);
     border-radius: 10px;
@@ -85,7 +84,6 @@
   }
   &.heavy-border {
     pointer-events: none;
-    // z-index: 20;
     background: #3f150057;
     border-radius: 10px;
     border: 6px solid #0042a5;
@@ -123,8 +121,6 @@
 
 @media only screen and (max-width: 470px) {
   .title-nav-container .navigate {
-    // scale: 95%;
-    // width: 81%;
     scale: 90%;
     width: 95%;
   }

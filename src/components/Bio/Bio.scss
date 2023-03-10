@@ -22,7 +22,6 @@
   border-left: 7px solid #3b5275;
   border-radius: 3px;
   left: -12px;
-  // display: flex;
   cursor: pointer;
   &:hover {
     background-color: #3e609132;
@@ -34,8 +33,6 @@
 }
 
 .music {
-  // font-size: clamp(12px, 2.5vw, 20px);
-  // font-size: clamp(12px, 3.5vw, 22px);
   font-size: clamp(12px, 1.5vh, 22px);
   justify-content: space-evenly;
   height: 100%;

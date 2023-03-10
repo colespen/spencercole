@@ -15,7 +15,6 @@ export default function Home(props) {
 
 
   useEffect(() => {
-    // setIsFirstLoad(false);
     const timer = setTimeout(() => {
       setOpacity(1)
       return () => clearTimeout(timer)
@@ -54,7 +53,6 @@ export default function Home(props) {
         style={{
           opacity,
           pointerEvents: isPointerEvent,
-          // maxHeight: "100%", 
           width: "100%",
           transition: "opacity 850ms ease"
         }}

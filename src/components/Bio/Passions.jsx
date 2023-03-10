@@ -17,11 +17,6 @@ export default function Passions() {
     return () => clearTimeout(timer);
   }, []);
 
-  // const link = { 
-  //   href: "https://github.com/colespen/Jungle", target: "_blank", rel: "noreferrer"
-  // }
-
-
 
   return (
     <>
@@ -29,7 +24,6 @@ export default function Passions() {
       <header className="tab-header"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
-        {/* <h1>Passions</h1> */}
       </header>
 
 

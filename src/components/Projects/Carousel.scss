@@ -15,13 +15,11 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  // border-radius: 13px;
 }
 
 .carousel-content {
   display: flex;
   align-items: center;
-  // transition: all 400ms ease, opacity 600ms ease;
   /* hide scrollbar in IE and Edge */
   -ms-overflow-style: none;
   /* hide scrollbar in Firefox */
@@ -53,7 +51,6 @@
   .right-arrow {
     z-index: 1;
     width: min(20vw, 40rem);
-    // min-width: 63px;
     max-width: 140px;
     height: 20px;
     border-radius: 24px;

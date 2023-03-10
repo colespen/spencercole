@@ -30,7 +30,5 @@ export default function useOnLoadImages(ref) {
 
     return;
   }, [ref]);
-
-  // console.log("useOnLoadImages status: ", status);
   return status;
 };
