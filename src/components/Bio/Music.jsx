@@ -35,13 +35,12 @@ export default function Music() {
     return () => clearTimeout(timer);
   }, []);
 
-  function clickHandler(e) {
+  const clickHandler = e => {
     e.preventDefault();
     const href = e.target.querySelector('a').getAttribute('href');
     const target = e.target.querySelector('a').getAttribute('target');
     window.open(href, target);
   }
-
 
   const link = {
     target: "_blank", rel: "noreferrer"
