@@ -35,6 +35,13 @@ export default function Music() {
     return () => clearTimeout(timer);
   }, []);
 
+  function clickHandler(e) {
+    e.preventDefault();
+    const href = e.target.querySelector('a').getAttribute('href');
+    const target = e.target.querySelector('a').getAttribute('target');
+    window.open(href, target);
+  }
+
 
   const link = {
     target: "_blank", rel: "noreferrer"
@@ -62,26 +69,33 @@ export default function Music() {
           }}>
           Solo Projects
         </h3>
-          {/* TODO: link entire list to anchor! */}
+        {/* TODO: link entire list to anchor! */}
         <ul className="extra-list"
           style={{ ...firstStyle, transition: "opacity 1200ms ease" }}
         >
-          <li><a href={myBandcamp} {...link}>
-            all releases</a></li>
-          <li><a href={brokenSpotify} {...link}
-            style={{ width: "78px" }}>
-            BROKEN</a>
+          <li onClick={clickHandler}>
+            <a href={myBandcamp} {...link}>
+              all releases
+            </a>
+          </li>
+          <li onClick={clickHandler}>
+            <a href={brokenSpotify} {...link}>
+              BROKEN
+            </a>
             <a className="inner-link"
               href={brokenClip} {...link}>(piano)</a>
           </li>
-          <li><a href={wasteSpotify} {...link}>
-            How To Waste</a>
+          <li onClick={clickHandler}>
+            <a href={wasteSpotify} {...link}>How To Waste</a>
           </li>
-          <li style={{ margin: "0px" }}><a href={hyperFollow} {...link}>
-            etc...</a>
-            <a className="inner-link" href={tvReel} {...link}><img alt="arrow" src="./share.png"></img></a>
-            <a className="inner-link"
-              href={tvReel} {...link}>TV</a>
+          <li onClick={clickHandler} style={{ margin: "0px" }}>
+            <a href={hyperFollow} {...link}>
+              etc...
+              <a className="inner-link" id="arrow-icon" href={tvReel} {...link}>
+                <img alt="arrow" src="./share.png"></img></a>
+              <a className="inner-link"
+                href={tvReel} {...link}>TV</a>
+            </a>
           </li>
         </ul>
 
@@ -96,21 +110,24 @@ export default function Music() {
         <ul className="extra-list"
           style={{ ...secondStyle, transition: "opacity 2.2s ease", paddingBottom: "10px" }}
         >
-          <li><a href={weavesVid} {...link}>
-            Weaves</a>
+          <li onClick={clickHandler}>
+            <a href={weavesVid} {...link}>Weaves</a>
           </li>
-          <li><a href={pinkBlobClip} {...link}
-            style={{ width: "82px" }}>
-            Pink Blob</a>
+          <li onClick={clickHandler}>
+            <a href={pinkBlobClip} {...link}
+            >
+              Pink Blob
+            </a>
             <a style={{ width: "157px" }}
               className="inner-link"
               href={pinkBlobRecord} {...link}>(Morgan Waters)</a>
-
           </li>
-          <li><a href={scrapArtsClip} {...link}>
-            Scrap Arts Music</a></li>
-          <li><a href={oFclip} {...link}>
-            Our Founders</a></li>
+          <li onClick={clickHandler}>
+            <a href={scrapArtsClip} {...link}>Scrap Arts Music</a>
+          </li>
+          <li onClick={clickHandler}>
+            <a href={oFclip} {...link}>Our Founders</a>
+          </li>
         </ul>
 
         <p className="music-bio"
@@ -120,7 +137,7 @@ export default function Music() {
           <br></br>peforming with great artists such as
           <br></br>
           <strong>
-            Jeremy Dutcher, Carly Rae Jepsen, The Weather Station, 
+            Jeremy Dutcher, Carly Rae Jepsen, The Weather Station,
             <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé
           </strong>
           <br></br>
