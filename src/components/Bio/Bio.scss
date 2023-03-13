@@ -15,6 +15,7 @@
   a {
     width: 100%;
     text-decoration: none;
+    pointer-events: none;
   }
 }
 .extra-list > li {
@@ -60,9 +61,10 @@
   }
 }
 
-.inner-link {
+#inner-link {
   width: fit-content;
   padding-left: 10px;
+  pointer-events: auto;
   &:hover {
     color: #a8b9d4;
   }
@@ -71,7 +73,8 @@
 #arrow-icon {
   margin-left: 15px;
   height: 15px;
-  &:hover ~ .inner-link {
+  pointer-events: auto;
+  &:hover ~ #inner-link {
     color: #a8b9d4;
   }
 }

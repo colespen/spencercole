@@ -36,10 +36,9 @@ export default function Music() {
   }, []);
 
   const clickHandler = e => {
-    e.preventDefault();
-    const href = e.target.querySelector('a').getAttribute('href');
-    const target = e.target.querySelector('a').getAttribute('target');
-    window.open(href, target);
+    const href = e.target.querySelector('a')?.getAttribute('href');
+    const target = e.target.querySelector('a')?.getAttribute('target');
+    href && target && window.open(href, target);
   }
 
   const link = {
@@ -81,7 +80,7 @@ export default function Music() {
             <a href={brokenSpotify} {...link}>
               BROKEN
             </a>
-            <a className="inner-link"
+            <a id="inner-link"
               href={brokenClip} {...link}>(piano)</a>
           </li>
           <li onClick={clickHandler}>
@@ -92,7 +91,7 @@ export default function Music() {
               etc...
               <a className="inner-link" id="arrow-icon" href={tvReel} {...link}>
                 <img alt="arrow" src="./share.png"></img></a>
-              <a className="inner-link"
+              <a id="inner-link"
                 href={tvReel} {...link}>TV</a>
             </a>
           </li>
@@ -118,7 +117,7 @@ export default function Music() {
               Pink Blob
             </a>
             <a style={{ width: "157px" }}
-              className="inner-link"
+              id="inner-link"
               href={pinkBlobRecord} {...link}>(Morgan Waters)</a>
           </li>
           <li onClick={clickHandler}>
