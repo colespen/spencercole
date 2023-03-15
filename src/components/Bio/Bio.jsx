@@ -81,7 +81,7 @@ export default function Bio(props) {
   }, [view.tab]);
 
   const cvPrev =
-    "https://docs.google.com/document/d/1EnxTwBGiWjiEPK8DkzJdpTd0Hh2cz1mgbzSocljhtyw/edit?usp=sharing";
+    "https://flowcv.com/resume/svm5jsc61b";
 
   return (
     <animated.section className="modal-main"
