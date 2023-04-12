@@ -6,6 +6,7 @@ import MadCap from './MadCap';
 import QuizApp from './QuizApp';
 import Jungle from './Jungle';
 import Scheduler from './Scheduler';
+import VoiceAssistant from './VoiceAssistant';
 
 import '../modal.scss';
 
@@ -73,19 +74,23 @@ export default function Projects(props) {
           <img className="tab-icon" src="./images/globeicon.png" alt="showfinder tab" />
         </button>
         <button id="P2" onClick={handleProjectBtnClick}>
-          <img className="tab-icon" src="./images/avatar-1.png" alt="madcap tab" />
+          <img className="tab-icon" src="./images/voiceassistanticon.png" alt="scheduler tab" />
         </button>
         <button id="P3" onClick={handleProjectBtnClick}>
+          <img className="tab-icon" src="./images/avatar-1.png" alt="madcap tab" />
+        </button>
+        <button id="P4" onClick={handleProjectBtnClick}>
           <img className="tab-icon" src="./images/quizappicon.png" alt="quizapp tab"
             style={{ height: "28px", paddingTop: "1px" }} />
         </button>
-        <button id="P4" onClick={handleProjectBtnClick}>
+        <button id="P5" onClick={handleProjectBtnClick}>
           <img className="tab-icon" src="./images/jungleicon.png" alt="jungle tab"
             style={{ height: "33px", paddingBottom: "3px" }} />
         </button>
-        <button id="P5" onClick={handleProjectBtnClick}>
+        <button id="P6" onClick={handleProjectBtnClick}>
           <img className="tab-icon" src="./images/schedulericon.png" alt="scheduler tab" />
         </button>
+       
       </nav>
 
       <button
@@ -132,10 +137,11 @@ export default function Projects(props) {
 
         <animated.div className="inner-window">
           {view.tab === "P1" && <ShowFinder />}
-          {view.tab === "P2" && <MadCap />}
-          {view.tab === "P3" && <QuizApp />}
-          {view.tab === "P4" && <Jungle />}
-          {view.tab === "P5" && <Scheduler />}
+          {view.tab === "P2" && <VoiceAssistant />}
+          {view.tab === "P3" && <MadCap />}
+          {view.tab === "P4" && <QuizApp />}
+          {view.tab === "P5" && <Jungle />}
+          {view.tab === "P6" && <Scheduler />}
         </animated.div>
       }
 
