@@ -4,8 +4,6 @@ import '../modal.scss';
 
 import Carousel from './Carousel';
 
-
-
 export default function MadCap() {
 
   const [mainStyle, setMainStyle] = useState({
@@ -25,7 +23,6 @@ export default function MadCap() {
 
   return (
     <>
-
       <header className="tab-header"
         style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
       >

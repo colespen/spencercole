@@ -10,7 +10,6 @@ import VoiceAssistant from './VoiceAssistant';
 
 import '../modal.scss';
 
-
 export default function Projects(props) {
   const {
     handleShowHideWindow, view, transition,
@@ -90,7 +89,7 @@ export default function Projects(props) {
         <button id="P6" onClick={handleProjectBtnClick}>
           <img className="tab-icon" src="./images/schedulericon.png" alt="scheduler tab" />
         </button>
-       
+
       </nav>
 
       <button
@@ -132,9 +131,7 @@ export default function Projects(props) {
           > <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
           </a>
         </animated.div>
-
         :
-
         <animated.div className="inner-window">
           {view.tab === "P1" && <ShowFinder />}
           {view.tab === "P2" && <VoiceAssistant />}

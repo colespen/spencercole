@@ -4,7 +4,6 @@ import '../modal.scss';
 
 import Carousel from './Carousel';
 
-
 export default function Jungle() {
 
   const [mainStyle, setMainStyle] = useState({
@@ -18,15 +17,12 @@ export default function Jungle() {
     return () => clearTimeout(timer);
   }, []);
 
-
   const link = {
     href: "https://github.com/colespen/Jungle", target: "_blank", rel: "noreferrer"
   };
 
-
   return (
     <>
-
       <header className="tab-header"
         style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
       >
