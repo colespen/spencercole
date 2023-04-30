@@ -2,7 +2,6 @@
 
 An SPA portfolio showcasing my work.
 <br>
-It's Live - Have a look see! 
 > https://www.spencercole.net/
 <br>
 
