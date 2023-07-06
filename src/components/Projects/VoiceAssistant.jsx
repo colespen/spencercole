@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "../modal.scss";
 
 import Carousel from "./Carousel";
+import GitHubLink from "./GitHubLink";
 
 export default function VoiceAssistant() {
   const [mainStyle, setMainStyle] = useState({
@@ -106,21 +107,10 @@ export default function VoiceAssistant() {
           </ul>
         </div>
       </main>
-
-      <a
-        className="github-icon"
-        style={{ ...mainStyle }}
-        href="https://github.com/colespen/voice-command-oscilloscope"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img
-          src="./images/github-mark.svg"
-          width="18"
-          height="18"
-          alt="GitHub-link"
-        ></img>
-      </a>
+      <GitHubLink
+        mainStyle={mainStyle}
+        projectUrlName="voice-command-oscilloscope"
+      />
     </>
   );
 }

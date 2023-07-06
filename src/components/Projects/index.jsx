@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { animated, useSpring } from "@react-spring/web";
 
-import Tabs from "./Tabs";
+import ModalTabs from "./ModalTabs";
 import ShowFinder from "./ShowFinder";
 import VoiceAssistant from "./VoiceAssistant";
 import Surveillance from "./Surveillance";
 import MadCap from "./MadCap";
 import QuizApp from "./QuizApp";
-
 import Scheduler from "./Scheduler";
+import GitHubLink from "./GitHubLink";
 
 import "../modal.scss";
 
@@ -69,56 +69,10 @@ export default function Projects(props) {
       className="modal-main"
       style={{ ...springs, ...modalStyle }}
     >
-      <Tabs 
+      <ModalTabs
         handleProjectBtnClick={handleProjectBtnClick}
         navStyle={navStyle}
       />
-      {/* <nav className="modal-nav" style={{ ...navStyle }}>
-        <button id="P1" onClick={handleProjectBtnClick}>
-          <img
-            className="tab-icon"
-            src="./images/globeicon.png"
-            alt="showfinder tab"
-          />
-        </button>
-        <button id="P2" onClick={handleProjectBtnClick}>
-          <img
-            className="tab-icon"
-            src="./images/voiceassistanticon.png"
-            alt="scheduler tab"
-          />
-        </button>
-        <button id="P3" onClick={handleProjectBtnClick}>
-          <img
-            className="tab-icon"
-            src="./images/SMSicon.png"
-            alt="SMS tab"
-            style={{ height: "32px", paddingTop: "2px" }}
-          />
-        </button>
-        <button id="P4" onClick={handleProjectBtnClick}>
-          <img
-            className="tab-icon"
-            src="./images/avatar-1.png"
-            alt="madcap tab"
-          />
-        </button>
-        <button id="P5" onClick={handleProjectBtnClick}>
-          <img
-            className="tab-icon"
-            src="./images/quizappicon.png"
-            alt="quizapp tab"
-            style={{ height: "28px", paddingTop: "1px" }}
-          />
-        </button>
-        <button id="P6" onClick={handleProjectBtnClick}>
-          <img
-            className="tab-icon"
-            src="./images/schedulericon.png"
-            alt="scheduler tab"
-          />
-        </button>
-      </nav> */}
 
       <button
         className="close-btn"
@@ -150,22 +104,8 @@ export default function Projects(props) {
             <br></br>
             <p>Please have a look through my work above...</p>
           </main>
-
-          <a
-            className="github-icon"
-            style={{ ...navStyle }}
-            href="https://github.com/colespen/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {" "}
-            <img
-              src="./images/github-mark.svg"
-              width="18"
-              height="18"
-              alt="GitHub-link"
-            ></img>
-          </a>
+          
+          <GitHubLink mainStyle={mainStyle} projectUrlName="" />
         </animated.div>
       ) : (
         <animated.div className="inner-window">

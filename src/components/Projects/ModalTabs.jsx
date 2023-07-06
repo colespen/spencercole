@@ -1,4 +1,4 @@
-export default function Tabs({ handleProjectBtnClick, navStyle }) {
+export default function ModalTabs({ handleProjectBtnClick, navStyle }) {
   return (
     <nav className="modal-nav" style={{ ...navStyle }}>
       <button id="P1" onClick={handleProjectBtnClick}>

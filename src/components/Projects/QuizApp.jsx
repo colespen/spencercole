@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "../modal.scss";
 
 import Carousel from "./Carousel";
+import GitHubLink from "./GitHubLink";
 
 export default function QuizApp() {
   const [mainStyle, setMainStyle] = useState({
@@ -106,22 +107,7 @@ export default function QuizApp() {
           </ul>
         </div>
       </main>
-
-      <a
-        className="github-icon"
-        style={{ ...mainStyle }}
-        href="https://github.com/colespen/Quiz-App"
-        target="_blank"
-        rel="noreferrer"
-      >
-        {" "}
-        <img
-          src="./images/github-mark.svg"
-          width="18"
-          height="18"
-          alt="GitHub-link"
-        ></img>
-      </a>
+      <GitHubLink mainStyle={mainStyle} projectUrlName="Quiz-App" />
     </>
   );
 }
