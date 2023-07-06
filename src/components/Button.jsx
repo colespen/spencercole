@@ -1,3 +1,5 @@
+import "./homebuttons.scss";
+
 export default function Button({ children, handleShowHideWindow, id }) {
   return (
     <button className="btn-main" id={id} onClick={handleShowHideWindow}>
