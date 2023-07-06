@@ -6,8 +6,9 @@ import "./styles.scss";
 import Home from "./Home";
 import Projects from "./Projects";
 import Bio from "./Bio/Bio";
-import Contact from "./Contact";
+import Contact from "./Contact/Contact";
 import Draw from "./Draw";
+import ModalStain from "./ModalStain";
 
 import useVisualMode from "../hooks/useVisualMode";
 
@@ -15,12 +16,12 @@ export default function Main() {
   const [show, setShow] = useState(false);
   const [isPointerEvent, setIsPointerEvent] = useState("auto");
   const [isDrawClear, setIsDrawClear] = useState(false);
+  const [clicks, setClicks] = useState(0);
+  const [isSpringRest, setIsSpringRest] = useState(false);
   //// For Modal Stain Transition
   const [isStainVisible, setIsStainVisible] = useState("visible");
-  const [isSpringRest, setIsSpringRest] = useState(false);
-  const [flash, setFlash] = useState(0);
   const [border, setBorder] = useState(0);
-  const [clicks, setClicks] = useState(0);
+  const [flash, setFlash] = useState(0);
 
   const { view, transition } = useVisualMode("home", null);
 
@@ -46,17 +47,17 @@ export default function Main() {
     !isDrawClear ? setIsDrawClear(true) : setIsDrawClear(false);
   };
 
-  useEffect(() => {
-    view.page !== "home"
-      ? setIsStainVisible("hidden")
-      : setIsStainVisible("visible");
-  }, [view.page]);
-
   const handleOnMouseEnter = () => {
     if (isSpringRest && isStainVisible === "hidden") {
       setIsStainVisible("visible");
     }
   };
+
+  useEffect(() => {
+    view.page !== "home"
+      ? setIsStainVisible("hidden")
+      : setIsStainVisible("visible");
+  }, [view.page]);
 
   return (
     <>
@@ -69,19 +70,11 @@ export default function Main() {
           handleClearDraw={handleClearDraw}
         />
       )}
-
-      <section
-        className="modal-stain light-border"
-        style={{ opacity: border, visibility: isStainVisible }}
-      ></section>
-      <section
-        className="modal-stain heavy-border"
-        style={{ opacity: flash, visibility: isStainVisible }}
-      ></section>
-      <section
-        className="modal-stain flash"
-        style={{ opacity: flash, visibility: isStainVisible }}
-      ></section>
+      <ModalStain
+        border={border}
+        flash={flash}
+        isStainVisible={isStainVisible}
+      />
 
       <div className={windowShowHide}>
         {view.page === "projects" && (

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import "../modal.scss";
+import "../modalstyles.scss";
 import "./Bio.scss";
 
 export default function Passions() {

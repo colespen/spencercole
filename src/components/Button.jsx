@@ -1,4 +1,4 @@
-import "./homebuttons.scss";
+import "./Button.scss";
 
 export default function Button({ children, handleShowHideWindow, id }) {
   return (

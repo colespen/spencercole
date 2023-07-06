@@ -10,7 +10,7 @@ import QuizApp from "./QuizApp";
 import Scheduler from "./Scheduler";
 import GitHubLink from "./GitHubLink";
 
-import "../modal.scss";
+import "../modalstyles.scss";
 
 export default function Projects(props) {
   const {
@@ -104,7 +104,7 @@ export default function Projects(props) {
             <br></br>
             <p>Please have a look through my work above...</p>
           </main>
-          
+
           <GitHubLink mainStyle={mainStyle} projectUrlName="" />
         </animated.div>
       ) : (

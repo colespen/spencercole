@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { animated, useSpring } from "@react-spring/web";
 
 import ContactForm from "./ContactForm";
-import "./modal.scss";
+import "../modalstyles.scss";
 
 export default function Contact(props) {
   const [formSubmitted, setFormSubmitted] = useState(false);

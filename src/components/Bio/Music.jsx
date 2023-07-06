@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { musicUrls } from "./musicLinks";
 
 import "./Bio.scss";
-import "../modal.scss";
+import "../modalstyles.scss";
 
 export default function Music() {
   const [firstStyle, setFirstStyle] = useState({

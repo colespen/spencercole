@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { animated, useSpring } from "@react-spring/web";
 
-import "../modal.scss";
+import "../modalstyles.scss";
 import LinkPreview from "./LinkPreview";
 import Passions from "./Passions";
 import Music from "./Music";

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import "../modal.scss";
+import "../modalstyles.scss";
 
 import Carousel from "./Carousel";
 import GitHubLink from "./GitHubLink";
