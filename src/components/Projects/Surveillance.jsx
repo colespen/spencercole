@@ -102,13 +102,13 @@ export default function Surveillance() {
       <a
         className="github-icon"
         style={{ ...mainStyle }}
-        href="https://surveillance-camera-management-system.vercel.app/"
+        href="https://github.com/colespen/Surveillance-Camera-Management-System"
         target="_blank"
         rel="noreferrer"
       >
         {" "}
         <img
-          src="./images/SMSicon.png"
+          src="./images/github-mark.svg"
           width="18"
           height="18"
           alt="GitHub-link"
