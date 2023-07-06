@@ -4,7 +4,7 @@ import classNames from "classnames";
 import "./styles.scss";
 
 import Home from "./Home";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import Bio from "./Bio/Bio";
 import Contact from "./Contact/Contact";
 import Draw from "./Draw";
