@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-import '../modal.scss';
-import './Bio.scss'
-
+import "../modal.scss";
+import "./Bio.scss";
 
 export default function Passions() {
-
   const [mainStyle, setMainStyle] = useState({
     opacity: 0,
   });
@@ -17,33 +15,35 @@ export default function Passions() {
     return () => clearTimeout(timer);
   }, []);
 
-
   return (
     <>
-
-      <header className="tab-header"
+      <header
+        className="tab-header"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
-      >
-      </header>
+      ></header>
 
-
-      <main className="main-description"
+      <main
+        className="main-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease-in" }}
       >
-        <h3
-        style={{fontSize: "130%", fontWeight: "400"}}
-        >Things that thrill me</h3>
+        <h3 style={{ fontSize: "130%", fontWeight: "400" }}>
+          Things that thrill me
+        </h3>
         <br></br>
         <ul className="passion-list">
-          <li>the process of creation <br></br>
+          <li>
+            the process of creation <br></br>
             (creating something <br></br>from nothing)
           </li>
           <li>originality</li>
-          <li>building something as useful
+          <li>
+            building something as useful
             <br></br>
             as it is beautiful
           </li>
-          <li>Music. <br></br>(performing, and especially composing)</li>
+          <li>
+            Music. <br></br>(performing, and especially composing)
+          </li>
         </ul>
       </main>
     </>

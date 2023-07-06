@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
-import useOnLoadImages from '../../hooks/useOnLoadImages';
+import useOnLoadImages from "../../hooks/useOnLoadImages";
 
-import './Carousel.scss';
+import "./Carousel.scss";
 
 export default function Carousel(props) {
   const { children } = props;
@@ -24,21 +24,20 @@ export default function Carousel(props) {
     return () => clearTimeout(timer);
   }, []);
 
-
   // Set the length to match current children from props
   useEffect(() => {
     setLength(children.length);
   }, [children]);
 
   const next = () => {
-    if (currentIndex < (length - 1)) {
-      setCurrentIndex(prevState => prevState + 1);
+    if (currentIndex < length - 1) {
+      setCurrentIndex((prevState) => prevState + 1);
     }
   };
 
   const prev = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(prevState => prevState - 1);
+      setCurrentIndex((prevState) => prevState - 1);
     }
   };
 
@@ -51,21 +50,22 @@ export default function Carousel(props) {
     borderColor: "rgb(158 170 191 / 58%) rgb(134 145 164) transparent",
     borderImage: "initial",
     display: "inline-block",
-    animation: "0.75s cubic-bezier(0.21, 0.11, 0.74, 0.85) 0s infinite normal both running react-spinners-ClipLoader-clip",
+    animation:
+      "0.75s cubic-bezier(0.21, 0.11, 0.74, 0.85) 0s infinite normal both running react-spinners-ClipLoader-clip",
   };
-
 
   return (
     <>
-      <div className="carousel-container" ref={imgRef}
+      <div
+        className="carousel-container"
+        ref={imgRef}
         style={{ ...mainStyle, transition: "opacity 1.5s ease" }}
       >
-        {imageLoaded ?
+        {imageLoaded ? (
           <div className="carousel-wrapper">
-
-            <div
-              className="carousel-content-wrapper">
-              <div className="carousel-content"
+            <div className="carousel-content-wrapper">
+              <div
+                className="carousel-content"
                 style={{
                   transform: `translateX(-${currentIndex * 100}%)`,
                 }}
@@ -84,7 +84,7 @@ export default function Carousel(props) {
               </button>
             </div>
           </div>
-          :
+        ) : (
           <ClipLoader
             cssOverride={override}
             size={50}
@@ -93,7 +93,7 @@ export default function Carousel(props) {
             id="carousel-spinner"
             aria-label="loading spinner"
           />
-        }
+        )}
       </div>
     </>
   );

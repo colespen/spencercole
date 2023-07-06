@@ -8,8 +8,6 @@ import "./LinkPreview.scss";
 import useOnLoadImages from "../../hooks/useOnLoadImages";
 import useOutsideClick from "../../hooks/useOutsideClick";
 
-
-
 export default function LinkPreview(props) {
   const { pClass, divClass, imgClass, href, image } = props;
   const [isShown, setIsShown] = useState(false);
@@ -17,17 +15,14 @@ export default function LinkPreview(props) {
   const imgRef = useRef(null);
   const imageLoaded = useOnLoadImages(imgRef);
 
-  const popUpDivClass = classNames(
-    divClass, {
+  const popUpDivClass = classNames(divClass, {
     "boxshadow-none": !imageLoaded,
   });
-
 
   const handleSetIsShown = () => {
     setIsShown(!isShown);
   };
   const clickRef = useOutsideClick(handleSetIsShown, isShown);
-
 
   const fadeSpring = useTransition([isShown], {
     from: { opacity: 0 },
@@ -45,46 +40,44 @@ export default function LinkPreview(props) {
     borderColor: "rgb(158 170 191 / 58%) rgb(134 145 164) transparent",
     borderImage: "initial",
     display: "inline-block",
-    animation: "0.75s cubic-bezier(0.21, 0.11, 0.74, 0.85) 0s infinite normal both running react-spinners-ClipLoader-clip",
+    animation:
+      "0.75s cubic-bezier(0.21, 0.11, 0.74, 0.85) 0s infinite normal both running react-spinners-ClipLoader-clip",
   };
-
 
   return (
     <>
       <div ref={imgRef}>
-      {/* was <p></p> */}
-        <div
-          ref={clickRef}
-          className={pClass}
-          onClick={handleSetIsShown}
-        >
+        {/* was <p></p> */}
+        <div ref={clickRef} className={pClass} onClick={handleSetIsShown}>
           <span> {props.children} </span>
 
-          {fadeSpring((style, item) =>
-            item &&
-            <animated.div
-              className={popUpDivClass} style={style}>
-
-              {imageLoaded ?
-
-                <a className="inner-card-link"
-                  href={href} target="_blank" rel="noreferrer">
-                  <img src={image} className={imgClass} alt="link popup" />
-                </a>
-                :
-                <ClipLoader
-                  cssOverride={override}
-                  size={50}
-                  color="#728db8"
-                  className="image-loading" aria-label="loading spinner"
-                />
-              }
-
-            </animated.div>
+          {fadeSpring(
+            (style, item) =>
+              item && (
+                <animated.div className={popUpDivClass} style={style}>
+                  {imageLoaded ? (
+                    <a
+                      className="inner-card-link"
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img src={image} className={imgClass} alt="link popup" />
+                    </a>
+                  ) : (
+                    <ClipLoader
+                      cssOverride={override}
+                      size={50}
+                      color="#728db8"
+                      className="image-loading"
+                      aria-label="loading spinner"
+                    />
+                  )}
+                </animated.div>
+              )
           )}
-
         </div>
       </div>
     </>
   );
-};
+}

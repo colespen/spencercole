@@ -1,13 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-import '../modal.scss';
+import "../modal.scss";
 
-import Carousel from './Carousel';
-
-
+import Carousel from "./Carousel";
 
 export default function QuizApp() {
-
   const [mainStyle, setMainStyle] = useState({
     opacity: 0,
   });
@@ -20,41 +17,78 @@ export default function QuizApp() {
   }, []);
 
   const link = {
-    href: "https://github.com/colespen/Quiz-App", target: "_blank", rel: "noreferrer"
+    href: "https://github.com/colespen/Quiz-App",
+    target: "_blank",
+    rel: "noreferrer",
   };
 
   return (
     <>
-
-      <header className="tab-header"
+      <header
+        className="tab-header"
         style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
       >
-        <h1><a {...link}>QuizApp</a></h1>
+        <h1>
+          <a {...link}>QuizApp</a>
+        </h1>
       </header>
 
       <Carousel>
-        <a {...link}><img className="project-screenshot"
-          src="./images/quizapp1.jpg" alt="screenshot 1" /></a>
-        <a {...link}><img className="project-screenshot"
-          src="./images/quizapp1a.png" alt="screenshot 2" /></a>
-        <a {...link}><img className="project-screenshot"
-          src="./images/quizapp2.png" alt="screenshot 3" /></a>
-        <a {...link}><img className="project-screenshot"
-          src="./images/quizapp3.png" alt="screenshot 4" /></a>
-        <a {...link}><img className="project-screenshot"
-          src="./images/quizapp4.png" alt="screensho t5" /></a>
-        <a {...link}><img className="project-screenshot"
-          src="./images/quizapp5.png" alt="screenshot 6" /></a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/quizapp1.jpg"
+            alt="screenshot 1"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/quizapp1a.png"
+            alt="screenshot 2"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/quizapp2.png"
+            alt="screenshot 3"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/quizapp3.png"
+            alt="screenshot 4"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/quizapp4.png"
+            alt="screensho t5"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/quizapp5.png"
+            alt="screenshot 6"
+          />
+        </a>
       </Carousel>
 
-      <main className="tab-description"
+      <main
+        className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
-        <p>Here's another.
+        <p>
+          Here's another.
           <br></br>
           Explore, Create and Share customized games to challenge your friends.
         </p>
-        <p>It's the first team build I was ever invloved in
+        <p>
+          It's the first team build I was ever invloved in
           <br></br>(with Nicholas Kovacs).
         </p>
         <br></br>
@@ -79,7 +113,14 @@ export default function QuizApp() {
         href="https://github.com/colespen/Quiz-App"
         target="_blank"
         rel="noreferrer"
-      > <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+      >
+        {" "}
+        <img
+          src="./images/github-mark.svg"
+          width="18"
+          height="18"
+          alt="GitHub-link"
+        ></img>
       </a>
     </>
   );

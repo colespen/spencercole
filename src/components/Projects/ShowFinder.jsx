@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-import '../modal.scss';
+import "../modal.scss";
 
-import Carousel from './Carousel';
-
+import Carousel from "./Carousel";
 
 export default function ShowFinder() {
   const [mainStyle, setMainStyle] = useState({
@@ -17,47 +16,79 @@ export default function ShowFinder() {
     return () => clearTimeout(timer);
   }, []);
 
-
   const link = {
-    href: "https://www.showfinder.ninja/", target: "_blank", rel: "noreferrer"
+    href: "https://www.showfinder.ninja/",
+    target: "_blank",
+    rel: "noreferrer",
   };
 
   return (
     <>
-      <header className="tab-header"
+      <header
+        className="tab-header"
         style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
       >
-        <h1><a {...link}>ShowFinder</a></h1>
+        <h1>
+          <a {...link}>ShowFinder</a>
+        </h1>
       </header>
 
       <Carousel>
-        <a {...link}><img className="project-screenshot" style={{ height: '200px' }}
-          src="./images/globeicon.png" alt="project icon" /></a>
-        <a {...link}><img className="project-screenshot"
-          src="./images/showfinder1.jpg" alt="screenshot 1" />
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            style={{ height: "200px" }}
+            src="./images/globeicon.png"
+            alt="project icon"
+          />
         </a>
-        <a {...link}><img className="project-screenshot"
-          src="./images/showfinder2.jpg" alt="screenshot 2" />
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/showfinder1.jpg"
+            alt="screenshot 1"
+          />
         </a>
-        <a {...link}><img className="project-screenshot"
-          src="./images/showfinder3.jpg" alt="screenshot 3" />
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/showfinder2.jpg"
+            alt="screenshot 2"
+          />
         </a>
-        <a {...link}><img className="project-screenshot"
-          src="./images/showfinder4.jpg" alt="screenshot 3" />
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/showfinder3.jpg"
+            alt="screenshot 3"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/showfinder4.jpg"
+            alt="screenshot 3"
+          />
         </a>
       </Carousel>
 
-      <main className="tab-description"
+      <main
+        className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
         <p>The world needs a very simple, quick app to find shows.</p>
         <br></br>
-        <p>This app provides the user with shows mapped to date and location input in a convenient interface, including relative links to artists, venues and ticket information</p>
+        <p>
+          This app provides the user with shows mapped to date and location
+          input in a convenient interface, including relative links to artists,
+          venues and ticket information
+        </p>
         <br></br>
         <p style={{ paddingBottom: "10px" }}>
-          <a
-            className="its-live" {...link}
-          >It's Live!</a></p>
+          <a className="its-live" {...link}>
+            It's Live!
+          </a>
+        </p>
 
         <div style={{ fontSize: "85%", paddingTop: "5px" }}>
           <h4>Stack:</h4>
@@ -85,7 +116,12 @@ export default function ShowFinder() {
         target="_blank"
         rel="noreferrer"
       >
-        <img src="./images/github-mark.svg" width="18" height="18" alt="GitHub-link"></img>
+        <img
+          src="./images/github-mark.svg"
+          width="18"
+          height="18"
+          alt="GitHub-link"
+        ></img>
       </a>
     </>
   );

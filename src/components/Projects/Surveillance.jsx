@@ -4,7 +4,7 @@ import "../modal.scss";
 
 import Carousel from "./Carousel";
 
-export default function MadCap() {
+export default function Surveillance() {
   const [mainStyle, setMainStyle] = useState({
     opacity: 0,
   });
@@ -17,7 +17,7 @@ export default function MadCap() {
   }, []);
 
   const link = {
-    href: "https://www.madcap.ninja/",
+    href: "https://surveillance-camera-management-system.vercel.app/",
     target: "_blank",
     rel: "noreferrer",
   };
@@ -29,7 +29,7 @@ export default function MadCap() {
         style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
       >
         <h1>
-          <a {...link}>Madcap</a>
+          <a {...link}>Surveillance Management System Simulation</a>
         </h1>
       </header>
 
@@ -37,44 +37,36 @@ export default function MadCap() {
         <a {...link}>
           <img
             className="project-screenshot"
-            src="./images/avatar-1.png"
-            alt="project icon"
-            style={{ height: "200px", width: "101%" }}
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/madcap1.png"
+            src="./images/SMS_1.jpg"
             alt="screenshot 1"
           />
         </a>
         <a {...link}>
           <img
             className="project-screenshot"
-            src="./images/madcap2.png"
-            alt="screenshot 2"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/madcap3.png"
+            src="./images/SMS_2.jpg"
             alt="screenshot 3"
           />
         </a>
         <a {...link}>
           <img
             className="project-screenshot"
-            src="./images/madcap4.png"
+            src="./images/SMS_3.jpg"
             alt="screenshot 4"
           />
         </a>
         <a {...link}>
           <img
             className="project-screenshot"
-            src="./images/madcap5.png"
-            alt="screenshot 5"
+            src="./images/SMS-mock1.png"
+            alt="screensho t5"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/SMS-mock2.png"
+            alt="screenshot 6"
           />
         </a>
       </Carousel>
@@ -83,31 +75,26 @@ export default function MadCap() {
         className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
+        <p>A fun challenge. . .</p>
+        <br></br>
         <p>
-          A fast-paced multiplayer word game where players race to capture
-          letters for each chosen category.
+          I built this application in under a week to simulate a network of
+          surveillance cameras which alerts the user when motion or sound
+          activity is detected. Alerts are written to a database for historical
+          analysis.
         </p>
-        <p>Built with Nicholas Kovacs and William Gadd</p>
         <br></br>
-        <p>Stack:</p>
-        <p>the stack is this and this and this, Socket.IO</p>
-        <p>Material-UI and custom SASS</p>
         <br></br>
-        <p style={{ paddingBottom: "10px" }}>
-          <a className="its-live" {...link}>
-            It's Live!
-          </a>
-        </p>
 
         <div style={{ fontSize: "85%", paddingTop: "5px" }}>
           <h4>Stack:</h4>
           <ul className="project-stack-list">
-            <li>Material UI</li>
-            <li>React.js</li>
-            <li>React Router</li>
-            <li>Socket.IO</li>
-            <li>Express</li>
+            <li>Next.js</li>
+            <li>TypeScript</li>
+            <li>Next-Auth</li>
+            <li>Primsa (ORM)</li>
             <li>PostgreSQL</li>
+            <li>AWS S3 & CloudFront</li>
           </ul>
         </div>
       </main>
@@ -115,13 +102,13 @@ export default function MadCap() {
       <a
         className="github-icon"
         style={{ ...mainStyle }}
-        href="https://github.com/colespen/MadCap"
+        href="https://surveillance-camera-management-system.vercel.app/"
         target="_blank"
         rel="noreferrer"
       >
         {" "}
         <img
-          src="./images/github-mark.svg"
+          src="./images/SMSicon.png"
           width="18"
           height="18"
           alt="GitHub-link"

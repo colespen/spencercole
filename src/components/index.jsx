@@ -1,23 +1,20 @@
-import { useState, useEffect } from 'react';
-import classNames from 'classnames';
+import { useState, useEffect } from "react";
+import classNames from "classnames";
 
-import './styles.scss';
+import "./styles.scss";
 
-import Home from './Home';
-import Projects from './Projects/Projects';
-import Bio from './Bio/Bio';
-import Contact from './Contact';
-import Draw from './Draw';
+import Home from "./Home";
+import Projects from "./Projects";
+import Bio from "./Bio/Bio";
+import Contact from "./Contact";
+import Draw from "./Draw";
 
-import useVisualMode from '../hooks/useVisualMode';
+import useVisualMode from "../hooks/useVisualMode";
 
 export default function Main() {
-
   const [show, setShow] = useState(false);
-
   const [isPointerEvent, setIsPointerEvent] = useState("auto");
   const [isDrawClear, setIsDrawClear] = useState(false);
-
   //// For Modal Stain Transition
   const [isStainVisible, setIsStainVisible] = useState("visible");
   const [isSpringRest, setIsSpringRest] = useState(false);
@@ -27,18 +24,16 @@ export default function Main() {
 
   const { view, transition } = useVisualMode("home", null);
 
-  const windowShowHide = classNames(
-    "window", {
+  const windowShowHide = classNames("window", {
     "display-block": show,
     "display-none": !show,
   });
 
-  const handleShowHideWindow = e => {
-    setClicks(prev => prev + 1);
+  const handleShowHideWindow = (e) => {
+    setClicks((prev) => prev + 1);
     if (!show) {
       setShow(true);
-      (clicks % 4 === 0 && clicks !== 0) ?
-        setFlash(1) : setBorder(1);
+      clicks % 4 === 0 && clicks !== 0 ? setFlash(1) : setBorder(1);
     } else {
       setShow(false);
       setBorder(0);
@@ -52,62 +47,68 @@ export default function Main() {
   };
 
   useEffect(() => {
-    view.page !== "home" ?
-      setIsStainVisible("hidden") : setIsStainVisible("visible");
+    view.page !== "home"
+      ? setIsStainVisible("hidden")
+      : setIsStainVisible("visible");
   }, [view.page]);
 
   const handleOnMouseEnter = () => {
     if (isSpringRest && isStainVisible === "hidden") {
       setIsStainVisible("visible");
-    };
+    }
   };
-
 
   return (
     <>
-      <Draw
-        setIsPointerEvent={setIsPointerEvent}
-        isDrawClear={isDrawClear}
-      />
+      <Draw setIsPointerEvent={setIsPointerEvent} isDrawClear={isDrawClear} />
 
-      {view.page === "home" &&
+      {view.page === "home" && (
         <Home
           handleShowHideWindow={handleShowHideWindow}
           isPointerEvent={isPointerEvent}
           handleClearDraw={handleClearDraw}
-        />}
+        />
+      )}
 
-      <section className="modal-stain light-border"
+      <section
+        className="modal-stain light-border"
         style={{ opacity: border, visibility: isStainVisible }}
       ></section>
-      <section className="modal-stain heavy-border"
+      <section
+        className="modal-stain heavy-border"
         style={{ opacity: flash, visibility: isStainVisible }}
       ></section>
-      <section className="modal-stain flash"
+      <section
+        className="modal-stain flash"
         style={{ opacity: flash, visibility: isStainVisible }}
       ></section>
 
       <div className={windowShowHide}>
-        {view.page === "projects" &&
+        {view.page === "projects" && (
           <Projects
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
             setIsSpringRest={setIsSpringRest}
-            view={view} transition={transition}
-          />}
-        {view.page === "bio" &&
+            view={view}
+            transition={transition}
+          />
+        )}
+        {view.page === "bio" && (
           <Bio
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
             setIsSpringRest={setIsSpringRest}
-            view={view} transition={transition}
-          />}
-        {view.page === "contact" &&
+            view={view}
+            transition={transition}
+          />
+        )}
+        {view.page === "contact" && (
           <Contact
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
             setIsSpringRest={setIsSpringRest}
-          />}
+          />
+        )}
       </div>
     </>
   );

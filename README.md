@@ -11,7 +11,7 @@ An SPA portfolio showcasing my work.
 - React.js
 - Custom SCSS
 
-> **Deployed with Netlify**
+> **Deployed with AWS Amplify**
 <br>
 
 <br>
