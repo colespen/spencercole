@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-import './styles.scss';
-
+import "./styles.scss";
 
 export default function Drawing(props) {
   const [drawing, setDrawing] = useState(false);
@@ -34,10 +33,10 @@ export default function Drawing(props) {
     const mousePos = getMousePosOnCanvas(nativeEvent);
     ctxRef.current.beginPath();
     ctxRef.current.moveTo(mousePos.x, mousePos.y);
-    ctxRef.current.fill(); //** 
+    ctxRef.current.fill(); //**
 
     setDrawing(true);
-    setClicks(prev => prev + 1);
+    setClicks((prev) => prev + 1);
   };
 
   const draw = ({ nativeEvent }) => {
@@ -65,16 +64,16 @@ export default function Drawing(props) {
   // to change color on clicks
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     const alpha = () => {
       let percent = 28;
       percent -= clicks * 3;
       if (percent < 2) return 1;
       return percent;
     };
-    ctx.strokeStyle = `hsl(${243 - (clicks * 3)}, 
-      ${60 + (clicks * 4)}%, 
-      ${15 + (clicks * 2)}%, ${alpha()}%)`;
+    ctx.strokeStyle = `hsl(${243 - clicks * 3}, 
+      ${60 + clicks * 4}%, 
+      ${15 + clicks * 2}%, ${alpha()}%)`;
   }, [clicks]);
 
   useEffect(() => {
@@ -85,14 +84,14 @@ export default function Drawing(props) {
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
     // setting the context to enable draw
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     ctx.scale(2, 2);
-    ctx.lineCap = 'round';
+    ctx.lineCap = "round";
     ctx.lineJoin = "round";
     ctx.lineWidth = 80;
     ctx.imageSmoothingEnabled = true;
     ctxRef.current = ctx;
-    
+
     if (props.isDrawClear) {
       clear();
       ctx.strokeStyle = `hsl(240, 64%, 17%, 29%)`;
@@ -101,8 +100,6 @@ export default function Drawing(props) {
       setClicks(0);
     }
   }, [props.isDrawClear]);
-
-
 
   return (
     <>

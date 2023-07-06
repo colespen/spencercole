@@ -1,8 +1,7 @@
-import './App.scss';
-import Main from "./components"
+import "./App.scss";
+import Main from "./components";
 
 function App() {
-
   return (
     <div className="App">
       <Main />

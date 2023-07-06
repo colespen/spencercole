@@ -20,7 +20,8 @@
 }
 
 #bio {
-  .front, .edge{
+  .front,
+  .edge {
     filter: brightness(89%);
   }
   transform: perspective(30px) rotateX(4deg) scale(0.96);
