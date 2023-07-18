@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
 import "../modalstyles.scss";
 
@@ -34,43 +34,45 @@ export default function Surveillance() {
         </h1>
       </header>
 
-      <Carousel>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/SMS_1.jpg"
-            alt="screenshot 1"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/SMS_2.jpg"
-            alt="screenshot 3"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/SMS_3.jpg"
-            alt="screenshot 4"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/SMS-mock1.png"
-            alt="screensho t5"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/SMS-mock2.png"
-            alt="screenshot 6"
-          />
-        </a>
-      </Carousel>
+      <Suspense>
+        <Carousel>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/SMS_1.jpg"
+              alt="screenshot 1"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/SMS_2.jpg"
+              alt="screenshot 3"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/SMS_3.jpg"
+              alt="screenshot 4"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/SMS-mock1.png"
+              alt="screensho t5"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/SMS-mock2.png"
+              alt="screenshot 6"
+            />
+          </a>
+        </Carousel>
+      </Suspense>
 
       <main
         className="tab-description"

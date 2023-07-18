@@ -25,14 +25,18 @@ export default function Title({ handleClearDraw }) {
   };
 
   return (
-    <animated.h1
-      className="title"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      onClick={handleClearDraw}
-      style={{ transform: titleSpring.xys.to(perspective) }}
-    >
-      Spencer Cole
-    </animated.h1>
+    <>
+      <animated.h1
+        className="title"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleClearDraw}
+        style={{
+          transform: titleSpring.xys.to(perspective),
+        }}
+      >
+        Spencer Cole
+      </animated.h1>
+    </>
   );
 }
