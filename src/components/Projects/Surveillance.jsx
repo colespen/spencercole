@@ -31,7 +31,7 @@ export default function Surveillance() {
         style={{ ...mainStyle, transition: "opacity 150ms ease-out" }}
       >
         <h1>
-          <a {...link}>Surveillance Management System Simulation</a>
+          <a {...link}>Surveillance Management System</a>
         </h1>
       </header>
       <Suspense fallback={<Loading />}>
@@ -88,6 +88,11 @@ export default function Surveillance() {
         </p>
         <br></br>
         <br></br>
+        <p style={{ paddingBottom: "10px" }}>
+          <a className="its-live" {...link}>
+            It's Live!
+          </a>
+        </p>
 
         <div style={{ fontSize: "85%", paddingTop: "5px" }}>
           <h4>Stack:</h4>
