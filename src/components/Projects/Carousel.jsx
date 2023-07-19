@@ -17,11 +17,15 @@ export default function Carousel(props) {
   const imageLoaded = useOnLoadImages(imgRef);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setMainStyle({ opacity: 1 });
-    }, 0);
-    return () => clearTimeout(timer);
-  }, []);
+    if (imageLoaded) {
+      const timer = setTimeout(() => {
+        setMainStyle({ opacity: 1 });
+      }, 0);
+      return () => clearTimeout(timer);
+    } else {
+      return;
+    }
+  }, [imageLoaded]);
 
   // Set the length to match current children from props
   useEffect(() => {
