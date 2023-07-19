@@ -1,9 +1,10 @@
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 
 import "../modalstyles.scss";
 
-import Carousel from "./Carousel";
 import GitHubLink from "./GitHubLink";
+import { Loading } from "./loaders";
+const Carousel = lazy(() => import("./Carousel"));
 
 export default function Surveillance() {
   const [mainStyle, setMainStyle] = useState({
@@ -33,8 +34,7 @@ export default function Surveillance() {
           <a {...link}>Surveillance Management System Simulation</a>
         </h1>
       </header>
-
-      <Suspense>
+      <Suspense fallback={<Loading />}>
         <Carousel>
           <a {...link}>
             <img

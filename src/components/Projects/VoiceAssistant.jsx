@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 
 import "../modalstyles.scss";
 
-import Carousel from "./Carousel";
 import GitHubLink from "./GitHubLink";
+import { Loading } from "./loaders";
+const Carousel = lazy(() => import("./Carousel"));
 
 export default function VoiceAssistant() {
   const [mainStyle, setMainStyle] = useState({
@@ -33,30 +34,31 @@ export default function VoiceAssistant() {
           <a {...link}>Voice Command Oscilloscope</a>
         </h1>
       </header>
-
-      <Carousel>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/voiceassistant1.png"
-            alt="screenshot 1"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/voiceassistant2.png"
-            alt="screenshot 2"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/voiceassistant3.png"
-            alt="screenshot 3"
-          />
-        </a>
-      </Carousel>
+      <Suspense fallback={<Loading />}>
+        <Carousel>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/voiceassistant1.png"
+              alt="screenshot 1"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/voiceassistant2.png"
+              alt="screenshot 2"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/voiceassistant3.png"
+              alt="screenshot 3"
+            />
+          </a>
+        </Carousel>
+      </Suspense>
 
       <main
         className="tab-description"

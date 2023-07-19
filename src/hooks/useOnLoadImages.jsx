@@ -23,6 +23,7 @@ export default function useOnLoadImages(ref) {
     }
 
     imagesLoaded.forEach((image) => {
+      console.log(image)
       image.addEventListener("load", () => updateStatus(imagesLoaded), {
         once: true,
       });

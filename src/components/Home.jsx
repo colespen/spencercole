@@ -1,4 +1,4 @@
-import { Suspense, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Title from "./Title";
 import Button from "./Button";
@@ -27,9 +27,7 @@ export default function Home(props) {
           transition: "opacity 850ms ease",
         }}
       >
-        <Suspense>
-          <Title handleClearDraw={handleClearDraw} />
-        </Suspense>
+        <Title handleClearDraw={handleClearDraw} />
 
         <div className="navigate">
           <Button handleShowHideWindow={handleShowHideWindow} id="projects">

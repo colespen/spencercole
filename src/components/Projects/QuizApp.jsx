@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 
 import "../modalstyles.scss";
 
-import Carousel from "./Carousel";
 import GitHubLink from "./GitHubLink";
+import { Loading } from "./loaders";
+const Carousel = lazy(() => import("./Carousel"));
 
 export default function QuizApp() {
   const [mainStyle, setMainStyle] = useState({
@@ -33,52 +34,52 @@ export default function QuizApp() {
           <a {...link}>QuizApp</a>
         </h1>
       </header>
-
-      <Carousel>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/quizapp1.jpg"
-            alt="screenshot 1"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/quizapp1a.png"
-            alt="screenshot 2"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/quizapp2.png"
-            alt="screenshot 3"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/quizapp3.png"
-            alt="screenshot 4"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/quizapp4.png"
-            alt="screensho t5"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/quizapp5.png"
-            alt="screenshot 6"
-          />
-        </a>
-      </Carousel>
-
+      <Suspense fallback={<Loading />}>
+        <Carousel>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/quizapp1.jpg"
+              alt="screenshot 1"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/quizapp1a.png"
+              alt="screenshot 2"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/quizapp2.png"
+              alt="screenshot 3"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/quizapp3.png"
+              alt="screenshot 4"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/quizapp4.png"
+              alt="screensho t5"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/quizapp5.png"
+              alt="screenshot 6"
+            />
+          </a>
+        </Carousel>
+      </Suspense>
       <main
         className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}

@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 
 import "../modalstyles.scss";
 
-import Carousel from "./Carousel";
 import GitHubLink from "./GitHubLink";
+import { Loading } from "./loaders";
+const Carousel = lazy(() => import("./Carousel"));
 
 export default function Scheduler() {
   const [mainStyle, setMainStyle] = useState({
@@ -33,31 +34,31 @@ export default function Scheduler() {
           <a {...link}>Scheduler</a>
         </h1>
       </header>
-
-      <Carousel>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/scheduler1.png"
-            alt="screenshot 1"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/scheduler2.png"
-            alt="screenshot 3"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/scheduler3.png"
-            alt="screenshot 4"
-          />
-        </a>
-      </Carousel>
-
+      <Suspense fallback={<Loading />}>
+        <Carousel>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/scheduler1.png"
+              alt="screenshot 1"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/scheduler2.png"
+              alt="screenshot 3"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/scheduler3.png"
+              alt="screenshot 4"
+            />
+          </a>
+        </Carousel>
+      </Suspense>
       <main
         className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}

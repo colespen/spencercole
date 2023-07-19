@@ -40,7 +40,7 @@ export default function Main() {
       setBorder(0);
       setFlash(0);
     }
-    transition(e.currentTarget.id, null);
+    transition(e ? e.currentTarget.id : null, null);
   };
 
   const handleClearDraw = () => {
@@ -82,8 +82,9 @@ export default function Main() {
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
             setIsSpringRest={setIsSpringRest}
-            view={view}
             transition={transition}
+            view={view}
+            show={show}
           />
         )}
         {view.page === "bio" && (
@@ -91,8 +92,9 @@ export default function Main() {
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
             setIsSpringRest={setIsSpringRest}
-            view={view}
             transition={transition}
+            view={view}
+            show={show}
           />
         )}
         {view.page === "contact" && (
@@ -100,6 +102,7 @@ export default function Main() {
             handleShowHideWindow={handleShowHideWindow}
             handleOnMouseEnter={handleOnMouseEnter}
             setIsSpringRest={setIsSpringRest}
+            show={show}
           />
         )}
       </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { animated, useSpring } from "@react-spring/web";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
 import "../modalstyles.scss";
 import LinkPreview from "./LinkPreview";
@@ -13,6 +14,7 @@ export default function Bio(props) {
     transition,
     handleOnMouseEnter,
     setIsSpringRest,
+    show,
   } = props;
 
   const [modalStyle, setModalStyle] = useState({
@@ -27,6 +29,8 @@ export default function Bio(props) {
   const [bioNavStyle, setBioNavStyle] = useState({
     opacity: 0,
   });
+
+  const clickRef = useOutsideClick(handleShowHideWindow, show);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -84,6 +88,7 @@ export default function Bio(props) {
 
   return (
     <animated.section
+      ref={clickRef}
       className="modal-main"
       style={{ ...springs, ...modalStyle }}
     >

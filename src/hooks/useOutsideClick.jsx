@@ -14,10 +14,10 @@ export default function useOutsideClick(callback, state) {
       }
     };
 
-    document.addEventListener('click', handleClick);
+    document.addEventListener('click', handleClick, true);
 
     return () => {
-      document.removeEventListener('click', handleClick);
+      document.removeEventListener('click', handleClick, true);
     };
   }, [ref, callback, state]);
 

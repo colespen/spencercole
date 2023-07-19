@@ -1,6 +1,7 @@
 import { useSpring, animated } from "@react-spring/web";
 
 export default function Title({ handleClearDraw }) {
+
   const [titleSpring, titleApi] = useSpring(() => ({
     xys: [0, 0, 0.75],
     config: { mass: 5, tension: 120, friction: 150 },

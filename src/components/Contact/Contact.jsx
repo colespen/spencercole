@@ -1,18 +1,15 @@
 import { useState, useEffect } from "react";
 import { animated, useSpring } from "@react-spring/web";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
-import ContactForm from "./ContactForm";
 import "../modalstyles.scss";
+import ContactForm from "./ContactForm";
 
 export default function Contact(props) {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const {
-    handleShowHideWindow,
-    handleOnMouseEnter,
-    setIsSpringRest,
-    // view, transition
-  } = props;
+  const { handleShowHideWindow, handleOnMouseEnter, setIsSpringRest, show } =
+    props;
 
   const [mainStyle, setMainStyle] = useState({
     opacity1: 0,
@@ -23,6 +20,8 @@ export default function Contact(props) {
   const [modalStyle, setModalStyle] = useState({
     opacity: 0,
   });
+
+  const clickRef = useOutsideClick(handleShowHideWindow, show);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -62,6 +61,7 @@ export default function Contact(props) {
 
   return (
     <animated.section
+      ref={clickRef}
       className="modal-main"
       style={{ overflow: "hidden", ...springs, ...modalStyle }}
     >

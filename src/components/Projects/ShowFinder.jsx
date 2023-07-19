@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 
 import "../modalstyles.scss";
 
-import Carousel from "./Carousel";
 import GitHubLink from "./GitHubLink";
+import { Loading } from "./loaders";
+const Carousel = lazy(() => import("./Carousel"));
 
 export default function ShowFinder() {
   const [mainStyle, setMainStyle] = useState({
@@ -33,46 +34,46 @@ export default function ShowFinder() {
           <a {...link}>ShowFinder</a>
         </h1>
       </header>
-
-      <Carousel>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            style={{ height: "200px" }}
-            src="./images/globeicon.png"
-            alt="project icon"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/showfinder1.jpg"
-            alt="screenshot 1"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/showfinder2.jpg"
-            alt="screenshot 2"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/showfinder3.jpg"
-            alt="screenshot 3"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/showfinder4.jpg"
-            alt="screenshot 3"
-          />
-        </a>
-      </Carousel>
-
+      <Suspense fallback={<Loading />}>
+        <Carousel>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              style={{ height: "200px" }}
+              src="./images/globeicon.png"
+              alt="project icon"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/showfinder1.jpg"
+              alt="screenshot 1"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/showfinder2.jpg"
+              alt="screenshot 2"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/showfinder3.jpg"
+              alt="screenshot 3"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/showfinder4.jpg"
+              alt="screenshot 3"
+            />
+          </a>
+        </Carousel>
+      </Suspense>
       <main
         className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}

@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 
 import "../modalstyles.scss";
 
-import Carousel from "./Carousel";
 import GitHubLink from "./GitHubLink";
+import { Loading } from "./loaders";
+const Carousel = lazy(() => import("./Carousel"));
 
 export default function MadCap() {
   const [mainStyle, setMainStyle] = useState({
@@ -33,53 +34,53 @@ export default function MadCap() {
           <a {...link}>Madcap</a>
         </h1>
       </header>
-
-      <Carousel>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/avatar-1.png"
-            alt="project icon"
-            style={{ height: "200px", width: "101%" }}
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/madcap1.png"
-            alt="screenshot 1"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/madcap2.png"
-            alt="screenshot 2"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/madcap3.png"
-            alt="screenshot 3"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/madcap4.png"
-            alt="screenshot 4"
-          />
-        </a>
-        <a {...link}>
-          <img
-            className="project-screenshot"
-            src="./images/madcap5.png"
-            alt="screenshot 5"
-          />
-        </a>
-      </Carousel>
-
+      <Suspense fallback={<Loading />}>
+        <Carousel>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/avatar-1.png"
+              alt="project icon"
+              style={{ height: "200px", width: "101%" }}
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/madcap1.png"
+              alt="screenshot 1"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/madcap2.png"
+              alt="screenshot 2"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/madcap3.png"
+              alt="screenshot 3"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/madcap4.png"
+              alt="screenshot 4"
+            />
+          </a>
+          <a {...link}>
+            <img
+              className="project-screenshot"
+              src="./images/madcap5.png"
+              alt="screenshot 5"
+            />
+          </a>
+        </Carousel>
+      </Suspense>
       <main
         className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}

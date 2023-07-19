@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { animated, useSpring } from "@react-spring/web";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
 import ModalTabs from "./ModalTabs";
 import ShowFinder from "./ShowFinder";
@@ -19,6 +20,7 @@ export default function Projects(props) {
     transition,
     handleOnMouseEnter,
     setIsSpringRest,
+    show,
   } = props;
 
   const [modalStyle, setModalStyle] = useState({
@@ -30,6 +32,8 @@ export default function Projects(props) {
   const [navStyle, setNavStyle] = useState({
     opacity: 0,
   });
+
+  const clickRef = useOutsideClick(handleShowHideWindow, show);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -66,6 +70,7 @@ export default function Projects(props) {
 
   return (
     <animated.section
+      ref={clickRef}
       className="modal-main"
       style={{ ...springs, ...modalStyle }}
     >
