@@ -51,7 +51,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 77%;
+  top: 80%;
 
   .left-arrow,
   .right-arrow {
@@ -107,6 +107,18 @@
     width: 50%;
   }
 }
+// TODO: use variable to set button height with vh
+@media only screen and (max-height: 1024px) {
+  .carousel-buttons {
+    top: 90%;
+  }
+}
+@media only screen and (max-height: 754px) {
+  .carousel-buttons {
+    top: 100%;
+  }
+}
+
 @media only screen and (max-height: 900px) and (max-width: 450px) {
   .carousel-buttons {
     top: 79%;
