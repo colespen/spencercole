@@ -63,11 +63,11 @@ export default function Carousel(props) {
 
             <div className="carousel-buttons">
               <button onClick={prev} className="left-arrow">
-                <img src="./images/arrow-l.png" alt="left arrow" />
+                <img loading="lazy" src="./images/arrow-l.png" alt="left arrow" />
               </button>
 
               <button onClick={next} className="right-arrow">
-                <img src="./images/arrow-r.png" alt="right arrow" />
+                <img loading="lazy" src="./images/arrow-r.png" alt="right arrow" />
               </button>
             </div>
           </div>
