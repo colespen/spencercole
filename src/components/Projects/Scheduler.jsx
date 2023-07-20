@@ -1,10 +1,9 @@
-import { lazy, Suspense, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import "../modalstyles.scss";
 
 import GitHubLink from "./GitHubLink";
-import { Loading } from "./loaders";
-const Carousel = lazy(() => import("./Carousel"));
+import Carousel from "./Carousel";
 
 export default function Scheduler() {
   const [mainStyle, setMainStyle] = useState({
@@ -34,7 +33,6 @@ export default function Scheduler() {
           <a {...link}>Scheduler</a>
         </h1>
       </header>
-      <Suspense fallback={<Loading />}>
         <Carousel>
           <a {...link}>
             <img
@@ -58,7 +56,6 @@ export default function Scheduler() {
             />
           </a>
         </Carousel>
-      </Suspense>
       <main
         className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}

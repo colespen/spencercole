@@ -1,10 +1,9 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect } from "react";
 
 import "../modalstyles.scss";
 
 import GitHubLink from "./GitHubLink";
-import { Loading } from "./loaders";
-const Carousel = lazy(() => import("./Carousel"));
+import Carousel from "./Carousel";
 
 export default function Surveillance() {
   const [mainStyle, setMainStyle] = useState({
@@ -34,46 +33,43 @@ export default function Surveillance() {
           <a {...link}>Surveillance Management System</a>
         </h1>
       </header>
-      <Suspense fallback={<Loading />}>
-        <Carousel>
-          <a {...link}>
-            <img
-              className="project-screenshot"
-              src="./images/SMS_1.jpg"
-              alt="screenshot 1"
-            />
-          </a>
-          <a {...link}>
-            <img
-              className="project-screenshot"
-              src="./images/SMS_2.jpg"
-              alt="screenshot 3"
-            />
-          </a>
-          <a {...link}>
-            <img
-              className="project-screenshot"
-              src="./images/SMS_3.jpg"
-              alt="screenshot 4"
-            />
-          </a>
-          <a {...link}>
-            <img
-              className="project-screenshot"
-              src="./images/SMS-mock1.png"
-              alt="screensho t5"
-            />
-          </a>
-          <a {...link}>
-            <img
-              className="project-screenshot"
-              src="./images/SMS-mock2.png"
-              alt="screenshot 6"
-            />
-          </a>
-        </Carousel>
-      </Suspense>
-
+      <Carousel>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/SMS_1.jpg"
+            alt="screenshot 1"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/SMS_2.jpg"
+            alt="screenshot 3"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/SMS_3.jpg"
+            alt="screenshot 4"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/SMS-mock1.png"
+            alt="screensho t5"
+          />
+        </a>
+        <a {...link}>
+          <img
+            className="project-screenshot"
+            src="./images/SMS-mock2.png"
+            alt="screenshot 6"
+          />
+        </a>
+      </Carousel>
       <main
         className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
