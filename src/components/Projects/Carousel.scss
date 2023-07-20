@@ -74,7 +74,8 @@
 
   .left-arrow img {
     filter: drop-shadow(9px 5px 1.5px #121f38);
-    transition: filter 250ms ease-out;
+    transition: opacity 1.5s ease 1s, filter 250ms ease-out;
+    // transition: filter 250ms ease-out;
     &:hover {
       filter: drop-shadow(-19px 5px 0.5px #121f38) brightness(125%);
     }
@@ -85,7 +86,8 @@
 
   .right-arrow img {
     filter: drop-shadow(-9px 5px 1.5px #121f38);
-    transition: all 250ms ease-out;
+    transition: opacity 1.5s ease 1s, filter 250ms ease-out;
+    // transition: filter 250ms ease-out;
     &:hover {
       filter: drop-shadow(19px 5px 0.5px #121f38) brightness(125%);
     }

@@ -17,14 +17,11 @@ export default function Carousel(props) {
   const imageLoaded = useOnLoadImages(imgRef);
 
   useEffect(() => {
-    if (imageLoaded) {
-      const timer = setTimeout(() => {
-        setMainStyle({ opacity: 1 });
-      }, 0);
-      return () => clearTimeout(timer);
-    } else {
-      return;
-    }
+    if (!imageLoaded) return;
+    const timer = setTimeout(() => {
+      setMainStyle({ opacity: 1 });
+    }, 50);
+    return () => clearTimeout(timer);
   }, [imageLoaded]);
 
   // Set the length to match current children from props
@@ -44,13 +41,12 @@ export default function Carousel(props) {
     }
   };
 
-
   return (
     <>
       <div
         className="carousel-container"
         ref={imgRef}
-        style={{ ...mainStyle, transition: "opacity 1.5s ease" }}
+        style={{ ...mainStyle, transition: "opacity 750ms ease" }}
       >
         {imageLoaded ? (
           <div className="carousel-wrapper">
