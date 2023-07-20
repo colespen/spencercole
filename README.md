@@ -29,9 +29,7 @@ An SPA portfolio showcasing my work.
 ![home_responsive](/docs/home_mobile.png?raw=true "home responsive")
 
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started 
 
 ## Available Scripts
 

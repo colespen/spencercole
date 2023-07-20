@@ -27,5 +27,7 @@ export const Spinner = () => {
 };
 
 export const Loading = () => {
-  return <div className="carousel-container">{/* <Spinner /> */}</div>;
+  return <div className="carousel-container">
+    {/* <Spinner /> */}
+    </div>;
 };

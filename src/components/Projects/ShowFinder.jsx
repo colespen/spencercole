@@ -4,7 +4,9 @@ import "../modalstyles.scss";
 
 import GitHubLink from "./GitHubLink";
 import { Loading } from "./loaders";
-const Carousel = lazy(() => import("./Carousel"));
+
+import Carousel from "./Carousel";
+// const Carousel = lazy(() => import("./Carousel"));
 
 export default function ShowFinder() {
   const [mainStyle, setMainStyle] = useState({
@@ -34,7 +36,7 @@ export default function ShowFinder() {
           <a {...link}>ShowFinder</a>
         </h1>
       </header>
-      <Suspense fallback={<Loading />}>
+      {/* <Suspense fallback={<Loading />}> */}
         <Carousel>
           <a {...link}>
             <img
@@ -73,7 +75,7 @@ export default function ShowFinder() {
             />
           </a>
         </Carousel>
-      </Suspense>
+      {/* </Suspense> */}
       <main
         className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
