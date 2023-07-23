@@ -55,6 +55,13 @@ export default function LinkPreview(props) {
             (style, item) =>
               item && (
                 <animated.div className={popUpDivClass} style={style}>
+                  <button
+                    className="close-btn"
+                    onClick={handleSetIsShown}
+                    style={{ opacity: "0.8" }}
+                  >
+                    <img src="./images/close.png" alt="close-window" />
+                  </button>
                   {imageLoaded ? (
                     <a
                       className="inner-card-link"
