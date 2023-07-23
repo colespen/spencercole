@@ -58,7 +58,7 @@ export default function LinkPreview(props) {
                   <button
                     className="close-btn"
                     onClick={handleSetIsShown}
-                    style={{ opacity: "0.8" }}
+                    style={{ opacity: "0.4" }}
                   >
                     <img src="./images/close.png" alt="close-window" />
                   </button>
