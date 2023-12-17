@@ -1,9 +1,10 @@
+import "./styles.scss";
+
 import { useState, useEffect } from "react";
 
 import Title from "./Title";
 import Button from "./Button";
 
-import "./styles.scss";
 
 export default function Home(props) {
   const { handleShowHideWindow, isPointerEvent, handleClearDraw } = props;

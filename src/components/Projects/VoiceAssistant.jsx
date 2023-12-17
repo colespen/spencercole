@@ -18,7 +18,7 @@ export default function VoiceAssistant() {
   }, []);
 
   const link = {
-    href: "https://voice-command-oscilloscope.vercel.app/",
+    href: "https://voice-command-oscilloscope.vercel.app",
     target: "_blank",
     rel: "noreferrer",
   };

@@ -18,7 +18,7 @@ export default function Surveillance() {
   }, []);
 
   const link = {
-    href: "https://surveillance-camera-management-system.vercel.app/",
+    href: "https://surveillance-camera-management-system.vercel.app",
     target: "_blank",
     rel: "noreferrer",
   };

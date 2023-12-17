@@ -1,7 +1,7 @@
+import "./styles.scss";
+
 import { useState, useEffect } from "react";
 import classNames from "classnames";
-
-import "./styles.scss";
 
 import Home from "./Home";
 import Projects from "./Projects/Projects";

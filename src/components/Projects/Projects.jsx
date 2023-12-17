@@ -8,7 +8,8 @@ import VoiceAssistant from "./VoiceAssistant";
 import Surveillance from "./Surveillance";
 import MadCap from "./MadCap";
 import QuizApp from "./QuizApp";
-import Scheduler from "./Scheduler";
+import Brainer from "./Brainer";
+// import Scheduler from "./Scheduler";
 import GitHubLink from "./GitHubLink";
 
 import "../modalstyles.scss";
@@ -115,11 +116,12 @@ export default function Projects(props) {
       ) : (
         <animated.div className="inner-window">
           {view.tab === "P1" && <ShowFinder />}
-          {view.tab === "P2" && <VoiceAssistant />}
+          {view.tab === "P2" && <Brainer />}
           {view.tab === "P3" && <Surveillance />}
-          {view.tab === "P4" && <MadCap />}
-          {view.tab === "P5" && <QuizApp />}
-          {view.tab === "P6" && <Scheduler />}
+          {view.tab === "P4" && <VoiceAssistant />}
+          {view.tab === "P5" && <MadCap />}
+          {view.tab === "P6" && <QuizApp />}
+          {/* {view.tab === "P6" && <Scheduler />} */}
         </animated.div>
       )}
     </animated.section>

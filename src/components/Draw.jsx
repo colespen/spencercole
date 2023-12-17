@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-
 import "./styles.scss";
+
+import { useEffect, useRef, useState } from "react";
 
 export default function Drawing(props) {
   const [drawing, setDrawing] = useState(false);

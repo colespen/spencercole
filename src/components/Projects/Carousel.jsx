@@ -15,7 +15,6 @@ export default function Carousel(props) {
 
   const imgRef = useRef(null);
   const imageLoaded = useOnLoadImages(imgRef);
-
   useEffect(() => {
     if (!imageLoaded) return;
     const timer = setTimeout(() => {
