@@ -145,6 +145,7 @@ export default function Bio(props) {
                 pClass={"rooftop-with-preview"}
                 divClass={"rooftop-card"}
                 image="./images/s_cole_rooftop_comp.jpg"
+                imageType="image/jpeg"
                 href="./images/s_cole_rooftop.jpg"
               >
                 <animated.span id="iButton" style={{ ...glowSpring }}>
@@ -164,6 +165,7 @@ export default function Bio(props) {
               pClass={"link-with-preview"}
               divClass={"card"}
               image="./images/spencer_cole_cv.webp"
+              imageType="image/webp"
               href={cvPrev}
             >
               &nbsp;Here is my Resume

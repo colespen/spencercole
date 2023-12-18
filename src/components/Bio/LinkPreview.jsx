@@ -9,7 +9,7 @@ import useOnLoadImages from "../../hooks/useOnLoadImages";
 import useOutsideClick from "../../hooks/useOutsideClick";
 
 export default function LinkPreview(props) {
-  const { pClass, divClass, imgClass, href, image } = props;
+  const { pClass, divClass, imgClass, href, image, imageType } = props;
   const [isShown, setIsShown] = useState(false);
 
   const imgRef = useRef(null);
@@ -69,7 +69,7 @@ export default function LinkPreview(props) {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <img src={image} className={imgClass} alt="link popup" />
+                      <img src={image} className={imgClass} alt="link popup" type={imageType} />
                     </a>
                   ) : (
                     <ClipLoader
