@@ -163,7 +163,7 @@ export default function Bio(props) {
             <LinkPreview
               pClass={"link-with-preview"}
               divClass={"card"}
-              image="./images/spencer_cole_cv.jpg"
+              image="./images/spencer_cole_cv.webp"
               href={cvPrev}
             >
               &nbsp;Here is my Resume
