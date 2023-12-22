@@ -37,7 +37,6 @@ export default function Brainer() {
         <a {...link}>
           <img
             className="project-screenshot"
-            // style={{ height: "200px" }}
             src="./images/brainer1.png"
             alt="project icon"
           />
@@ -85,7 +84,7 @@ export default function Brainer() {
           </ul>
         </div>
       </main>
-      <GitHubLink mainStyle={mainStyle} projectUrlName="ShowFinder" />
+      <GitHubLink mainStyle={mainStyle} projectUrlName="brainer" />
     </>
   );
 }
