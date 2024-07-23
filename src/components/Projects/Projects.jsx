@@ -4,6 +4,7 @@ import useOutsideClick from "../../hooks/useOutsideClick";
 
 import ModalTabs from "./ModalTabs";
 import ShowFinder from "./ShowFinder";
+import SaucerSwap from "./SaucerSwap";
 import VoiceAssistant from "./VoiceAssistant";
 import Surveillance from "./Surveillance";
 import MadCap from "./MadCap";
@@ -115,12 +116,13 @@ export default function Projects(props) {
         </animated.div>
       ) : (
         <animated.div className="inner-window">
-          {view.tab === "P1" && <ShowFinder />}
-          {view.tab === "P2" && <Brainer />}
-          {view.tab === "P3" && <Surveillance />}
-          {view.tab === "P4" && <VoiceAssistant />}
-          {view.tab === "P5" && <MadCap />}
-          {view.tab === "P6" && <QuizApp />}
+          {view.tab === "P1" && <SaucerSwap />}
+          {view.tab === "P2" && <ShowFinder />}
+          {view.tab === "P3" && <Brainer />}
+          {view.tab === "P4" && <Surveillance />}
+          {view.tab === "P5" && <VoiceAssistant />}
+          {view.tab === "P6" && <MadCap />}
+          {view.tab === "P7" && <QuizApp />}
           {/* {view.tab === "P6" && <Scheduler />} */}
         </animated.div>
       )}
