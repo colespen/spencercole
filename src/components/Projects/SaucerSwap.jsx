@@ -37,7 +37,7 @@ export default function SaucerSwap() {
         <a {...link}>
           <img
             className="project-screenshot"
-            src="./images/saucerswap1.jpg"
+            src="./images/saucerswap1.webp"
             alt="screenshot 1"
           />
         </a>
