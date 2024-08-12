@@ -90,8 +90,10 @@ export default function SaucerSwap() {
           <ul className="project-stack-list">
             <li>React</li>
             <li>React Query</li>
+            <li>Next.js</li>
             <li>Typescript</li>
             <li>MUI</li>
+            <li>Hedera Network</li>
           </ul>
         </div>
       </main>

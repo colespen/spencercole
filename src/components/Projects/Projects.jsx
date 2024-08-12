@@ -119,8 +119,8 @@ export default function Projects(props) {
           {view.tab === "P1" && <SaucerSwap />}
           {view.tab === "P2" && <ShowFinder />}
           {view.tab === "P3" && <Brainer />}
-          {view.tab === "P4" && <Surveillance />}
-          {view.tab === "P5" && <VoiceAssistant />}
+          {view.tab === "P4" && <VoiceAssistant />}
+          {view.tab === "P5" && <Surveillance />}
           {view.tab === "P6" && <MadCap />}
           {view.tab === "P7" && <QuizApp />}
           {/* {view.tab === "P6" && <Scheduler />} */}
