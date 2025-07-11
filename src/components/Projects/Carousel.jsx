@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import "./Carousel.scss";
 
 export default function Carousel(props) {
-  const { children } = props;
+  const { children, onInteractionChange } = props;
 
   const [mainStyle, setMainStyle] = useState({
     opacity: 0,
@@ -19,6 +19,31 @@ export default function Carousel(props) {
 
   const imgRef = useRef(null);
   const imageLoaded = useOnLoadImages(imgRef);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleTouchStart = () => {
+    setIsDragging(true);
+    onInteractionChange?.(true);
+  };
+
+  const handleTouchEnd = () => {
+    // Add a small delay to prevent immediate modal close
+    setTimeout(() => {
+      setIsDragging(false);
+      onInteractionChange?.(false);
+    }, 100);
+  };
+
+  const handleSlideChange = () => {
+    // Keep interaction active during slide changes
+    onInteractionChange?.(true);
+  };
+
+  const handleTransitionEnd = () => {
+    if (!isDragging) {
+      onInteractionChange?.(false);
+    }
+  };
 
   useEffect(() => {
     if (!imageLoaded) return;
@@ -61,6 +86,10 @@ export default function Carousel(props) {
               simulateTouch={true}
               watchSlidesProgress={true}
               className="carousel-swiper"
+              onSlideChangeTransitionStart={handleSlideChange}
+              onSlideChangeTransitionEnd={handleTransitionEnd}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
             >
               {children.map((child, index) => (
                 <SwiperSlide key={index}>{child}</SwiperSlide>

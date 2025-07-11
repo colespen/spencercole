@@ -14,6 +14,7 @@ export default function ProjectTemplate({
   apis,
   apiListClass,
   githubProjectName,
+  onCarouselInteractionChange,
 }) {
   const [mainStyle, setMainStyle] = useState({
     opacity: 0,
@@ -43,7 +44,7 @@ export default function ProjectTemplate({
         </h1>
       </header>
 
-      <Carousel>
+      <Carousel onInteractionChange={onCarouselInteractionChange}>
         {images.map((image, index) => (
           <a key={index} {...linkProps}>
             <img
@@ -105,7 +106,11 @@ export default function ProjectTemplate({
           {apis && (
             <>
               <h5 style={{ paddingTop: "5px" }}>APIs:</h5>
-              <ul className={`project-stack-list${apiListClass ? ` ${apiListClass}` : ''}`}>
+              <ul
+                className={`project-stack-list${
+                  apiListClass ? ` ${apiListClass}` : ""
+                }`}
+              >
                 {apis.map((api, index) => (
                   <li key={index} style={api.style || {}}>
                     {typeof api === "string" ? api : api.text}

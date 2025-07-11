@@ -46,11 +46,13 @@ export const projectsData = {
       "Node.js"
     ],
     apis: [
-      "Ticketmaster",
-      "OpenWeatherMap",
-      "Spotify",
-      "Leaflet"
+      "RadpidAPI",
+      "LocationIQ",
+      { text: "PredictHQ", style: { textDecoration: "line-through" } },
+      { text: "Songkick", style: { textDecoration: "line-through" } },
+      { text: "Zyla", style: { textDecoration: "line-through" } }
     ],
+    apiListClass: "sub",
     githubProjectName: "ShowFinder"
   },
 

@@ -5,7 +5,7 @@ import useOutsideClick from "../../hooks/useOutsideClick";
 import ModalTabs from "./ModalTabs";
 import ProjectTemplate from "./ProjectTemplate";
 import GitHubLink from "./GitHubLink";
-import { projectsData } from "./projectsData";
+import { projectsData } from "./projectsConfig";
 import { tabConfig } from "./tabConfig";
 
 import "../modalstyles.scss";
@@ -29,8 +29,13 @@ export default function Projects(props) {
   const [navStyle, setNavStyle] = useState({
     opacity: 0,
   });
+  const [isCarouselInteracting, setIsCarouselInteracting] = useState(false);
 
-  const clickRef = useOutsideClick(handleShowHideWindow, show);
+  const clickRef = useOutsideClick(
+    handleShowHideWindow,
+    show,
+    () => isCarouselInteracting
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -63,6 +68,10 @@ export default function Projects(props) {
 
   const handleProjectBtnClick = (e) => {
     transition("projects", e.currentTarget.id);
+  };
+
+  const handleCarouselInteractionChange = (isInteracting) => {
+    setIsCarouselInteracting(isInteracting);
   };
 
   return (
@@ -127,6 +136,7 @@ export default function Projects(props) {
                   apis={projectData.apis}
                   apiListClass={projectData.apiListClass}
                   githubProjectName={projectData.githubProjectName}
+                  onCarouselInteractionChange={handleCarouselInteractionChange}
                 />
               );
             }
