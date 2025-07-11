@@ -18,7 +18,7 @@ export default function Main() {
   const [isDrawClear, setIsDrawClear] = useState(false);
   const [clicks, setClicks] = useState(0);
   const [isSpringRest, setIsSpringRest] = useState(false);
-  //// For Modal Stain Transition
+  //// for modal stain transition
   const [isStainVisible, setIsStainVisible] = useState("visible");
   const [border, setBorder] = useState(0);
   const [flash, setFlash] = useState(0);

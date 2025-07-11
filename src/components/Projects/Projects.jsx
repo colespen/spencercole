@@ -3,15 +3,10 @@ import { animated, useSpring } from "@react-spring/web";
 import useOutsideClick from "../../hooks/useOutsideClick";
 
 import ModalTabs from "./ModalTabs";
-import ShowFinder from "./ShowFinder";
-import SaucerSwap from "./SaucerSwap";
-import VoiceAssistant from "./VoiceAssistant";
-import Surveillance from "./Surveillance";
-import MadCap from "./MadCap";
-import QuizApp from "./QuizApp";
-import Brainer from "./Brainer";
-// import Scheduler from "./Scheduler";
+import ProjectTemplate from "./ProjectTemplate";
 import GitHubLink from "./GitHubLink";
+import { projectsData } from "../../data/projectsConfig";
+import { tabConfig } from "../../data/tabConfig";
 
 import "../modalstyles.scss";
 
@@ -34,8 +29,13 @@ export default function Projects(props) {
   const [navStyle, setNavStyle] = useState({
     opacity: 0,
   });
+  const [isCarouselInteracting, setIsCarouselInteracting] = useState(false);
 
-  const clickRef = useOutsideClick(handleShowHideWindow, show);
+  const clickRef = useOutsideClick(
+    handleShowHideWindow,
+    show,
+    () => isCarouselInteracting
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -68,6 +68,10 @@ export default function Projects(props) {
 
   const handleProjectBtnClick = (e) => {
     transition("projects", e.currentTarget.id);
+  };
+
+  const handleCarouselInteractionChange = (isInteracting) => {
+    setIsCarouselInteracting(isInteracting);
   };
 
   return (
@@ -104,7 +108,7 @@ export default function Projects(props) {
             </p>
             <br></br>
             <p>
-              I love to focus on creating useful, fun applications.
+              I love to focus on creating useful and memorable applications.
               <br></br>I am perpetually in search of a new challenge and enjoy
               discovering the latest tools available.
             </p>
@@ -112,18 +116,32 @@ export default function Projects(props) {
             <p>Please have a look through my work above...</p>
           </main>
 
-          <GitHubLink mainStyle={mainStyle} projectUrlName="" />
+          <GitHubLink mainStyle={mainStyle} githubRepo="" />
         </animated.div>
       ) : (
         <animated.div className="inner-window">
-          {view.tab === "P1" && <SaucerSwap />}
-          {view.tab === "P2" && <ShowFinder />}
-          {view.tab === "P3" && <Brainer />}
-          {view.tab === "P4" && <VoiceAssistant />}
-          {view.tab === "P5" && <Surveillance />}
-          {view.tab === "P6" && <MadCap />}
-          {view.tab === "P7" && <QuizApp />}
-          {/* {view.tab === "P6" && <Scheduler />} */}
+          {(() => {
+            const activeTab = tabConfig.find((tab) => tab.id === view.tab);
+            if (activeTab) {
+              const projectData = projectsData[activeTab.key];
+              return (
+                <ProjectTemplate
+                  key={view.tab} // force remount on tab change for proper animation
+                  title={projectData.title}
+                  href={projectData.href}
+                  images={projectData.images}
+                  description={projectData.description}
+                  liveLink={projectData.liveLink}
+                  stack={projectData.stack}
+                  apis={projectData.apis}
+                  apiListClass={projectData.apiListClass}
+                  githubProjectName={projectData.githubProjectName}
+                  onCarouselInteractionChange={handleCarouselInteractionChange}
+                />
+              );
+            }
+            return null;
+          })()}
         </animated.div>
       )}
     </animated.section>
