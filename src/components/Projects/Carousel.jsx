@@ -1,20 +1,25 @@
 import { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import { Spinner } from "./loaders";
 import useOnLoadImages from "../../hooks/useOnLoadImages";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./Carousel.scss";
 
 export default function Carousel(props) {
   const { children } = props;
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [length, setLength] = useState(children.length);
   const [mainStyle, setMainStyle] = useState({
     opacity: 0,
   });
 
   const imgRef = useRef(null);
   const imageLoaded = useOnLoadImages(imgRef);
+
   useEffect(() => {
     if (!imageLoaded) return;
     const timer = setTimeout(() => {
@@ -22,23 +27,6 @@ export default function Carousel(props) {
     }, 50);
     return () => clearTimeout(timer);
   }, [imageLoaded]);
-
-  // Set the length to match current children from props
-  useEffect(() => {
-    setLength(children.length);
-  }, [children]);
-
-  const next = () => {
-    if (currentIndex < length - 1) {
-      setCurrentIndex((prevState) => prevState + 1);
-    }
-  };
-
-  const prev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevState) => prevState - 1);
-    }
-  };
 
   return (
     <>
@@ -49,26 +37,38 @@ export default function Carousel(props) {
       >
         {imageLoaded ? (
           <div className="carousel-wrapper">
-            <div className="carousel-content-wrapper">
-              <div
-                className="carousel-content"
-                style={{
-                  transform: `translateX(-${currentIndex * 100}%)`,
-                }}
-              >
-                {children}
-              </div>
-            </div>
-
-            <div className="carousel-buttons">
-              <button onClick={prev} className="left-arrow">
-                <img src="./images/arrow-l.png" alt="left arrow" />
-              </button>
-
-              <button onClick={next} className="right-arrow">
-                <img src="./images/arrow-r.png" alt="right arrow" />
-              </button>
-            </div>
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={0}
+              slidesPerView={1}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
+              pagination={{
+                clickable: true,
+                dynamicBullets: false,
+                el: ".carousel-pagination",
+              }}
+              grabCursor={true}
+              touchRatio={1}
+              touchAngle={45}
+              threshold={10}
+              longSwipesRatio={0.5}
+              longSwipesMs={300}
+              followFinger={true}
+              allowTouchMove={true}
+              simulateTouch={true}
+              watchSlidesProgress={true}
+              className="carousel-swiper"
+            >
+              {children.map((child, index) => (
+                <SwiperSlide key={index}>{child}</SwiperSlide>
+              ))}
+            </Swiper>
+            
+            {/* Custom pagination dots - moved outside Swiper */}
+            <div className="carousel-pagination"></div>
           </div>
         ) : (
           <Spinner />

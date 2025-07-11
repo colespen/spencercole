@@ -6,7 +6,8 @@ A responsive React component system for showcasing portfolio projects with an el
 
 - **Responsive Design**: Displays 6 tabs on mobile/tablet, 7 tabs on desktop
 - **Dynamic Content**: Projects are rendered from configuration data
-- **Image Carousel**: Interactive image gallery for each project
+- **Interactive Carousel**: Click and drag (desktop) or swipe (mobile) support with smooth animations
+- **Touch-Friendly**: Optimized for mobile touch interactions
 - **Live Links**: Direct links to live projects and GitHub repositories
 - **Smooth Animations**: Fade-in effects and smooth transitions
 - **Mobile Optimized**: Touch-friendly navigation and responsive layouts
@@ -89,6 +90,7 @@ Modify `modalstyles.scss` to match your design:
 
 - React 18+
 - React Spring (for animations)
+- @use-gesture/react (for drag/swipe interactions)
 - Sass (for styling)
 - Custom hooks: `useOutsideClick`, `useOnLoadImages`
 

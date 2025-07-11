@@ -112,11 +112,12 @@ export default function Projects(props) {
       ) : (
         <animated.div className="inner-window">
           {(() => {
-            const activeTab = tabConfig.find(tab => tab.id === view.tab);
+            const activeTab = tabConfig.find((tab) => tab.id === view.tab);
             if (activeTab) {
               const projectData = projectsData[activeTab.key];
               return (
                 <ProjectTemplate
+                  key={view.tab} // force remount on tab change for proper animation
                   title={projectData.title}
                   href={projectData.href}
                   images={projectData.images}
@@ -124,6 +125,7 @@ export default function Projects(props) {
                   liveLink={projectData.liveLink}
                   stack={projectData.stack}
                   apis={projectData.apis}
+                  apiListClass={projectData.apiListClass}
                   githubProjectName={projectData.githubProjectName}
                 />
               );

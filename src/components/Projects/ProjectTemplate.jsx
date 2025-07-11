@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import "../modalstyles.scss";
 import GitHubLink from "./GitHubLink";
 import Carousel from "./Carousel";
+
+import "../modalstyles.scss";
 
 export default function ProjectTemplate({
   title,
@@ -11,8 +12,8 @@ export default function ProjectTemplate({
   liveLink,
   stack,
   apis,
+  apiListClass,
   githubProjectName,
-  customStyles = {}
 }) {
   const [mainStyle, setMainStyle] = useState({
     opacity: 0,
@@ -41,7 +42,7 @@ export default function ProjectTemplate({
           <a {...linkProps}>{title}</a>
         </h1>
       </header>
-      
+
       <Carousel>
         {images.map((image, index) => (
           <a key={index} {...linkProps}>
@@ -54,22 +55,18 @@ export default function ProjectTemplate({
           </a>
         ))}
       </Carousel>
-      
+
       <main
         className="tab-description"
         style={{ ...mainStyle, transition: "opacity 500ms ease" }}
       >
         {description.map((paragraph, index) => (
           <div key={index}>
-            {typeof paragraph === 'string' ? (
-              <p>{paragraph}</p>
-            ) : (
-              paragraph
-            )}
-            {index < description.length - 1 && <br />}
+            <p>{typeof paragraph === "string" ? paragraph : paragraph}</p>
+            {index < description.length - 1 && <br></br>}
           </div>
         ))}
-        
+        <br></br>
         {liveLink && (
           <p style={{ paddingBottom: "10px" }}>
             <a className="its-live" {...linkProps}>
@@ -85,7 +82,7 @@ export default function ProjectTemplate({
               <ul className="project-stack-list">
                 {stack.map((tech, index) => (
                   <li key={index}>
-                    {typeof tech === 'string' ? (
+                    {typeof tech === "string" ? (
                       tech
                     ) : (
                       <>
@@ -104,20 +101,22 @@ export default function ProjectTemplate({
               </ul>
             </>
           )}
-          
+
           {apis && (
             <>
               <h5 style={{ paddingTop: "5px" }}>APIs:</h5>
-              <ul className="project-stack-list">
+              <ul className={`project-stack-list${apiListClass ? ` ${apiListClass}` : ''}`}>
                 {apis.map((api, index) => (
-                  <li key={index}>{api}</li>
+                  <li key={index} style={api.style || {}}>
+                    {typeof api === "string" ? api : api.text}
+                  </li>
                 ))}
               </ul>
             </>
           )}
         </div>
       </main>
-      
+
       <GitHubLink mainStyle={mainStyle} projectUrlName={githubProjectName} />
     </>
   );
