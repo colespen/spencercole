@@ -9,7 +9,7 @@ export const projectsData = {
       { src: "./images/saucerswap4.jpg", alt: "screenshot 4" }
     ],
     description: [
-      "SaucerSwap™ is a decentralized exchange built on the Hedera network.",
+      "SaucerSwap is a decentralized exchange built on the Hedera network.",
       "For this contract, I had the pleasure of working with a team of world-class developers to build version 2 of the UI for an advanced cryto trading platform. I am proud of the results and grateful for the opportunity."
     ],
     liveLink: "SaucerSwap™",
@@ -19,9 +19,35 @@ export const projectsData = {
       "Next.js",
       "Typescript",
       "MUI",
-      "Hedera Network"
+      "Hedera Network SDKs",
+      
     ],
     githubProjectName: "ShowFinder"
+  },
+
+  hiomusic: {
+    title: "HIO Music",
+    href: "https://apps.apple.com/ca/app/hio/id6444498474",
+    images: [
+      { src: "./images/HIO-token.webp", alt: "HIO music app icon", style: { height: "200px" } },
+      { src: "./images/HIO-cell1.webp", alt: "screenshot 1" },
+      { src: "./images/HIO-cell2.webp", alt: "screenshot 2" },
+      { src: "./images/HIO-cell3.webp", alt: "screenshot 3" },
+      { src: "./images/HIO-cell4.webp", alt: "screenshot 4" }
+    ],
+    description: [
+      "HIO Music is a social music streaming platform & web3 marketplace to get artist paid fairly for their monetized content.",
+      "I led E2E mobile app & CMS overhaul incl. monetized upload workflows, contributor tagging, gated feeds, gapless audio playback, one-tap Stripe checkout & Solana NFT minting, resulting in 40% DAU increase."
+    ],
+    liveLink: "App Store",
+    stack: [
+      "Expo / React Native + TypeScript",
+      "React Query, tRPC, DrizzleORM, Neon Serverless PostgreSQL",
+      "Solana Network SDKs",
+      "Stripe SDK/API",
+      "AWS (incl. audio & image optimization & web3 minting pipeline w/ SQS)"
+    ],
+    githubProjectName: "hio-music"
   },
 
   showfinder: {
@@ -151,7 +177,7 @@ export const projectsData = {
 
   madcap: {
     title: "Madcap",
-    href: "https://www.madcap.ninja/",
+    // href: "https://www.madcap.ninja/",
     images: [
       { src: "./images/avatar-1.png", alt: "project icon", style: { height: "200px", width: "101%" } },
       { src: "./images/madcap1.png", alt: "screenshot 1" },
@@ -164,7 +190,7 @@ export const projectsData = {
       "A fast-paced multiplayer word game where players race to capture letters for each chosen category.",
       "Built with Nicholas Kovacs and William Gadd"
     ],
-    liveLink: "It's Live!",
+    // liveLink: "It's Live!",
     stack: [
       "Material UI",
       "React.js",
