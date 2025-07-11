@@ -1,6 +1,6 @@
 .carousel-container {
   width: 40%;
-  height: 55%; // reduced from 75% to bring pagination closer
+  height: 55%; // default for large screens (>992px)
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -154,6 +154,38 @@
     bottom: -18px;
   }
 }
+
+// Responsive height breakpoints
+// Mobile devices (≤768px) - 65% height
+@media only screen and (max-width: 768px) {
+  .carousel-container {
+    height: 65%;
+    width: 90%; // adjust width for mobile as well
+    padding-bottom: 16px;
+    overflow: hidden;
+  }
+
+  .carousel-wrapper {
+    height: calc(100% - 16px);
+    overflow: hidden;
+  }
+}
+
+// MacBook Pro and similar screens (769px - 992px) - 70% height
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .carousel-container {
+    height: 70%;
+    width: 45%;
+  }
+}
+
+// Large screens (>992px) - 55% height (already set as default)
+@media only screen and (min-width: 993px) {
+  .carousel-container {
+    height: 72%;
+    width: 40%;
+  }
+}
 // TODO: use variable to set button height with vh
 @media only screen and (max-height: 1024px) {
   .carousel-buttons {
@@ -278,17 +310,6 @@
 
 // responsive pagination adjustments
 @media (max-width: 768px) {
-  .carousel-container {
-    padding-bottom: 16px;
-    // ensure no overflow on mobile
-    overflow: hidden;
-  }
-
-  .carousel-wrapper {
-    height: calc(100% - 16px);
-    overflow: hidden;
-  }
-
   .carousel-swiper {
     // force exact width on mobile to prevent overflow
     width: 100% !important;
