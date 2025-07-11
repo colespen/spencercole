@@ -33,15 +33,15 @@
   -ms-overflow-style: none;
   /* hide scrollbar in Firefox */
   scrollbar-width: none;
-  
+
   /* drag/swipe improvements */
   touch-action: pan-y;
   cursor: grab;
-  
+
   &:active {
     cursor: grabbing;
   }
-  
+
   /* prevent default image dragging */
   img {
     -webkit-user-drag: none;
@@ -54,7 +54,7 @@
     -ms-user-select: none;
     user-select: none;
   }
-  
+
   /* prevent link dragging */
   a {
     -webkit-user-drag: none;
@@ -187,11 +187,11 @@
   position: relative;
   // ensure no overflow on mobile
   overflow: hidden;
-  
+
   .swiper-wrapper {
     height: 100%;
   }
-  
+
   .swiper-slide {
     height: 100%;
     display: flex;
@@ -200,7 +200,7 @@
     // ensure slides don't overflow their container
     width: 100% !important;
     flex-shrink: 0;
-    
+
     // inherit existing image & link styles
     img {
       -webkit-user-drag: none;
@@ -215,7 +215,7 @@
       max-height: 100%;
       object-fit: contain;
     }
-    
+
     a {
       -webkit-user-drag: none;
       -khtml-user-drag: none;
@@ -232,7 +232,7 @@
       height: 100%;
     }
   }
-  
+
   // hide default Swiper navigation but show custom pagination
   .swiper-button-next,
   .swiper-button-prev {
@@ -252,7 +252,7 @@
   z-index: 10;
   min-height: 20px; // ensure container has height
   align-items: center;
-  
+
   .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
@@ -262,12 +262,12 @@
     cursor: pointer;
     transition: all 0.3s ease;
     opacity: 1;
-    
+
     &:hover {
       background-color: rgba(120, 120, 120, 0.8);
       transform: scale(1.2);
     }
-    
+
     &.swiper-pagination-bullet-active {
       background-color: white;
       transform: scale(1.1);
@@ -283,22 +283,22 @@
     // ensure no overflow on mobile
     overflow: hidden;
   }
-  
+
   .carousel-wrapper {
     height: calc(100% - 16px);
     overflow: hidden;
   }
-  
+
   .carousel-swiper {
     // force exact width on mobile to prevent overflow
     width: 100% !important;
     overflow: hidden;
-    
+
     .swiper-wrapper {
       // ensure wrapper doesn't exceed container
       width: 100% !important;
     }
-    
+
     .swiper-slide {
       // ensure slides are exactly container width
       width: 100% !important;
@@ -307,7 +307,7 @@
       overflow: hidden;
       // ensure exact boundaries
       position: relative;
-      
+
       // ensure content is properly contained
       & > * {
         width: 100%;
@@ -317,11 +317,11 @@
       }
     }
   }
-  
+
   .carousel-pagination {
     bottom: -12px;
     gap: 6px;
-    
+
     .swiper-pagination-bullet {
       width: 6px;
       height: 6px;
@@ -336,11 +336,11 @@
   .carousel-wrapper {
     height: calc(100% - 14px);
   }
-  
+
   .carousel-pagination {
     bottom: -10px;
     gap: 5px;
-    
+
     .swiper-pagination-bullet {
       width: 5px;
       height: 5px;

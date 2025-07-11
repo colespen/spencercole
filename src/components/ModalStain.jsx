@@ -1,5 +1,4 @@
-export default function ModalStain({flash, border, isStainVisible}) {
-
+export default function ModalStain({ flash, border, isStainVisible }) {
   return (
     <>
       <section

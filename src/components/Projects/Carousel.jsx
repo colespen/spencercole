@@ -74,17 +74,11 @@ export default function Carousel(props) {
               resistance={true}
               resistanceRatio={0.85}
               roundLengths={true} // ensure pixel-perfect positioning
+              // mobile breakpoints with smaller spacing
               breakpoints={{
-                // mobile breakpoints with smaller spacing
-                320: {
-                  spaceBetween: 15,
-                },
-                768: {
-                  spaceBetween: 20,
-                },
-                1024: {
-                  spaceBetween: 30,
-                }
+                320: { spaceBetween: 15 },
+                768: { spaceBetween: 20 },
+                1024: { spaceBetween: 30 },
               }}
               navigation={{
                 nextEl: ".swiper-button-next",
@@ -119,7 +113,7 @@ export default function Carousel(props) {
                 <SwiperSlide key={index}>{child}</SwiperSlide>
               ))}
             </Swiper>
-            
+
             {/* custom pagination dots - moved outside Swiper */}
             <div className="carousel-pagination"></div>
           </div>
