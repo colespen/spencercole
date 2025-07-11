@@ -151,13 +151,19 @@
     border-bottom: 2px solid #0f1c28;
     border-left: 2px solid #686b70;
     height: 37px;
-    width: 14.5%;
+    width: 14.5%; /* Default for 6 tabs */
     max-width: 88px;
     padding-left: 10px;
     margin: 0 6px 3px 0;
     display: flex;
     align-items: center;
     transition: color 200ms ease;
+    
+    /* Responsive width for 7 tabs on larger screens */
+    @media only screen and (min-width: 769px) {
+      width: 12.5%; /* Adjusts for 7 tabs (7 × 12.5% = 87.5%) */
+      max-width: 75px;
+    }
     cursor: pointer;
 
     &:hover {
