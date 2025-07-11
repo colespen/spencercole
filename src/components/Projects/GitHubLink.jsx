@@ -1,9 +1,9 @@
-export default function GitHubLink({ mainStyle, projectUrlName }) {
+export default function GitHubLink({ mainStyle, githubRepo }) {
   return (
     <a
       className="github-icon"
       style={{ ...mainStyle }}
-      href={`https://github.com/colespen/${projectUrlName}`}
+      href={`https://github.com/${githubRepo}`}
       target="_blank"
       rel="noopener noreferrer"
     >

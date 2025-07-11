@@ -116,7 +116,7 @@ export default function Projects(props) {
             <p>Please have a look through my work above...</p>
           </main>
 
-          <GitHubLink mainStyle={mainStyle} projectUrlName="" />
+          <GitHubLink mainStyle={mainStyle} githubRepo="" />
         </animated.div>
       ) : (
         <animated.div className="inner-window">

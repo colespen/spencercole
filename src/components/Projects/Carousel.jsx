@@ -4,7 +4,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Spinner } from "./loaders";
 import useOnLoadImages from "../../hooks/useOnLoadImages";
 
-// Import Swiper styles
+// import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -27,7 +27,7 @@ export default function Carousel(props) {
   };
 
   const handleTouchEnd = () => {
-    // Add a small delay to prevent immediate modal close
+    // add small delay to prevent immediate modal close
     setTimeout(() => {
       setIsDragging(false);
       onInteractionChange?.(false);
@@ -35,7 +35,7 @@ export default function Carousel(props) {
   };
 
   const handleSlideChange = () => {
-    // Keep interaction active during slide changes
+    // keep interaction active during slide changes
     onInteractionChange?.(true);
   };
 
@@ -64,13 +64,28 @@ export default function Carousel(props) {
           <div className="carousel-wrapper">
             <Swiper
               modules={[Navigation, Pagination]}
-              spaceBetween={0}
+              spaceBetween={20} // add spacing between slides to prevent bleeding
               slidesPerView={1}
               slidesPerGroup={1}
-              centeredSlides={true}
+              centeredSlides={false} // changed to false to prevent centering offset
               loop={false}
-              width={null} // Let CSS control width
+              width={null} // let CSS control width
               watchOverflow={true}
+              resistance={true}
+              resistanceRatio={0.85}
+              roundLengths={true} // ensure pixel-perfect positioning
+              breakpoints={{
+                // mobile breakpoints with smaller spacing
+                320: {
+                  spaceBetween: 15,
+                },
+                768: {
+                  spaceBetween: 20,
+                },
+                1024: {
+                  spaceBetween: 30,
+                }
+              }}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -93,6 +108,7 @@ export default function Carousel(props) {
               preventInteractionOnTransition={false}
               observer={true}
               observeParents={true}
+              updateOnWindowResize={true}
               className="carousel-swiper"
               onSlideChangeTransitionStart={handleSlideChange}
               onSlideChangeTransitionEnd={handleTransitionEnd}
@@ -104,7 +120,7 @@ export default function Carousel(props) {
               ))}
             </Swiper>
             
-            {/* Custom pagination dots - moved outside Swiper */}
+            {/* custom pagination dots - moved outside Swiper */}
             <div className="carousel-pagination"></div>
           </div>
         ) : (

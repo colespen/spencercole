@@ -83,7 +83,7 @@ export default function Drawing(props) {
     canvas.height = window.innerHeight * 2;
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
-    // setting the context to enable draw
+    // setting context to enable draw
     const ctx = canvas.getContext("2d");
     ctx.scale(2, 2);
     ctx.lineCap = "round";

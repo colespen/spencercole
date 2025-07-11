@@ -122,7 +122,7 @@ export default function ProjectTemplate({
         </div>
       </main>
 
-      <GitHubLink mainStyle={mainStyle} projectUrlName={githubProjectName} />
+      {githubProjectName && <GitHubLink mainStyle={mainStyle}                  githubRepo={githubProjectName}/>}
     </>
   );
 }

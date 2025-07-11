@@ -3,10 +3,10 @@ export const projectsData = {
     title: "SaucerSwap™",
     href: "https://www.saucerswap.finance/",
     images: [
-      { src: "./images/saucerswap1.webp", alt: "screenshot 1" },
-      { src: "./images/saucerswap2.jpg", alt: "screenshot 2" },
-      { src: "./images/saucerswap3.jpg", alt: "screenshot 3" },
-      { src: "./images/saucerswap4.jpg", alt: "screenshot 4" }
+      { src: "./images/saucerswap1.webp", alt: "SaucerSwap screenshot 1" },
+      { src: "./images/saucerswap2.jpg", alt: "SaucerSwap screenshot 2" },
+      { src: "./images/saucerswap3.jpg", alt: "SaucerSwap screenshot 3" },
+      { src: "./images/saucerswap4.jpg", alt: "SaucerSwap screenshot 4" }
     ],
     description: [
       "SaucerSwap is a decentralized exchange built on the Hedera network.",
@@ -22,18 +22,18 @@ export const projectsData = {
       "Hedera Network SDKs",
       
     ],
-    githubProjectName: "ShowFinder"
+    githubProjectName: "saucerswaplabs"
   },
 
   hiomusic: {
     title: "HIO Music",
     href: "https://apps.apple.com/ca/app/hio/id6444498474",
     images: [
-      { src: "./images/HIO-token.webp", alt: "HIO music app icon", style: { height: "200px" } },
-      { src: "./images/HIO-cell1.webp", alt: "screenshot 1" },
-      { src: "./images/HIO-cell2.webp", alt: "screenshot 2" },
-      { src: "./images/HIO-cell3.webp", alt: "screenshot 3" },
-      { src: "./images/HIO-cell4.webp", alt: "screenshot 4" }
+      { src: "./images/HIO-splash.webp", alt: "HIO splash" },
+      { src: "./images/HIO-cell1.webp", alt: "HIO screenshot 1" },
+      { src: "./images/HIO-cell2.webp", alt: "HIO screenshot 2" },
+      { src: "./images/HIO-cell3.webp", alt: "HIO screenshot 3" },
+      { src: "./images/HIO-cell4.webp", alt: "HIO screenshot 4" }
     ],
     description: [
       "HIO Music is a social music streaming platform & web3 marketplace to get artist paid fairly for their monetized content.",
@@ -47,18 +47,18 @@ export const projectsData = {
       "Stripe SDK/API",
       "AWS (incl. audio & image optimization & web3 minting pipeline w/ SQS)"
     ],
-    githubProjectName: "hio-music"
+    // githubProjectName: "hio-music"
   },
 
   showfinder: {
     title: "ShowFinder",
     href: "https://www.showfinder.ninja",
     images: [
-      { src: "./images/globeicon.png", alt: "project icon", style: { height: "200px" } },
-      { src: "./images/showfinder1.jpg", alt: "screenshot 1" },
-      { src: "./images/showfinder2.jpg", alt: "screenshot 2" },
-      { src: "./images/showfinder3.jpg", alt: "screenshot 3" },
-      { src: "./images/showfinder4.jpg", alt: "screenshot 4" }
+      { src: "./images/globeicon.png", alt: "ShowFinder icon", style: { height: "200px" } },
+      { src: "./images/showfinder1.jpg", alt: "ShowFinder screenshot 1" },
+      { src: "./images/showfinder2.jpg", alt: "ShowFinder screenshot 2" },
+      { src: "./images/showfinder3.jpg", alt: "ShowFinder screenshot 3" },
+      { src: "./images/showfinder4.jpg", alt: "ShowFinder screenshot 4" }
     ],
     description: [
       "The world needs a very simple, quick app to find shows.",
@@ -79,16 +79,16 @@ export const projectsData = {
       { text: "Zyla", style: { textDecoration: "line-through" } }
     ],
     apiListClass: "sub",
-    githubProjectName: "ShowFinder"
+    githubProjectName: "colespen/ShowFinder"
   },
 
   brainer: {
     title: "BRAINER",
     href: "https://brainer-client.vercel.app",
     images: [
-      { src: "./images/brainer1.png", alt: "project icon" },
-      { src: "./images/brainer2.png", alt: "screenshot 1" },
-      { src: "./images/brainer3.jpg", alt: "screenshot 2" }
+      { src: "./images/brainer1.png", alt: "BRAINER project icon" },
+      { src: "./images/brainer2.png", alt: "BRAINER screenshot 1" },
+      { src: "./images/brainer3.jpg", alt: "BRAINER screenshot 2" }
     ],
     description: [
       "A simple memory game that will help people to improve their focus, retention of geometric configurations and visual memory recall.",
@@ -102,16 +102,16 @@ export const projectsData = {
       "Express",
       "PostgreSQL"
     ],
-    githubProjectName: "brainer"
+    githubProjectName: "colespen/brainer"
   },
 
   voiceassistant: {
     title: "Voice Command Oscilloscope",
     href: "https://voice-command-oscilloscope.vercel.app",
     images: [
-      { src: "./images/voiceassistant1.png", alt: "screenshot 1" },
-      { src: "./images/voiceassistant2.png", alt: "screenshot 2" },
-      { src: "./images/voiceassistant3.png", alt: "screenshot 3" }
+      { src: "./images/voiceassistant1.png", alt: "Voice Command Oscilloscope screenshot 1" },
+      { src: "./images/voiceassistant2.png", alt: "Voice Command Oscilloscope screenshot 2" },
+      { src: "./images/voiceassistant3.png", alt: "Voice Command Oscilloscope screenshot 3" }
     ],
     description: [
       "This little app offers a fun, engaging way to search Google.",
@@ -146,18 +146,18 @@ export const projectsData = {
       },
       "Web Audio API"
     ],
-    githubProjectName: "voice-command-oscilloscope"
+    githubProjectName: "colespen/voice-command-oscilloscope"
   },
 
   surveillance: {
     title: "Surveillance Management System",
     href: "https://surveillance-camera-management-system.vercel.app",
     images: [
-      { src: "./images/SMS_1.jpg", alt: "screenshot 1" },
-      { src: "./images/SMS_2.jpg", alt: "screenshot 2" },
-      { src: "./images/SMS_3.jpg", alt: "screenshot 3" },
-      { src: "./images/SMS-mock1.png", alt: "screenshot 4" },
-      { src: "./images/SMS-mock2.png", alt: "screenshot 5" }
+      { src: "./images/SMS_1.jpg", alt: "Surveillance Management System screenshot 1" },
+      { src: "./images/SMS_2.jpg", alt: "Surveillance Management System screenshot 2" },
+      { src: "./images/SMS_3.jpg", alt: "Surveillance Management System screenshot 3" },
+      { src: "./images/SMS-mock1.png", alt: "Surveillance Management System screenshot 4" },
+      { src: "./images/SMS-mock2.png", alt: "Surveillance Management System screenshot 5" }
     ],
     description: [
       "A fun challenge. . .",
@@ -172,19 +172,19 @@ export const projectsData = {
       "PostgreSQL",
       "Vercel"
     ],
-    githubProjectName: "surveillance-camera-management-system"
+    githubProjectName: "colespen/surveillance-camera-management-system"
   },
 
   madcap: {
     title: "Madcap",
     // href: "https://www.madcap.ninja/",
     images: [
-      { src: "./images/avatar-1.png", alt: "project icon", style: { height: "200px", width: "101%" } },
-      { src: "./images/madcap1.png", alt: "screenshot 1" },
-      { src: "./images/madcap2.png", alt: "screenshot 2" },
-      { src: "./images/madcap3.png", alt: "screenshot 3" },
-      { src: "./images/madcap4.png", alt: "screenshot 4" },
-      { src: "./images/madcap5.png", alt: "screenshot 5" }
+      { src: "./images/avatar-1.png", alt: "Madcap project icon", style: { height: "200px", width: "101%" } },
+      { src: "./images/madcap1.png", alt: "Madcap screenshot 1" },
+      { src: "./images/madcap2.png", alt: "Madcap screenshot 2" },
+      { src: "./images/madcap3.png", alt: "Madcap screenshot 3" },
+      { src: "./images/madcap4.png", alt: "Madcap screenshot 4" },
+      { src: "./images/madcap5.png", alt: "Madcap screenshot 5" }
     ],
     description: [
       "A fast-paced multiplayer word game where players race to capture letters for each chosen category.",
@@ -198,19 +198,19 @@ export const projectsData = {
       "Express",
       "Node.js"
     ],
-    githubProjectName: "madcap"
+    githubProjectName: "colespen/madcap"
   },
 
   quizapp: {
     title: "QuizApp",
     href: "https://github.com/colespen/Quiz-App",
     images: [
-      { src: "./images/quizapp1.jpg", alt: "screenshot 1" },
-      { src: "./images/quizapp1a.png", alt: "screenshot 2" },
-      { src: "./images/quizapp2.png", alt: "screenshot 3" },
-      { src: "./images/quizapp3.png", alt: "screenshot 4" },
-      { src: "./images/quizapp4.png", alt: "screenshot 5" },
-      { src: "./images/quizapp5.png", alt: "screenshot 6" }
+      { src: "./images/quizapp1.jpg", alt: "QuizApp screenshot 1" },
+      { src: "./images/quizapp1a.png", alt: "QuizApp screenshot 2" },
+      { src: "./images/quizapp2.png", alt: "QuizApp screenshot 3" },
+      { src: "./images/quizapp3.png", alt: "QuizApp screenshot 4" },
+      { src: "./images/quizapp4.png", alt: "QuizApp screenshot 5" },
+      { src: "./images/quizapp5.png", alt: "QuizApp screenshot 6" }
     ],
     description: [
       <>
@@ -232,6 +232,6 @@ export const projectsData = {
       "Node.js",
       "PostgreSQL"
     ],
-    githubProjectName: "Quiz-App"
+    githubProjectName: "colespen/Quiz-App"
   }
 };

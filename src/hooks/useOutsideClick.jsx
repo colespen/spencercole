@@ -16,7 +16,7 @@ export default function useOutsideClick(callback, state, isInteracting = null) {
         !ref.current.contains(event.target) &&
         state === true
       ) {
-        // if isInteracting fn is provided and returns true, don't close
+        // if isInteracting fn is provided & returns true, don't close
         if (isInteracting && isInteracting()) {
           return;
         }
@@ -24,7 +24,7 @@ export default function useOutsideClick(callback, state, isInteracting = null) {
       }
     };
 
-    // listen to both mouse and touch events
+    // listen to both mouse & touch events
     document.addEventListener("mousedown", handlePointerEvent, true);
     document.addEventListener("touchstart", handlePointerEvent, true);
 
