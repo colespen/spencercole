@@ -108,7 +108,7 @@ export default function Projects(props) {
             </p>
             <br></br>
             <p>
-              I love to focus on creating useful, fun applications.
+              I love to focus on creating useful and memorable applications.
               <br></br>I am perpetually in search of a new challenge and enjoy
               discovering the latest tools available.
             </p>

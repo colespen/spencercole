@@ -158,7 +158,7 @@ export default function Music() {
           <br></br>peforming with great artists such as
           <br></br>
           <strong>
-            Jeremy Dutcher, Carly Rae Jepsen, The Weather Station,
+            Jeremy Dutcher, Carly Rae Jepsen, Tim Baker, The Weather Station,
             <br></br> The Toronto Sympony Orchestra, July Talk, Michael Bublé
           </strong>
           <br></br>
