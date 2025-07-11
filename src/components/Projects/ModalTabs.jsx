@@ -1,9 +1,9 @@
-import { tabConfig } from "./tabConfig";
+import { tabConfig } from "../../data/tabConfig";
 
 export default function ModalTabs({ handleProjectBtnClick, navStyle }) {
   return (
     <nav className="modal-nav" style={{ ...navStyle }}>
-      {tabConfig.slice(0, 7).map((tab) => (
+      {tabConfig.map((tab) => (
         <button key={tab.id} id={tab.id} onClick={handleProjectBtnClick}>
           <img
             className="tab-icon"

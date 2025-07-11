@@ -185,6 +185,8 @@
   width: 100%;
   height: 100%;
   position: relative;
+  // Ensure no overflow on mobile
+  overflow: hidden;
   
   .swiper-wrapper {
     height: 100%;
@@ -195,6 +197,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    // Ensure slides don't overflow their container
+    width: 100%;
+    flex-shrink: 0;
     
     // Inherit existing image and link styles
     img {
@@ -275,9 +280,30 @@
 @media (max-width: 768px) {
   .carousel-container {
     padding-bottom: 16px;
+    // Ensure no overflow on mobile
+    overflow: hidden;
   }
+  
   .carousel-wrapper {
     height: calc(100% - 16px);
+    overflow: hidden;
+  }
+  
+  .carousel-swiper {
+    // Force exact width on mobile to prevent overflow
+    width: 100% !important;
+    overflow: hidden;
+    
+    .swiper-wrapper {
+      // Ensure wrapper doesn't exceed container
+      width: 100% !important;
+    }
+    
+    .swiper-slide {
+      // Ensure slides are exactly the container width
+      width: 100% !important;
+      flex-shrink: 0;
+    }
   }
   
   .carousel-pagination {

@@ -151,7 +151,7 @@
     border-bottom: 2px solid #0f1c28;
     border-left: 2px solid #686b70;
     height: 37px;
-    width: 13.5%; /* Consistent width for 7 tabs */
+    width: 13.5%; /* Fixed width - same as original */
     max-width: 88px;
     padding-left: 10px;
     margin: 0 6px 3px 0;
@@ -186,6 +186,14 @@
         rgb(24, 37, 59) 11%,
         rgba(58, 82, 126, 0.286) 80%
       );
+    }
+
+    // Hide tabs beyond 6 on mobile (768px and below)
+    // This will automatically hide any tab beyond the 6th position
+    &:nth-child(n+7) {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 

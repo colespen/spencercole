@@ -66,6 +66,11 @@ export default function Carousel(props) {
               modules={[Navigation, Pagination]}
               spaceBetween={0}
               slidesPerView={1}
+              slidesPerGroup={1}
+              centeredSlides={true}
+              loop={false}
+              width={null} // Let CSS control width
+              watchOverflow={true}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -85,6 +90,9 @@ export default function Carousel(props) {
               allowTouchMove={true}
               simulateTouch={true}
               watchSlidesProgress={true}
+              preventInteractionOnTransition={false}
+              observer={true}
+              observeParents={true}
               className="carousel-swiper"
               onSlideChangeTransitionStart={handleSlideChange}
               onSlideChangeTransitionEnd={handleTransitionEnd}
