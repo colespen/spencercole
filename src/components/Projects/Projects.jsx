@@ -5,8 +5,8 @@ import useOutsideClick from "../../hooks/useOutsideClick";
 import ModalTabs from "./ModalTabs";
 import ProjectTemplate from "./ProjectTemplate";
 import GitHubLink from "./GitHubLink";
-import { projectsData } from "../../data/projectsConfig";
-import { tabConfig } from "../../data/tabConfig";
+import { projectsData } from "../../config/projectsConfig";
+import { tabConfig } from "../../config/tabConfig";
 
 import "../modalstyles.scss";
 

@@ -1,4 +1,4 @@
-import { tabConfig } from "../../data/tabConfig";
+import { tabConfig } from "../../config/tabConfig";
 
 export default function ModalTabs({ handleProjectBtnClick, navStyle }) {
   return (
