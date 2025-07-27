@@ -7,15 +7,21 @@
       "src": "./me_icon.png",
       "sizes": "126x126",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "./me_icon.png",
+      "sizes": "126x126",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#000000",
   "lang": "en",
   "scope": "/",
-  "orientation": "portrait-primary",
-  "categories": ["business", "productivity", "portfolio"]
+  "orientation": "any",
+  "categories": ["business", "productivity"]
 }
