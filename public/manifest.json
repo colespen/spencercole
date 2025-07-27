@@ -23,5 +23,12 @@
   "lang": "en",
   "scope": "/",
   "orientation": "any",
-  "categories": ["business", "productivity"]
+  "categories": [
+    "web development",
+    "software engineering",
+    "technology",
+    "software",
+    "business",
+    "productivity"
+  ]
 }
