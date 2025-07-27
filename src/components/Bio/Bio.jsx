@@ -7,6 +7,8 @@ import LinkPreview from "./LinkPreview";
 import Passions from "./Passions";
 import Music from "./Music";
 
+const cvPrev = "https://flowcv.com/resume/svm5jsc61b";
+
 export default function Bio(props) {
   const {
     handleShowHideWindow,
@@ -31,6 +33,19 @@ export default function Bio(props) {
   });
 
   const clickRef = useOutsideClick(handleShowHideWindow, show);
+
+  // Preload critical bio images when component mounts
+  useEffect(() => {
+    const preloadImage = (src) => {
+      const img = new Image();
+      img.src = src;
+    };
+
+    // Preload bio images for smooth LinkPreview experience
+    preloadImage("./images/spencer_cole_cv.webp");
+    preloadImage("./images/s_cole_rooftop_comp.jpg");
+    preloadImage("./images/s_cole_rooftop.jpg");
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -83,8 +98,6 @@ export default function Bio(props) {
       setBioNavStyle({ opacity: 0 });
     }
   }, [view.tab]);
-
-  const cvPrev = "https://flowcv.com/resume/svm5jsc61b";
 
   return (
     <animated.section
@@ -144,14 +157,14 @@ export default function Bio(props) {
               <LinkPreview
                 pClass={"rooftop-with-preview"}
                 divClass={"rooftop-card"}
-                image="./images/s_cole_rooftop_comp.jpg"
+                image="./images/s_cole_rooftop_comp.webp"
                 href="./images/s_cole_rooftop.jpg"
               >
                 <animated.span id="iButton" style={{ ...glowSpring }}>
                   I
                 </animated.span>
               </LinkPreview>
-              &nbsp;&nbsp; am a full-stack web developer with a highly creative
+              &nbsp;&nbsp; am a full-stack developer with a highly creative
               background in music composition and production. Using ingenuity,
               my eye for design and attention to detail, I strive to create an
               intuitive and memorable experience for the user. Working with

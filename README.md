@@ -40,6 +40,7 @@ An SPA portfolio showcasing my work.
 - **Live Links**: Direct links to live projects and GitHub repositories
 - **Smooth Animations**: Fade-in effects and smooth transitions
 - **Mobile Optimized**: Touch-friendly navigation and responsive layouts
+- **SEO Optimizations**: Enhanced meta tags, structured data, and performance improvements
 
 ## Architecture
 

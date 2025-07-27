@@ -1,3 +1,24 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow certain file types
+Disallow: *.scss
+Disallow: *.js.map
+Disallow: *.css.map
+
+# Sitemap location
+Sitemap: https://www.spencercole.net/sitemap.xml
+
+# Crawl delay (optional - be respectful to servers)
+Crawl-delay: 1
