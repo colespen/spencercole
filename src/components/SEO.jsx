@@ -4,11 +4,11 @@ const SEO = () => {
   return (
     <Helmet>
       <title>
-        Spencer Cole - Full Stack Developer | React & Node.js Expert
+        Spencer Cole - Full Stack Developer | React, Next.js & Node.js
       </title>
       <meta
         name="description"
-        content="Spencer Cole - Creative full-stack developer specializing in React, TypeScript, and Node.js. View my portfolio of innovative web applications and development projects."
+        content="Spencer Cole - Creative full-stack developer specializing in React, TypeScript, and Node.js. View my portfolio of innovative web applications and personal projects."
       />
       <meta
         name="keywords"
