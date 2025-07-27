@@ -34,17 +34,16 @@ export default function Bio(props) {
 
   const clickRef = useOutsideClick(handleShowHideWindow, show);
 
-  // Preload critical bio images when component mounts
+  // preload critical bio images when component mounts
   useEffect(() => {
     const preloadImage = (src) => {
       const img = new Image();
       img.src = src;
     };
 
-    // Preload bio images for smooth LinkPreview experience
+    // preload bio images for smooth LinkPreview experience
     preloadImage("./images/spencer_cole_cv.webp");
     preloadImage("./images/s_cole_rooftop_comp.jpg");
-    preloadImage("./images/s_cole_rooftop.jpg");
   }, []);
 
   useEffect(() => {
