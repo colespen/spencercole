@@ -1,3 +1,12 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow source maps and development files
+Disallow: *.js.map
+Disallow: *.css.map
+Disallow: /static/js/*.map
+Disallow: /static/css/*.map
+
+# Sitemap location
+Sitemap: https://www.spencercole.net/sitemap.xml

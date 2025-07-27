@@ -9,6 +9,7 @@ import Bio from "./Bio/Bio";
 import Contact from "./Contact/Contact";
 import Draw from "./Draw";
 import ModalStain from "./ModalStain";
+import SEO from "./SEO";
 
 import useVisualMode from "../hooks/useVisualMode";
 
@@ -61,6 +62,7 @@ export default function Main() {
 
   return (
     <>
+      <SEO />
       <Draw setIsPointerEvent={setIsPointerEvent} isDrawClear={isDrawClear} />
 
       {view.page === "home" && (
