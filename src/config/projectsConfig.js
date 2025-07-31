@@ -97,6 +97,37 @@ export const projectsData = {
     githubProjectName: "colespen/brainer",
   },
 
+  emotionChord: {
+    title: "Emotion to Chord",
+    href: "https://emotion-chord.vercel.app/",
+    images: [
+      { src: "./images/emotion-chord.svg", alt: "Emotion to Chord icon" },
+      {
+        src: "./images/e2c_mobile_1.webp",
+        alt: "Emotion to Chord screenshot 1",
+      },
+      {
+        src: "./images/e2c_mobile_2.webp",
+        alt: "Emotion to Chord screenshot 2",
+      },
+      {
+        src: "./images/e2c_desktop_1.webp",
+        alt: "Emotion to Chord screenshot 3",
+      },
+      {
+        src: "./images/e2c_desktop_2.webp",
+        alt: "Emotion to Chord screenshot 4",
+      },
+    ],
+    description: [
+      "Transform emotions into musical chords using AI-powered analysis.",
+      "I built this app to explore the relationship between emotion and music and practice working with AI models.",
+    ],
+    liveLink: "It's Live!",
+    stack: ["React 19", "Next 15", "Tone.js", "OpenAI API"],
+    githubProjectName: "colespen/emotion-chord",
+  },
+
   voiceassistant: {
     title: "Voice Command Oscilloscope",
     href: "https://voice-command-oscilloscope.vercel.app",

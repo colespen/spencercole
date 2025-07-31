@@ -116,7 +116,7 @@ export default function Projects(props) {
             <p>Please have a look through my work above...</p>
           </main>
 
-          <GitHubLink mainStyle={mainStyle} githubRepo="" />
+          <GitHubLink mainStyle={mainStyle} githubRepo="colespen" />
         </animated.div>
       ) : (
         <animated.div className="inner-window">
@@ -124,6 +124,7 @@ export default function Projects(props) {
             const activeTab = tabConfig.find((tab) => tab.id === view.tab);
             if (activeTab) {
               const projectData = projectsData[activeTab.key];
+
               return (
                 <ProjectTemplate
                   key={view.tab} // force remount on tab change for proper animation
