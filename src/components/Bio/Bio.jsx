@@ -43,7 +43,7 @@ export default function Bio(props) {
 
     // preload bio images for smooth LinkPreview experience
     preloadImage("./images/spencer_cole_cv.webp");
-    preloadImage("./images/s_cole_rooftop_comp.jpg");
+    preloadImage("./images/s_cole_rooftop_comp.webp");
   }, []);
 
   useEffect(() => {
