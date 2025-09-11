@@ -8,7 +8,7 @@ const SEO = () => {
       </title>
       <meta
         name="description"
-        content="Spencer Cole - Creative full-stack developer specializing in React, TypeScript, and Node.js. View my portfolio of innovative web applications and personal projects."
+        content="Spencer Cole - Creative full-stack developer specializing in React, TypeScript, and Node.js. View my portfolio of web and mobile applications built with cutting-edge tech."
       />
       <meta
         name="keywords"
@@ -16,31 +16,46 @@ const SEO = () => {
       />
 
       {/* Open Graph */}
-      <meta property="og:title" content="Spencer Cole - Full Stack Developer" />
+      <meta
+        property="og:title"
+        content="Spencer Cole - Full Stack Developer | React, Next.js & Node.js"
+      />
+      <meta property="og:type" content="website" />
       <meta
         property="og:description"
-        content="Creative full-stack developer specializing in React, TypeScript, and Node.js. View my portfolio of innovative web applications."
+        content="Creative full-stack developer specializing in React, TypeScript, and Node.js. View my portfolio of web and mobile applications built with cutting-edge tech."
       />
       <meta
         property="og:image"
-        content="https://www.spencercole.net/images/spencer_cole_cv.webp"
+        content="https://www.spencercole.net/images/spencercole-preview.webp"
+      />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta
+        property="og:image:alt"
+        content="Spencer Cole - Full Stack Developer Portfolio"
       />
       <meta property="og:url" content="https://www.spencercole.net/" />
-      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Spencer Cole Portfolio" />
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
-        content="Spencer Cole - Full Stack Developer"
+        content="Spencer Cole - Full Stack Developer | React, Next.js & Node.js"
       />
       <meta
         name="twitter:description"
-        content="Creative full-stack developer specializing in React, TypeScript, and Node.js."
+        content="Creative full-stack developer specializing in React, TypeScript, and Node.js. View my portfolio of web and mobile applications built with cutting-edge tech."
       />
       <meta
         name="twitter:image"
-        content="https://www.spencercole.net/images/spencer_cole_cv.webp"
+        content="https://www.spencercole.net/images/spencercole-preview.webp"
+      />
+      <meta
+        name="twitter:image:alt"
+        content="Spencer Cole - Full Stack Developer Portfolio"
       />
 
       {/* Essential Structured Data */}
