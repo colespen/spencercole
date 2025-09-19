@@ -4,6 +4,7 @@
   position: fixed;
   width: 88%;
   max-width: 1000px;
+  max-height: 1185px;
   height: 75%;
   top: 50%;
   left: 50%;
@@ -58,10 +59,11 @@
   .tab-header {
     h1 {
       font-weight: 400;
+      line-height: clamp(27px, 3.4vh, 54px);
     }
     a {
       font-family: "Montserrat", sans-serif, "Courier New", Courier, monospace;
-      font-size: 95%;
+      font-size: clamp(20px, 3.2vh, 44px);
       text-decoration: none;
       transition: color 150ms ease, text-shadow 650ms ease;
     }
@@ -224,10 +226,13 @@
 }
 
 .project-stack-list {
-  padding-left: 20px;
+  padding-left: 18px;
   list-style: square;
   li {
     padding-top: 3px;
+  }
+  ul {
+    padding-left: 12px;
   }
   &.sub {
     font-size: 90%;

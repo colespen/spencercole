@@ -60,7 +60,7 @@ export default function Projects(props) {
 
   const springs = useSpring({
     from: { height: "0%" },
-    to: { height: "75%" },
+    to: { height: "85%" }, // override stylesheet
     config: { mass: 1.3, tension: 335, friction: 24 },
     onStart: () => setIsSpringRest(false),
     onRest: () => setIsSpringRest(true),
