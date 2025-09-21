@@ -10,7 +10,8 @@
 
 body {
   background-color: #05090f;
-  height: 100vh;
+  height: 100vh; // keep as fallback older browsers
+  height: 100dvh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
