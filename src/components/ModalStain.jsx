@@ -1,18 +1,21 @@
-export default function ModalStain({ flash, border, isStainVisible }) {
+export default function ModalStain({ flash, border, isStainVisible, variant }) {
+  const stainClasses = `modal-stain ${variant || ""}`.trim();
+  const height = variant === "projects" ? "85%" : "75%";
+
   return (
     <>
       <section
-        className="modal-stain light-border"
-        style={{ opacity: border, visibility: isStainVisible }}
-      ></section>
+        className={`${stainClasses} light-border`}
+        style={{ opacity: border, visibility: isStainVisible, height }}
+      />
       <section
-        className="modal-stain heavy-border"
-        style={{ opacity: flash, visibility: isStainVisible }}
-      ></section>
+        className={`${stainClasses} heavy-border`}
+        style={{ opacity: flash, visibility: isStainVisible, height }}
+      />
       <section
-        className="modal-stain flash"
-        style={{ opacity: flash, visibility: isStainVisible }}
-      ></section>
+        className={`${stainClasses} flash`}
+        style={{ opacity: flash, visibility: isStainVisible, height }}
+      />
     </>
   );
 }

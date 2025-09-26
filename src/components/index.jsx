@@ -23,8 +23,16 @@ export default function Main() {
   const [isStainVisible, setIsStainVisible] = useState("visible");
   const [border, setBorder] = useState(0);
   const [flash, setFlash] = useState(0);
+  const [lastOpenTab, setLastOpenTab] = useState(null);
 
   const { view, transition } = useVisualMode("home", null);
+
+  // Track the last opened tab for modal stain animation
+  useEffect(() => {
+    if (view.page !== "home") {
+      setLastOpenTab(view.page);
+    }
+  }, [view.page]);
 
   const windowShowHide = classNames("window", {
     "display-block": show,
@@ -76,6 +84,7 @@ export default function Main() {
         border={border}
         flash={flash}
         isStainVisible={isStainVisible}
+        variant={view.page === "home" ? lastOpenTab : view.page}
       />
 
       <div className={windowShowHide}>

@@ -77,7 +77,7 @@ export default function Projects(props) {
   return (
     <animated.section
       ref={clickRef}
-      className="modal-main"
+      className="modal-main projects-modal"
       style={{ ...springs, ...modalStyle }}
     >
       <ModalTabs

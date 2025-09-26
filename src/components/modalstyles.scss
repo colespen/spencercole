@@ -4,7 +4,6 @@
   position: fixed;
   width: 88%;
   max-width: 1000px;
-  max-height: 1185px;
   height: 75%;
   top: 50%;
   left: 50%;
@@ -14,6 +13,10 @@
   justify-content: center;
   align-items: center;
   transition: opacity 300ms ease;
+
+  &.projects-modal {
+    height: 85%;
+  }
 
   .close-btn {
     background-color: transparent;
@@ -218,7 +221,6 @@
 
 .main-description {
   width: 100%;
-
   font-size: clamp(14px, 2.5vw, 20px);
   display: flex;
   justify-content: center;

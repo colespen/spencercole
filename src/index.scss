@@ -1,7 +1,7 @@
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
 
 * {
-  font-family:  BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+  font-family: BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #f4e5e0;
   box-sizing: border-box;
@@ -21,11 +21,13 @@ textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-a:focus,a:visited,a:active{
+a:focus,
+a:visited,
+a:active {
   outline: none;
 }
 * {
-    -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
